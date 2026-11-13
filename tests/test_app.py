@@ -33,10 +33,11 @@ def test_upload_returns_escaped_source_and_complete_project():
     assert '<pdf2tex.' not in result['tex']
     with ZipFile(BytesIO(base64.b64decode(result['zip']))) as archive:
         assert archive.read('main.tex').decode() == result['tex']
-        assets = [p for p in archive.namelist() if p.startswith('assets/')]
+        assets = [p for p in archive.namelist() if p.endswith('.png')]
         assert len(assets) == 1
         assert assets[0] in result['tex']
         assert archive.read(assets[0]).startswith(b'\x89PNG')
+        assert any(p.endswith(('.otf', '.ttf')) for p in archive.namelist())
 
 
 def test_scan_routes_through_ocr(monkeypatch):

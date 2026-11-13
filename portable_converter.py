@@ -18,7 +18,8 @@ import pymupdf
 from fontTools import agl
 from fontTools.pens.basePen import BasePen
 
-from font_reconstruction import load_type1
+from font_reconstruction import FontError
+from pdf_fonts import FontRegistry, visible
 
 
 @lru_cache(maxsize=1)
@@ -40,12 +41,13 @@ def letters(index):
 
 
 class OutlinePen(BasePen):
-    def __init__(self, glyphs):
+    def __init__(self, glyphs, units=1000):
         super().__init__(glyphs)
         self.commands = []
+        self.units = units
 
     def point(self, point):
-        return ' '.join(number(c / 1000) for c in point)
+        return ' '.join(number(c / self.units) for c in point)
 
     def _moveTo(self, p):
         self.commands.append(self.point(p) + ' m')
@@ -69,7 +71,8 @@ def vector(content):
     return r'\InlineGraphic{' + content + '}'
 
 
-def standard_face(base):
+def standard_face(base, flags=0):
+    base = re.sub(r'^[A-Z]{6}\+', '', base)
     aliases = {'NimbusRomNo9L-Regu':'ptmr8r', 'NimbusRomNo9L-Medi':'ptmb8r',
                'NimbusRomNo9L-ReguItal':'ptmri8r', 'SFTT1000':'ec-lmtt10',
                'Times-Roman':'ptmr8r', 'Times-Bold':'ptmb8r', 'Times-Italic':'ptmri8r',
@@ -80,7 +83,20 @@ def standard_face(base):
                'Arial-ItalicMT':'phvro8r', 'Arial-BoldItalicMT':'phvbo8r',
                'TimesNewRomanPSMT':'ptmr8r', 'TimesNewRomanPS-BoldMT':'ptmb8r',
                'TimesNewRomanPS-ItalicMT':'ptmri8r', 'TimesNewRomanPS-BoldItalicMT':'ptmbi8r'}
-    return aliases.get(base,base.lower())
+    target = aliases.get(base, base.lower())
+    if target in standard_fonts():
+        return target
+    lower = base.lower()
+    bold = bool(flags & 16) or any(s in lower for s in ('bold', 'black', 'demi', 'heavy'))
+    italic = bool(flags & 2) or any(s in lower for s in ('italic', 'oblique', 'slant'))
+    if flags & 8 or any(s in lower for s in ('mono', 'courier', 'typewriter')):
+        return { (False,False):'pcrr8r', (True,False):'pcrb8r',
+                 (False,True):'pcrro8r', (True,True):'pcrbo8r'}[bold,italic]
+    if flags & 4 or any(s in lower for s in ('times', 'roman', 'serif', 'garamond', 'stag')):
+        return {(False,False):'ptmr8r', (True,False):'ptmb8r',
+                (False,True):'ptmri8r', (True,True):'ptmbi8r'}[bold,italic]
+    return {(False,False):'phvr8r', (True,False):'phvb8r',
+            (False,True):'phvro8r', (True,True):'phvbo8r'}[bold,italic]
 
 
 def editable_words(content):
@@ -184,54 +200,62 @@ def drawing(path, height):
 def convert_portable(data, filename):
     fonts = standard_fonts()
     with pymupdf.open(stream=data, filetype='pdf') as doc:
-        traces = [p.get_texttrace() for p in doc]
+        registry = FontRegistry(doc)
+        traces = registry.pages
         # OCR overlays on scanned page images are not visible editable content.
         for i, page_traces in enumerate(traces):
-            if not any(t['type'] != 3 and t['chars'] for t in page_traces):
+            if not any(visible(t) and t['chars'] for t in page_traces):
                 raise ValueError(f'Page {i+1} has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX.')
         definitions, warnings, body = [], [], []
         faces, glyph_definitions = {}, {}
-        for page in doc:
-            for xref, ext, kind, name, *_ in page.get_fonts(full=True):
-                base = re.sub(r'^[A-Z]{6}\+', '', name)
-                if base in faces:
-                    continue
-                target = standard_face(base)
-                face = {'target':target if target in fonts else 'cmr10', 'order':[], 'glyphs':None, 'encoding':{}}
-                if ext in ('pfa', 'pfb'):
-                    try:
-                        original, face['order'], face['glyphs'] = load_type1(doc.extract_font(xref)[3])
-                        face['encoding'] = {g:c for c,g in enumerate(original.font['Encoding']) if g != '.notdef'}
-                    except (ValueError, RuntimeError, KeyError, AssertionError, EOFError):
-                        pass
-                if target not in fonts and 'Awesome' not in base:
-                    warnings.append(f'Font {base} uses a standard Computer Modern substitute; check the compiled result.')
-                faces[base] = face
+        for resource in registry.resources.values():
+            try:
+                faces[resource.identity] = resource.program()
+            except FontError:
+                faces[resource.identity] = None
+        substituted = set()
 
         def glyph(trace, char):
             unicode, gid, origin, _ = char
-            face = faces.get(trace['font'], {'target':'cmr10','order':[], 'glyphs':None, 'encoding':{}})
-            target = face['target']
+            face = faces[trace['font_key']]
+            resource = registry.resources[trace['font_key']]
+            target = standard_face(resource.name, trace.get('flags', 0))
+            base = re.sub(r'^[A-Z]{6}\+', '', resource.name)
+            if base.lower() not in fonts and base != target and base not in substituted:
+                substituted.add(base)
+                warnings.append(f'Font {base} uses the standard {target} face; check the compiled result.')
             meta = fonts[target]
-            name = face['order'][gid] if 0 <= gid < len(face['order']) else agl.UV2AGL.get(unicode)
-            encoding = meta['encoding'] or face['encoding']
-            code = encoding.get(name) if name else (unicode if 32 <= unicode < 127 else None)
-            if name == 'space' or chr(unicode).isspace():
+            name = face.glyph_name(gid) if face else None
+            aliases = {0xFB00:'ff', 0xFB01:'fi', 0xFB02:'fl', 0xFB03:'ffi', 0xFB04:'ffl'}
+            names = [name, aliases.get(unicode), agl.UV2AGL.get(unicode)]
+            encoding = meta['encoding'] or (face.encoding if face else {})
+            code = next((encoding[n] for n in names if n in encoding), None)
+            if code is None and not meta['encoding'] and 32 <= unicode < 127:
+                code = unicode
+            if name == 'space' or (0 <= unicode <= 0x10FFFF and chr(unicode).isspace()):
                 return target, ' ', meta['space'] * trace['size'], 32
+            # Text fonts such as OT1 Computer Modern omit everyday punctuation
+            # and accents. Keep these as text in the closest standard family.
+            if code is None:
+                alternate = standard_face('PDFSerif' if trace.get('flags', 0) & 4 else 'PDFSans', trace.get('flags', 0))
+                other = fonts[alternate]
+                found = next((other['encoding'][n] for n in names if n in other['encoding']), None)
+                if found is not None:
+                    target, meta, code = alternate, other, found
             if code is not None and str(code) in meta['widths']:
                 # Literal words remain readable/editable. Non-ASCII font slots
                 # use TeX character numbers, independent of Unicode engines.
                 text = chr(code) if 33 <= code < 127 and chr(code) not in '\\&%$#_{}~^' else f'\\char{code}{{}}'
                 return target, text, meta['widths'][str(code)] * trace['size'], code
-            if face['glyphs'] is not None and name in face['glyphs']:
-                key = (trace['font'], gid)
+            if face is not None and name in face.glyphs and not (0 <= unicode <= 0x10FFFF and chr(unicode).isalpha() and unicode > 127 and unicode not in aliases):
+                key = (trace['font_key'], gid)
                 if key not in glyph_definitions:
                     command = 'symbol' + letters(len(glyph_definitions))
-                    pen = OutlinePen(face['glyphs'])
-                    face['glyphs'][name].draw(pen)
+                    pen = OutlinePen(face.glyphs, face.units)
+                    face.glyphs[name].draw(pen)
                     definitions.append('\\newcommand{\\' + command + '}[1]{' + vector('q #1 0 0 #1 0 0 cm ' + ' '.join(pen.commands) + ' f Q') + '}')
                     glyph_definitions[key] = command
-                width = face['glyphs'][name].width / 1000 * trace['size']
+                width = face.width(gid) * trace['size']
                 return target, '\\' + glyph_definitions[key] + '{' + number(trace['size']) + '}\\kern' + number(width) + 'bp{}', width, None
             raise ValueError(f'Cannot export glyph U+{unicode:04X} in {trace["font"]} without an external font. Use Preserve original layout for this PDF.')
 
@@ -255,7 +279,7 @@ def convert_portable(data, filename):
                 body.append(f'\\put({number(x0)},{number(h-y1)}){{\\{command}}}')
             lines = {}
             for trace in page_traces:
-                if trace['type'] == 3:
+                if not visible(trace):
                     continue
                 if abs(trace['dir'][0]-1) > .001 or abs(trace['dir'][1]) > .001:
                     raise ValueError('Portable mode currently supports horizontal text. Use Preserve original layout for rotated text.')

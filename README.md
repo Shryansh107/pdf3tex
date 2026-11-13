@@ -97,6 +97,33 @@ The server binds to localhost by default. This is a personal local tool, with no
 
 ## Tests
 
+### Font reconstruction and editable source
+
+Layout mode associates every visible text trace with its actual MuPDF font
+program, identified by SHA-256. Different subsets with the same PostScript name
+remain separate, including on the same page. Observed Unicode/glyph pairs repair
+the exported font's character map. TrueType outlines and CFF hinting are retained;
+Type 1 programs are converted to OpenType. Damaged or unsupported fonts produce
+a conversion error rather than a silent substitution.
+
+Invisible OCR and zero-opacity text are omitted from visible reconstruction.
+Image stencils retain their paint color and transparency, and supported drawings,
+images, and text keep their paint order. Image-only layout exports remain scans.
+
+Words stay editable in the source. `\Spaced{word}{corrections}` keeps original
+letter spacing beside the word; edit its first argument normally. Fixed positions
+can overlap after longer edits, and embedded subsets may lack new letters.
+Fonts with missing or conflicting Unicode mappings use explicit character codes;
+these glyphs do not establish semantic text recovery.
+
+Portable mode selects standard Times, Helvetica, Courier, or known TeX faces
+using the original family and style. Common punctuation, accents, and ligatures
+remain text. Rare supported symbols can use inline outlines, normalized to the
+original font's units. Portable exports still contain only `main.tex`; scans,
+rotated text, and unsupported writing systems can require another mode.
+
+### Run the suite
+
 ```bash
 uv pip install --python .venv/bin/python pytest httpx
 .venv/bin/python -m pytest -q

@@ -1,51 +1,20 @@
-"""Reconstruct PDF text at its original coordinates rather than reflowing it."""
+"""Reconstruct visible PDF text with its actual fonts and glyph positions."""
 import base64
 from io import BytesIO
-import re
+import math
 from zipfile import ZipFile, ZIP_DEFLATED
 
 import pymupdf
 from pdf2tex import Utils
-from font_reconstruction import recover_type1
-from fontTools.t1Lib import T1Error
-from fontTools.ttLib import TTLibError
+from PIL import Image, ImageChops
 
-
-def unicode_codes(doc, xref):
-    mapping = {}
-    entry = doc.xref_get_key(xref, 'ToUnicode')[1]
-    if not entry.endswith(' R'):
-        return mapping
-    cmap = doc.xref_stream(int(entry.split()[0])).decode('latin1')
-    for section in re.findall(r'beginbfrange(.*?)endbfrange', cmap, re.S):
-        for start, end, first in re.findall(r'<([\dA-Fa-f]+)>\s*<([\dA-Fa-f]+)>\s*<([\dA-Fa-f]+)>', section):
-            for code in range(int(start, 16), min(int(end, 16) + 1, int(start, 16) + 256)):
-                mapping.setdefault(chr(int(first, 16) + code - int(start, 16)), code)
-    for section in re.findall(r'beginbfchar(.*?)endbfchar', cmap, re.S):
-        for code, value in re.findall(r'<([\dA-Fa-f]+)>\s*<([\dA-Fa-f]+)>', section):
-            try:
-                mapping.setdefault(bytes.fromhex(value).decode('utf-16-be'), int(code, 16))
-            except (ValueError, UnicodeError):
-                continue
-    return mapping
-
-
-def encoded_text(text, mapping):
-    # Keep normal words editable. Explicit character codes preserve the PDF's
-    # legacy-font punctuation encoding, rather than substituting Unicode glyphs.
-    out = []
-    for char in text:
-        if char.isascii() and (char.isalnum() or char in ' .,;:!?()-/+=@[]'):
-            out.append(char)
-        elif char in mapping:
-            out.append(r'\char"' + format(mapping[char], 'X') + '{}')
-        else:
-            out.append(Utils.escape_special_chars(char))
-    return ''.join(out)
+from font_reconstruction import FontError, recover_font
+from pdf_fonts import FontRegistry, visible
+from portable_converter import editable_words, letters
 
 
 def recovered_words(trace, font):
-    """Editable Unicode words with explicit corrections for PDF glyph spacing."""
+    """Compatibility helper for Type 1 words with explicit PDF kerning."""
     words, current = [], []
     for char in trace['chars']:
         unicode, gid, origin, _ = char
@@ -83,158 +52,166 @@ def recovered_words(trace, font):
         yield word[0][2], ''.join(content)
 
 
+def trace_lines(trace, font):
+    """Keep readable text runs while correcting advances along each baseline."""
+    dx, dy = trace['dir']
+    origin, parts, cursor = None, [], 0
+    size = trace['size']
+    for unicode, gid, point, _ in trace['chars']:
+        whitespace = 0 <= unicode <= 0x10FFFF and chr(unicode).isspace()
+        code = 32 if whitespace else font['codes'].get((unicode, gid))
+        if code is None:
+            continue
+        if origin is not None:
+            x, y = point[0] - origin[0], point[1] - origin[1]
+            along, across = x * dx + y * dy, -x * dy + y * dx
+            if abs(across) > .01 or along < cursor - size:
+                yield origin, editable_words(''.join(parts))
+                origin, parts, cursor = None, [], 0
+        if origin is None:
+            origin, along = point, 0
+        gap = along - cursor
+        if abs(gap) > .002:
+            parts.append(f'\\kern{gap:.5f}bp{{}}')
+        if code >= 0xF0000 or code in (127, 0x2028, 0x2029):
+            parts.append('\\char"' + format(code, 'X') + '{}')
+        else:
+            parts.append(Utils.escape_special_chars(chr(code)))
+        width = font['space'] if whitespace else font['advances'][gid] / 1000
+        cursor = along + width * size
+    if origin is not None:
+        yield origin, editable_words(''.join(parts))
+
+
+def rgb_color(value):
+    if isinstance(value, (int, float)):
+        value = (value,) * 3
+    return value if len(value) == 3 else (0, 0, 0)
+
+
+def image_asset(block, paint):
+    image = Image.open(BytesIO(block['image']))
+    if block.get('colorspace') == 0:
+        # Stencil PNG samples are coverage, not grayscale page pixels.
+        color = paint.get('color') or (0, 0, 0)
+        alpha = image.convert('L')
+        image = Image.new('RGBA', image.size, tuple(round(v * 255) for v in color))
+        image.putalpha(alpha)
+    else:
+        image = image.convert('RGBA')
+    if block.get('mask'):
+        mask = Image.open(BytesIO(block['mask'])).convert('L')
+        if mask.size != image.size:
+            mask = mask.resize(image.size, Image.Resampling.LANCZOS)
+        image.putalpha(ImageChops.multiply(image.getchannel('A'), mask))
+    opacity = paint.get('opacity', 1)
+    if opacity < 1:
+        image.putalpha(image.getchannel('A').point(lambda v: round(v * opacity)))
+    buffer = BytesIO()
+    image.save(buffer, format='PNG')
+    return buffer.getvalue()
+
+
 def convert_layout(data, filename):
-    doc = pymupdf.open(stream=data, filetype='pdf')
-    with doc:
+    with pymupdf.open(stream=data, filetype='pdf') as doc:
         if doc.needs_pass:
             raise ValueError('This PDF is password protected. Upload an unlocked copy.')
         if not 1 <= len(doc) <= 50:
             raise ValueError('Upload a PDF with 1–50 pages.')
         assets, body, definitions, warnings = {}, [], [], []
-        fonts, char_count, graphics, fallback_fonts = {}, 0, 0, set()
-        traces = [page.get_texttrace() for page in doc]
+        fonts, char_count, graphics = {}, 0, 0
+        registry = FontRegistry(doc)
         observed = {}
-        for page_traces in traces:
-            for trace in page_traces:
-                observed.setdefault(trace['font'], set()).update((c[0], c[1]) for c in trace['chars'])
-        recovered = {}
-        for page in doc:
-            for xref, ext, kind, name, *_ in page.get_fonts(full=True):
-                base = re.sub(r'^[A-Z]{6}\+', '', name)
-                if base in fonts:
-                    continue
-                mapping = unicode_codes(doc, xref)
-                legacy = bool(re.fullmatch(r'CM(?:R|BX|TI|SL|TT|CSC|SY|BSY|MI|EX|SS|SSI|SSBX)\d+', base, re.I))
-                if ext in ('pfa', 'pfb') and (not mapping or not legacy):
-                    key = f'font_{len(fonts)}'
-                    command = 'PDFfont' + ''.join(chr(97 + int(d)) for d in str(len(fonts)))
-                    try:
-                        data, codes, advances = recover_type1(doc.extract_font(xref)[3], 'Recovered' + str(xref), observed.get(base, set()))
-                    except (T1Error, TTLibError, ValueError, RuntimeError, KeyError, AssertionError, EOFError) as exc:
-                        warnings.append(f'Embedded font {base} could not be reconstructed ({exc}); using a substitute.')
-                        fonts[base] = ('fallback', '', {})
-                        continue
-                    assets[f'assets/{key}.otf'] = data
-                    definitions.append('\\newfontface\\' + command + '[Path=assets/]{' + key + '.otf}')
-                    fonts[base] = ('recovered', '\\' + command, {})
-                    recovered[base] = {'command': '\\' + command, 'codes': codes, 'advances': advances}
-                elif legacy:
-                    fonts[base] = ('legacy', base.lower(), unicode_codes(doc, xref))
-                elif ext in ('ttf', 'otf'):
-                    key = f'font_{len(fonts)}'
-                    asset = f'assets/{key}.{ext}'
-                    assets[asset] = doc.extract_font(xref)[3]
-                    command = 'PDFfont' + ''.join(chr(97 + int(d)) for d in str(len(fonts)))
-                    definitions.append('\\newfontface\\' + command + '[Path=assets/]{' + key + '.' + ext + '}')
-                    fonts[base] = ('unicode', '\\' + command, {})
-                else:
-                    fonts[base] = ('fallback', '', {})
+        for traces in registry.pages:
+            for trace in traces:
+                if visible(trace):
+                    observed.setdefault(trace['font_key'], set()).update((c[0], c[1]) for c in trace['chars'])
+        for identity, pairs in observed.items():
+            resource = registry.resources[identity]
+            try:
+                payload, codes, advances, space, extension = recover_font(resource.program(), 'PDF' + identity[:20], pairs)
+            except Exception as error:
+                # Substituting a damaged font makes a successful compile look
+                # trustworthy while silently changing its glyphs. Report it.
+                raise FontError(f'Cannot reconstruct font {resource.name}: {error}') from error
+            key = f'font_{len(fonts)}'
+            command = '\\PDFfont' + letters(len(fonts))
+            assets[f'assets/{key}.{extension}'] = payload
+            definitions.append('\\newfontface' + command + '[Path=assets/]{' + key + '.' + extension + '}')
+            fonts[identity] = {'command': command, 'codes': codes, 'advances': advances, 'space': space}
         w, h = doc[0].rect.width, doc[0].rect.height
         preamble = (f'% !TeX program = xelatex\n% Editable text placed at original PDF coordinates.\n'
                     '\\documentclass{article}\n\\usepackage{fontspec,graphicx,color}\n'
                     '\\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]\n'
-                    '\\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]\n'
                     f'\\usepackage[paperwidth={w:.5f}bp,paperheight={h:.5f}bp,margin=0bp]{{geometry}}\n'
                     '\\pagestyle{empty}\n\\setlength{\\parindent}{0pt}\n\\setlength{\\topskip}{0pt}\n'
                     '\\setlength{\\unitlength}{1bp}\n'
-                    '\\newcommand{\\PDFimage}[5]{\\put(#1,#2){\\IfFileExists{#5}'
-                    '{\\includegraphics[width=#3bp,height=#4bp]{#5}}{\\framebox(#3,#4){}}}}\n'
-                    '\\newcommand{\\PDFtext}[5]{\\put(#1,#2){\\makebox[0pt][l]{\\begingroup'
-                    '\\font\\PDFfont=#3 at #4bp\\PDFfont #5\\endgroup}}}\n'
-                    '\\newcommand{\\PDFunicode}[5]{\\put(#1,#2){\\makebox[0pt][l]{\\begingroup'
-                    '\\fontsize{#4bp}{#4bp}\\selectfont #3#5\\endgroup}}}\n'
-                    + '\n'.join(definitions) + '\n\\begin{document}\n')
+                    '\\newcommand{\\PageSize}[2]{\\setlength{\\paperwidth}{#1bp}\\setlength{\\paperheight}{#2bp}'
+                    '\\special{papersize=#1bp,#2bp}\\setlength{\\textwidth}{\\paperwidth}\\setlength{\\textheight}{\\paperheight}}\n'
+                    '\\newcommand{\\PDFimage}[5]{\\put(#1bp,#2bp){\\includegraphics[width=#3bp,height=#4bp]{#5}}}\n'
+                    '\\newcommand{\\PDFunicode}[5]{\\put(#1bp,#2bp){\\makebox[0pt][l]{\\begingroup'
+                    '#3\\fontsize{#4bp}{#4bp}\\selectfont #5\\endgroup}}}\n'
+                    '% Edit the word in the first argument; the second stores spacing.\n'
+                    '\\ExplSyntaxOn\n\\NewDocumentCommand{\\Spaced}{mm}{'
+                    '\\seq_set_split:Nnn \\l_tmpa_seq {,} {#2}'
+                    '\\tl_map_inline:nn {#1}{\\seq_pop_left:NN \\l_tmpa_seq \\l_tmpa_tl'
+                    '\\quark_if_no_value:NTF \\l_tmpa_tl {\\kern0bp}{\\kern\\l_tmpa_tl bp}##1}}\n'
+                    '\\ExplSyntaxOff\n' + '\n'.join(definitions) + '\n\\begin{document}\n')
         for number, page in enumerate(doc, 1):
             pw, ph = page.rect.width, page.rect.height
-            body.append(f'% Page {number}\n\\noindent\\begin{{picture}}({pw:.5f},{ph:.5f})')
-            # Lines remain vector rules rather than becoming a page screenshot.
+            body.append(f'% Page {number}\n\\PageSize{{{pw:.5f}}}{{{ph:.5f}}}\n\\noindent\\begin{{picture}}({pw:.5f}bp,{ph:.5f}bp)')
+            elements = []
+            def add(seqno, content):
+                elements.append((seqno, len(elements), content))
             for path in page.get_drawings():
                 for item in path['items']:
                     if item[0] == 're' and path['type'] == 'f':
                         rect = item[1]
-                        color = path.get('fill') or (0, 0, 0)
-                        body.append(f'\\put({rect.x0:.5f},{ph-rect.y1:.5f})'
+                        color = rgb_color(path.get('fill') or (0, 0, 0))
+                        add(path['seqno'], f'\\put({rect.x0:.5f}bp,{ph-rect.y1:.5f}bp)'
                                     f'{{\\color[rgb]{{{color[0]:.5f},{color[1]:.5f},{color[2]:.5f}}}'
                                     f'\\rule{{{rect.width:.5f}bp}}{{{rect.height:.5f}bp}}}}')
                     if item[0] == 'l' and abs(item[1].y - item[2].y) < .01:
                         x1, x2 = sorted([item[1].x, item[2].x])
                         thickness = max(path['width'] or .4, .1)
-                        color = path.get('color') or (0, 0, 0)
-                        body.append(f'\\put({x1:.5f},{ph-item[1].y-thickness/2:.5f})'
+                        color = rgb_color(path.get('color') or (0, 0, 0))
+                        add(path['seqno'], f'\\put({x1:.5f}bp,{ph-item[1].y-thickness/2:.5f}bp)'
                                     f'{{\\color[rgb]{{{color[0]:.5f},{color[1]:.5f},{color[2]:.5f}}}'
                                     f'\\rule{{{x2-x1:.5f}bp}}{{{thickness:.5f}bp}}}}')
+            paints = list(registry.images[number - 1])
             for block in page.get_text('dict', sort=False)['blocks']:
-                if block['type'] == 1:
-                    graphics += 1
-                    name = f'assets/page_{number}_image_{graphics}.png'
-                    pix = pymupdf.Pixmap(block['image'])
-                    if pix.colorspace and pix.colorspace.n > 3:
-                        pix = pymupdf.Pixmap(pymupdf.csRGB, pix)
-                    if block.get('mask'):
-                        pix = pymupdf.Pixmap(pix, pymupdf.Pixmap(block['mask']))
-                    assets[name] = pix.tobytes('png')
-                    x0,y0,x1,y1 = block['bbox']
-                    body.append(f'\\PDFimage{{{x0:.5f}}}{{{ph-y1:.5f}}}{{{x1-x0:.5f}}}{{{y1-y0:.5f}}}{{{name}}}')
+                if block['type'] != 1:
                     continue
-                for line in block.get('lines', []):
-                    for span in line['spans']:
-                        text = span['text']
-                        if not text.strip():
-                            continue
-                        char_count += len(text)
-                        x, y = span['origin']
-                        size = span['size']
-                        font = re.sub(r'^[A-Z]{6}\+', '', span['font'])
-                        kind, fontcommand, mapping = fonts.get(font, ('fallback', '', {}))
-                        if kind == 'recovered':
-                            continue
-                        rgb = pymupdf.sRGB_to_pdf(span['color'])
-                        color = f'\\color[rgb]{{{rgb[0]:.5f},{rgb[1]:.5f},{rgb[2]:.5f}}}'
-                        if kind == 'legacy':
-                            body.append(f'\\PDFtext{{{x:.5f}}}{{{ph-y:.5f}}}{{{fontcommand}}}{{{size:.5f}}}{{{color}{encoded_text(text, mapping)}}}')
-                        elif 'Awesome' in font or 'Symbol' in font:
-                            # Preserve tiny pictograms whose PDF Unicode map is
-                            # absent/wrong; body text is always reconstructed.
-                            graphics += 1
-                            name = f'assets/page_{number}_image_{graphics}.png'
-                            rect = pymupdf.Rect(span['bbox'])
-                            assets[name] = page.get_pixmap(matrix=pymupdf.Matrix(4,4), clip=rect, alpha=True).tobytes('png')
-                            body.append(f'\\PDFimage{{{rect.x0:.5f}}}{{{ph-rect.y1:.5f}}}{{{rect.width:.5f}}}{{{rect.height:.5f}}}{{{name}}}')
-                        else:
-                            if kind == 'fallback':
-                                fallback_fonts.add(font)
-                                fontcommand = r'\rmfamily'
-                                if any(name in font.lower() for name in ('helvetica','arial','sans')):
-                                    fontcommand = r'\sffamily'
-                                if span['flags'] & 2:
-                                    fontcommand += r'\itshape'
-                                if span['flags'] & 16:
-                                    fontcommand += r'\bfseries'
-                            body.append(f'\\PDFunicode{{{x:.5f}}}{{{ph-y:.5f}}}{{{fontcommand}}}{{{size:.5f}}}{{{color}{Utils.escape_special_chars(text)}}}')
-            for trace in traces[number - 1]:
-                font = recovered.get(trace['font'])
-                if not font or trace['type'] == 3:
+                graphics += 1
+                name = f'assets/page_{number}_image_{graphics}.png'
+                match = next((i for i, event in enumerate(paints) if max(abs(a-b) for a,b in zip(event['bbox'], block['bbox'])) < .05), None)
+                paint = paints.pop(match) if match is not None else {'seqno': 0}
+                assets[name] = image_asset(block, paint)
+                x0, y0, x1, y1 = block['bbox']
+                add(paint['seqno'], f'\\PDFimage{{{x0:.5f}}}{{{ph-y1:.5f}}}{{{x1-x0:.5f}}}{{{y1-y0:.5f}}}{{{name}}}')
+            for trace in registry.pages[number - 1]:
+                if not visible(trace):
                     continue
-                color = trace['color']
-                if isinstance(color, (int, float)):
-                    color = (color, color, color)
-                if len(color) != 3:
-                    color = (0, 0, 0)
+                font = fonts[trace['font_key']]
+                color = rgb_color(trace['color'])
                 style = f'\\color[rgb]{{{color[0]:.5f},{color[1]:.5f},{color[2]:.5f}}}'
-                for (x, y), content in recovered_words(trace, font):
-                    body.append(f'\\PDFunicode{{{x:.5f}}}{{{ph-y:.5f}}}{{{font["command"]}}}{{{trace["size"]:.5f}}}{{{style}{content}}}')
+                angle = -math.degrees(math.atan2(trace['dir'][1], trace['dir'][0]))
+                char_count += sum(not chr(c[0]).isspace() for c in trace['chars'] if 0 <= c[0] <= 0x10FFFF)
+                for (x, y), content in trace_lines(trace, font):
+                    if abs(angle) > .001:
+                        content = f'\\rotatebox[origin=Bl]{{{angle:.5f}}}{{{content}}}'
+                    add(trace['seqno'], f'\\PDFunicode{{{x:.5f}}}{{{ph-y:.5f}}}{{{font["command"]}}}{{{trace["size"]:.5f}}}{{{style}{content}}}')
+            body.extend(content for _, _, content in sorted(elements))
             body.append('\\end{picture}')
             if number != len(doc):
                 body.append('\\newpage')
-        for font in sorted(fallback_fonts):
-            warnings.append(f'Font {font} was substituted; visual comparison may show differences.')
         if not char_count:
-            warnings.append('This PDF has no editable text layer; its scanned images are preserved in layout mode. Use editable-text mode for OCR.')
+            warnings.append('This PDF has no visible editable text layer; its scanned images are preserved in layout mode. Use editable-text mode for OCR.')
         source = preamble + '\n'.join(body) + '\n\\end{document}\n'
         buffer = BytesIO()
         with ZipFile(buffer, 'w', ZIP_DEFLATED) as archive:
             archive.writestr('main.tex', source)
-            archive.writestr('README.txt', 'Compile main.tex with XeLaTeX. Text coordinates are preserved; edit the PDFtext/PDFunicode content. Keep assets/ beside main.tex.\n')
+            archive.writestr('README.txt', 'Compile main.tex with XeLaTeX. Edit PDFunicode text or the first argument of Spaced. Keep assets/ beside main.tex. Fonts retain the PDF glyphs; subsets may lack letters needed for new text.\n')
             for name, content in assets.items():
                 archive.writestr(name, content)
         return {'tex': source, 'zip': base64.b64encode(buffer.getvalue()).decode(),
