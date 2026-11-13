@@ -1,0 +1,11 @@
+# Pin the project matching the screenshot, rather than the unrelated PyPI 0.2 package.
+pdf2tex @ git+https://github.com/p3nGu1nZz/pdf2tex.git@a5d6f7c62ae6f8922bfffb2a5e38dae6a365c7cb
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+python-multipart>=0.0.20,<1
+scikit-image>=0.25,<1
+scipy>=1.15,<2
+fonttools>=4.58,<5
+numpy>=2,<4
+pillow>=11,<15
+opencv-python-headless>=4.10,<6
