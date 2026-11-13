@@ -208,3 +208,15 @@ def test_compiled_cid_subsets_can_be_reconstructed_again():
     result = convert_pdf(original, 'cid-subset.pdf', 'layout')
     second = compile_latex(result['tex'], result['zip'], first['pdf'])
     assert second['comparison']['similarity'] >= 95, second['comparison']
+
+
+@engine
+def test_leading_and_repeated_spaces_keep_glyph_positions():
+    with pymupdf.open() as doc:
+        page = doc.new_page()
+        page.insert_text((72,100), '  leading  spaces stay visible', fontsize=12)
+        source = doc.tobytes()
+    result = convert_pdf(source, 'spaces.pdf', 'layout')
+    assert r'\ \ leading\ \ spaces\ stay\ visible' in result['tex']
+    compiled = compile_latex(result['tex'], result['zip'], base64.b64encode(source).decode())
+    assert compiled['comparison']['similarity'] >= 95, compiled['comparison']

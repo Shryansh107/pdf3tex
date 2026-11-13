@@ -52,7 +52,7 @@ def test_layout_keeps_dimensions_coordinates_and_editable_text():
     assert result['mode'] == 'layout'
     assert 'paperwidth=612.00000bp,paperheight=792.00000bp' in result['tex']
     assert r'\PDFunicode{72.00000}{692.00000}' in result['tex']
-    assert 'An editable document heading' in result['tex']
+    assert r'An\ editable\ document\ heading' in result['tex']
     assert r'\rule{530.00000bp}' in result['tex']
     with ZipFile(BytesIO(base64.b64decode(result['zip']))) as archive:
         assert not any(name.endswith('.pdf') for name in archive.namelist())

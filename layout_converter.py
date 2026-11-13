@@ -73,7 +73,9 @@ def trace_lines(trace, font):
         gap = along - cursor
         if abs(gap) > .002:
             parts.append(f'\\kern{gap:.5f}bp{{}}')
-        if code >= 0xF0000 or code in (127, 0x2028, 0x2029):
+        if whitespace:
+            parts.append(r'\ ')
+        elif code >= 0xF0000 or code in (127, 0x2028, 0x2029):
             parts.append('\\char"' + format(code, 'X') + '{}')
         else:
             parts.append(Utils.escape_special_chars(chr(code)))

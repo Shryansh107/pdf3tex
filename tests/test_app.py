@@ -28,7 +28,7 @@ def test_upload_returns_escaped_source_and_complete_project():
     response = client.post('/api/convert', data={'mode':'layout'}, files={'file': ('paper.pdf', pdf_bytes(image=True), 'application/pdf')})
     assert response.status_code == 200
     result = response.json()
-    assert r'Research \& results: 50\% improvement' in result['tex']
+    assert r'Research\ \&\ results:\ 50\%\ improvement' in result['tex']
     assert result['pages'] == 1 and result['images'] == 1 and result['ocr_pages'] == 0
     assert '<pdf2tex.' not in result['tex']
     with ZipFile(BytesIO(base64.b64decode(result['zip']))) as archive:
