@@ -1,0 +1,349 @@
+{
+  "completed_utc": "2026-11-13T07:27:54.353794+00:00",
+  "dataset_audit": {
+    "pdf_files": 1076,
+    "distinct_hashes": 1075,
+    "metadata_rows": 1000,
+    "matched_metadata_hashes": 1000,
+    "missing_metadata_hashes": 0,
+    "additional_distinct_hashes": 75
+  },
+  "outcomes": {
+    "layout": {
+      "LaTeX/compiler failure": 113,
+      "Compiled below visual target": 847,
+      "Upload/page limit": 50,
+      "Generated source/project exceeds compile limits": 16,
+      "Unhandled converter error": 25,
+      "Meets visual target": 8,
+      "Password protected": 1,
+      "Other conversion failure": 10,
+      "Invalid PDF header": 1,
+      "Generated asset bundle exceeds compile limits": 4,
+      "Conversion phase timeout (240s)": 1
+    },
+    "portable": {
+      "Unsupported glyph/font": 411,
+      "Scan/no supported visible text layer": 214,
+      "Compiled below visual target": 123,
+      "Upload/page limit": 50,
+      "Meets visual target": 119,
+      "Rotated text": 83,
+      "Generated source/project exceeds compile limits": 37,
+      "Password protected": 1,
+      "Other conversion failure": 10,
+      "Unhandled converter error": 20,
+      "Invalid PDF header": 1,
+      "LaTeX/compiler failure": 7
+    }
+  },
+  "cohorts": {
+    "Library of Congress metadata": {
+      "layout": {
+        "documents": 1000,
+        "target": 95,
+        "statuses": {
+          "success": 822,
+          "compile_failed": 90,
+          "input_rejected": 51,
+          "conversion_failed": 36,
+          "timeout": 1
+        },
+        "compiled": 822,
+        "compiled_percent": 82.2,
+        "passed": 8,
+        "pass_percent": 0.8,
+        "dataset_score": 26.638,
+        "grade": "F",
+        "eligible_documents": 949,
+        "eligible_dataset_score": 28.07,
+        "successful_mean_lowest_page_ssim": 32.407,
+        "successful_mean_page_ssim": 37.336,
+        "successful_mean_text_token_f1": 95.621,
+        "image_only_successes": 94
+      },
+      "portable": {
+        "documents": 1000,
+        "target": 90,
+        "statuses": {
+          "success": 237,
+          "conversion_failed": 705,
+          "input_rejected": 51,
+          "compile_failed": 7
+        },
+        "compiled": 237,
+        "compiled_percent": 23.7,
+        "passed": 116,
+        "pass_percent": 11.6,
+        "dataset_score": 18.915,
+        "grade": "F",
+        "eligible_documents": 949,
+        "eligible_dataset_score": 19.931,
+        "successful_mean_lowest_page_ssim": 79.81,
+        "successful_mean_page_ssim": 80.996,
+        "successful_mean_text_token_f1": 97.77,
+        "image_only_successes": 0
+      }
+    },
+    "Additional PDFs": {
+      "layout": {
+        "documents": 76,
+        "target": 95,
+        "statuses": {
+          "compile_failed": 43,
+          "success": 33
+        },
+        "compiled": 33,
+        "compiled_percent": 43.421,
+        "passed": 0,
+        "pass_percent": 0.0,
+        "dataset_score": 19.872,
+        "grade": "F",
+        "eligible_documents": 76,
+        "eligible_dataset_score": 19.872,
+        "successful_mean_lowest_page_ssim": 45.766,
+        "successful_mean_page_ssim": 57.701,
+        "successful_mean_text_token_f1": 96.57,
+        "image_only_successes": 0
+      },
+      "portable": {
+        "documents": 76,
+        "target": 90,
+        "statuses": {
+          "conversion_failed": 71,
+          "success": 5
+        },
+        "compiled": 5,
+        "compiled_percent": 6.579,
+        "passed": 3,
+        "pass_percent": 3.947,
+        "dataset_score": 5.001,
+        "grade": "F",
+        "eligible_documents": 76,
+        "eligible_dataset_score": 5.001,
+        "successful_mean_lowest_page_ssim": 76.017,
+        "successful_mean_page_ssim": 90.322,
+        "successful_mean_text_token_f1": 97.314,
+        "image_only_successes": 0
+      }
+    }
+  },
+  "page_count_mismatches": 0,
+  "duplicate_consistency": [
+    {
+      "sha256": "60e24df4378b73bdfef989b033655ea0d2ad9cffe47101782e80ec5a5fee3578",
+      "mode": "layout",
+      "inputs": [
+        "Pdf/536b64435024c919d6b4c3f5819a889d0607f349 (1).pdf",
+        "Pdf/536b64435024c919d6b4c3f5819a889d0607f349.pdf"
+      ],
+      "matching_status_and_metrics": true
+    },
+    {
+      "sha256": "60e24df4378b73bdfef989b033655ea0d2ad9cffe47101782e80ec5a5fee3578",
+      "mode": "portable",
+      "inputs": [
+        "Pdf/536b64435024c919d6b4c3f5819a889d0607f349 (1).pdf",
+        "Pdf/536b64435024c919d6b4c3f5819a889d0607f349.pdf"
+      ],
+      "matching_status_and_metrics": true
+    }
+  ],
+  "examples": {
+    "2A2C2V4WI5YRDJHR26XUD4IAULIYGTMA": {
+      "layout": {
+        "input": "Pdf/2A2C2V4WI5YRDJHR26XUD4IAULIYGTMA.pdf",
+        "status": "success",
+        "metrics": {
+          "similarity": 31.349,
+          "target": 95,
+          "matches": false,
+          "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+          "pages": [
+            {
+              "page": 1,
+              "similarity": 42.376
+            },
+            {
+              "page": 2,
+              "similarity": 31.349
+            },
+            {
+              "page": 3,
+              "similarity": 32.753
+            }
+          ],
+          "mean_page_similarity": 35.493,
+          "original_pages": 3,
+          "compiled_pages": 3,
+          "reference_tokens": 1163,
+          "compiled_tokens": 1163,
+          "text_token_precision": 100.0,
+          "text_token_recall": 100.0,
+          "text_token_f1": 100.0
+        },
+        "error": null
+      },
+      "portable": {
+        "input": "Pdf/2A2C2V4WI5YRDJHR26XUD4IAULIYGTMA.pdf",
+        "status": "success",
+        "metrics": {
+          "similarity": 99.895,
+          "target": 90,
+          "matches": true,
+          "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+          "pages": [
+            {
+              "page": 1,
+              "similarity": 99.898
+            },
+            {
+              "page": 2,
+              "similarity": 99.895
+            },
+            {
+              "page": 3,
+              "similarity": 99.918
+            }
+          ],
+          "mean_page_similarity": 99.904,
+          "original_pages": 3,
+          "compiled_pages": 3,
+          "reference_tokens": 1163,
+          "compiled_tokens": 1163,
+          "text_token_precision": 100.0,
+          "text_token_recall": 100.0,
+          "text_token_f1": 100.0
+        },
+        "error": null
+      }
+    },
+    "ESIAEQENN4LMSOASECP7GLHB4TQ6IDPB": {
+      "layout": {
+        "input": "Pdf/ESIAEQENN4LMSOASECP7GLHB4TQ6IDPB.pdf",
+        "status": "success",
+        "metrics": {
+          "similarity": 99.998,
+          "target": 95,
+          "matches": true,
+          "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+          "pages": [
+            {
+              "page": 1,
+              "similarity": 99.998
+            },
+            {
+              "page": 2,
+              "similarity": 99.999
+            },
+            {
+              "page": 3,
+              "similarity": 99.999
+            },
+            {
+              "page": 4,
+              "similarity": 99.999
+            },
+            {
+              "page": 5,
+              "similarity": 99.999
+            },
+            {
+              "page": 6,
+              "similarity": 99.999
+            },
+            {
+              "page": 7,
+              "similarity": 99.999
+            },
+            {
+              "page": 8,
+              "similarity": 99.999
+            },
+            {
+              "page": 9,
+              "similarity": 99.999
+            },
+            {
+              "page": 10,
+              "similarity": 99.999
+            },
+            {
+              "page": 11,
+              "similarity": 99.999
+            },
+            {
+              "page": 12,
+              "similarity": 99.999
+            },
+            {
+              "page": 13,
+              "similarity": 99.998
+            }
+          ],
+          "mean_page_similarity": 99.999,
+          "original_pages": 13,
+          "compiled_pages": 13,
+          "reference_tokens": 0,
+          "compiled_tokens": 0,
+          "text_token_precision": null,
+          "text_token_recall": null,
+          "text_token_f1": null
+        },
+        "error": null
+      },
+      "portable": {
+        "input": "Pdf/ESIAEQENN4LMSOASECP7GLHB4TQ6IDPB.pdf",
+        "status": "conversion_failed",
+        "metrics": null,
+        "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+      }
+    },
+    "3I3G2ZKLILXKCZTX77LVBWNF5IR2ZM7E": {
+      "layout": {
+        "input": "Pdf/3I3G2ZKLILXKCZTX77LVBWNF5IR2ZM7E.pdf",
+        "status": "success",
+        "metrics": {
+          "similarity": 0,
+          "target": 95,
+          "matches": false,
+          "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+          "pages": [
+            {
+              "page": 1,
+              "similarity": 0.238
+            },
+            {
+              "page": 2,
+              "similarity": 0
+            }
+          ],
+          "mean_page_similarity": 0.119,
+          "original_pages": 2,
+          "compiled_pages": 2,
+          "reference_tokens": 433,
+          "compiled_tokens": 429,
+          "text_token_precision": 98.834,
+          "text_token_recall": 97.921,
+          "text_token_f1": 98.376
+        },
+        "error": null
+      },
+      "portable": {
+        "input": "Pdf/3I3G2ZKLILXKCZTX77LVBWNF5IR2ZM7E.pdf",
+        "status": "conversion_failed",
+        "metrics": null,
+        "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+      },
+      "trace_audit": {
+        "original_trace_types": {
+          "3": 400
+        },
+        "compiled_layout_trace_types": {
+          "0": 83
+        },
+        "meaning": "Invisible source OCR text becomes visible in layout output."
+      }
+    }
+  }
+}

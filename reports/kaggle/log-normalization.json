@@ -1,0 +1,8 @@
+{
+  "reason": "Remove echoed request payloads from validation diagnostics; no changes to converter, compiler, metric, status or scores.",
+  "from_run_fingerprint": "810decdaafd1bfcc45bccb127e55e8df8eaf3477eb3d94fbcf1ece6a30c2db5a",
+  "to_run_fingerprint": "7080f34ac43fbd5572be4505327aff65cad2fb6149e54bf6442656c4a0a440b6",
+  "completed_measurements_preserved": 682,
+  "validation_errors_compacted": 7,
+  "measurement_sha256_before_and_after": "5659ba139e8c057601d4de5a6ac327b85746f300f2d3f37dec19553727bae500"
+}

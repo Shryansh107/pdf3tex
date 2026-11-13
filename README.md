@@ -108,7 +108,14 @@ With the compiler image installed, the suite also exercises the real `/api/compi
 
 For real compilation regression tests, install Tectonic and run `LATEX_COMPILER=/path/to/tectonic .venv/bin/python -m pytest tests/test_compilation.py -q`. You can also point `LATEX_COMPILER` at `pdflatex`; the Unicode-only test is skipped for that engine.
 
-## Benchmark another MCP project
+## Evaluate a PDF dataset
+
+The [full Kaggle evaluation](reports/kaggle/FINDINGS.md) covers all 1,076 PDFs.
+Portable mode scores **17.932% (F)** and layout mode **26.161% (F)** across the
+dataset, averaging each document's lowest page SSIM and counting failures and
+rejections as zero. Portable compiles 242 inputs and meets its 90% target on 119;
+layout compiles 855 and meets its 95% target on 8. See the report for successful
+document scores, text retention, limitations, and concrete failure examples.
 
 For a dataset evaluation of this app alone, install both compiler images, put
 the input PDFs under the ignored `data/` directory, and run:
@@ -123,11 +130,14 @@ under `output/` and writes a compact report and JSON results under `reports/`.
 Failed and rejected documents count as zero in the overall score; successful
 document scores and text token retention are also reported separately. Two
 isolated worker processes run by default; use `--workers 1` for a serial run.
-Matching completed results resume automatically. See `--help` for options.
+Matching completed results resume automatically. Use fresh output and report
+directories for a separate experiment. See `--help` for options.
 
 Docker compilation supports Linux and Windows with Docker Desktop using Linux
 containers. The shell compiler installers require Linux; on Windows the
 pdfLaTeX image can be built with `docker build -t pdf3tex-pdflatex:local -f compiler/Dockerfile.pdflatex compiler`.
+
+## Benchmark another MCP project
 
 `scripts/benchmark.py` compares PDFs in a folder using this running server and the separate Lattedit MCP CLI project. It writes sources, compiled PDFs, logs, per-page foreground SSIM, token recall/precision/F1, and failure details under an output directory. Neither converter is edited. Use a new output directory per benchmark:
 
