@@ -50,6 +50,15 @@ def grade(score):
                 if score >= threshold)
 
 
+def validation_error_summary(detail):
+    # Pydantic includes the rejected input in validation errors. That may be a
+    # multi-megabyte TeX source or base64 asset bundle, not useful diagnostics.
+    if isinstance(detail, list):
+        return [{key: error[key] for key in ('type', 'loc', 'msg') if key in error}
+                for error in detail]
+    return detail
+
+
 def tokens(document):
     return Counter(re.findall(r'\w+', ' '.join(page.get_text() for page in document).casefold()))
 
@@ -118,7 +127,7 @@ def evaluate(client, path, entry, mode, directory, stage_callback=lambda stage: 
     record['compile_http_status'] = response.status_code
     record['seconds'] = round(time.monotonic() - start, 3)
     if response.status_code != 200:
-        detail = response.json().get('detail')
+        detail = validation_error_summary(response.json().get('detail'))
         if isinstance(detail, dict):
             (directory / 'compile.log').write_text(detail.get('log', ''), encoding='utf-8')
             detail = detail.get('message', detail)
@@ -247,6 +256,8 @@ def aggregate(records, inventory):
 
 
 def write_reports(directory, manifest, records):
+    records = [record | {'error': validation_error_summary(record['error'])}
+               if 'error' in record else record for record in records]
     summary = aggregate(records, manifest['inputs'])
     save_json(directory / 'results.json', {'manifest': manifest, 'summary': summary, 'results': records})
     lines = ['# Kaggle PDF conversion evaluation', '', f"Dataset: [{manifest['dataset']}]({manifest['dataset']})", '',
@@ -339,9 +350,13 @@ def main():
             result_file = directory / 'result.json'
             cached = json.loads(result_file.read_text(encoding='utf-8')) if result_file.exists() else {}
             if cached.get('run_fingerprint') == run_fingerprint and cached.get('sha256') == entry['sha256']:
+                if 'error' in cached:
+                    cached['error'] = validation_error_summary(cached['error'])
                 records.append(cached)
             else:
                 pending.append(((path, entry, mode, directory), result_file))
+    manifest['resumed_jobs'] = len(records)
+    save_json(output / 'manifest.json', manifest)
     for result_file, record in run_jobs(pending, args.workers, args.phase_timeout):
         record.update(pipeline_sha256=manifest['pipeline_sha256'], run_fingerprint=run_fingerprint)
         save_json(result_file, record)

@@ -5,7 +5,7 @@ import pymupdf
 import pytest
 
 import compiler
-from scripts.evaluate_dataset import aggregate, text_metrics
+from scripts.evaluate_dataset import aggregate, text_metrics, validation_error_summary
 
 
 @pytest.mark.parametrize('system, expected', [('nt', []), ('posix', ['--user', '1000:1001'])])
@@ -58,3 +58,13 @@ def test_text_metric_has_no_ground_truth_for_image_only_pdf():
     assert result['reference_tokens'] == 0
     assert result['text_token_f1'] is None
     assert result['text_token_recall'] is None
+
+
+def test_validation_diagnostics_omit_submitted_source_and_assets():
+    error = [{'type': 'string_too_long', 'loc': ['body', 'project_zip'],
+              'msg': 'String should have at most 70000000 characters',
+              'input': 'base64 project contents', 'ctx': {'max_length': 70000000}}]
+    compact = validation_error_summary(error)
+    assert compact == [{key: error[0][key] for key in ('type', 'loc', 'msg')}]
+    assert 'base64 project contents' not in str(compact)
+    assert validation_error_summary('Compilation failed') == 'Compilation failed'
