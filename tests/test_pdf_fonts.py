@@ -220,3 +220,27 @@ def test_leading_and_repeated_spaces_keep_glyph_positions():
     assert r'\ \ leading\ \ spaces\ stay\ visible' in result['tex']
     compiled = compile_latex(result['tex'], result['zip'], base64.b64encode(source).decode())
     assert compiled['comparison']['similarity'] >= 95, compiled['comparison']
+
+
+def test_uniform_paper_sizes_keep_the_existing_page_macro():
+    source = duplicate_name_pdf(second_page=True)
+    result = convert_pdf(source, 'uniform.pdf', 'layout')
+    assert '@colht' not in result['tex']
+    assert r'\setlength{\textheight}{\paperheight}}' in result['tex']
+
+
+@engine
+def test_mixed_paper_sizes_preserve_page_count_dimensions_and_positions():
+    sizes = [(612,792), (595,842), (300,200), (610,789), (612,792)]
+    with pymupdf.open() as doc:
+        for width,height in sizes:
+            doc.new_page(width=width,height=height).insert_text((72,100), 'Editable mixed size page', fontsize=12)
+        source = doc.tobytes()
+    result = convert_pdf(source, 'mixed.pdf', 'layout')
+    assert '@colht' in result['tex']
+    compiled = compile_latex(result['tex'], result['zip'], base64.b64encode(source).decode())
+    assert compiled['comparison']['similarity'] >= 95, compiled['comparison']
+    with pymupdf.open(stream=base64.b64decode(compiled['pdf']), filetype='pdf') as output:
+        assert len(output) == len(sizes)
+        for page,size in zip(output,sizes):
+            assert (page.rect.width,page.rect.height) == pytest.approx(size, abs=.01)

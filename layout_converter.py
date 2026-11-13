@@ -142,6 +142,12 @@ def convert_layout(data, filename):
             definitions.append('\\newfontface' + command + '[Path=assets/]{' + key + '.' + extension + '}')
             fonts[identity] = {'command': command, 'codes': codes, 'advances': advances, 'space': space}
         w, h = doc[0].rect.width, doc[0].rect.height
+        page_sizes = {(f'{page.rect.width:.5f}', f'{page.rect.height:.5f}') for page in doc}
+        # LaTeX caches the available column height after each page break.
+        # Update it when the next picture has a different paper size.
+        resize_columns = ('\\global\\csname @colht\\endcsname=\\textheight\\global\\csname @colroom\\endcsname=\\textheight'
+                          '\\vsize=\\textheight\\hsize=\\textwidth'
+                          '\\linewidth=\\textwidth\\columnwidth=\\textwidth') if len(page_sizes) > 1 else ''
         preamble = (f'% !TeX program = xelatex\n% Editable text placed at original PDF coordinates.\n'
                     '\\documentclass{article}\n\\usepackage{fontspec,graphicx,color}\n'
                     '\\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]\n'
@@ -149,7 +155,8 @@ def convert_layout(data, filename):
                     '\\pagestyle{empty}\n\\setlength{\\parindent}{0pt}\n\\setlength{\\topskip}{0pt}\n'
                     '\\setlength{\\unitlength}{1bp}\n'
                     '\\newcommand{\\PageSize}[2]{\\setlength{\\paperwidth}{#1bp}\\setlength{\\paperheight}{#2bp}'
-                    '\\special{papersize=#1bp,#2bp}\\setlength{\\textwidth}{\\paperwidth}\\setlength{\\textheight}{\\paperheight}}\n'
+                    '\\special{papersize=#1bp,#2bp}\\setlength{\\textwidth}{\\paperwidth}\\setlength{\\textheight}{\\paperheight}'
+                    + resize_columns + '}\n'
                     '\\newcommand{\\PDFimage}[5]{\\put(#1bp,#2bp){\\includegraphics[width=#3bp,height=#4bp]{#5}}}\n'
                     '\\newcommand{\\PDFunicode}[5]{\\put(#1bp,#2bp){\\makebox[0pt][l]{\\begingroup'
                     '#3\\fontsize{#4bp}{#4bp}\\selectfont #5\\endgroup}}}\n'
