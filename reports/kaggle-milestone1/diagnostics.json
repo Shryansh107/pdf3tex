@@ -1,0 +1,1325 @@
+{
+  "completed_utc": "2026-11-13T10:52:30.262670+00:00",
+  "outcomes": {
+    "layout": {
+      "Compiled below visual target": 391,
+      "Meets visual target": 492,
+      "LaTeX/compiler failure": 83,
+      "Upload/page limit": 50,
+      "Source/project exceeds compile limits": 15,
+      "Password protected": 1,
+      "Font program cannot be reconstructed": 29,
+      "Invalid PDF header": 1,
+      "Asset bundle exceeds compile limits": 4,
+      "Unhandled converter error": 2,
+      "Phase timeout": 1,
+      "Other conversion failure": 7
+    },
+    "portable": {
+      "Compiled below visual target": 314,
+      "Source/project exceeds compile limits": 78,
+      "Scan/no supported visible text layer": 214,
+      "Meets visual target": 275,
+      "Upload/page limit": 50,
+      "Rotated text": 99,
+      "LaTeX/compiler failure": 13,
+      "Unsupported portable glyph/font": 17,
+      "Password protected": 1,
+      "Other conversion failure": 10,
+      "Invalid PDF header": 1,
+      "Unhandled converter error": 3,
+      "Phase timeout": 1
+    }
+  },
+  "page_count_mismatches": [],
+  "duplicate_audit": [
+    {
+      "sha256": "60e24df4378b73bdfef989b033655ea0d2ad9cffe47101782e80ec5a5fee3578",
+      "mode": "layout",
+      "consistent": true
+    },
+    {
+      "sha256": "60e24df4378b73bdfef989b033655ea0d2ad9cffe47101782e80ec5a5fee3578",
+      "mode": "portable",
+      "consistent": true
+    }
+  ],
+  "examples": {
+    "2A2C2V4WI5YRDJHR26XUD4IAULIYGTMA": {
+      "before": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 31.349,
+            "target": 95,
+            "matches": false,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 42.376
+              },
+              {
+                "page": 2,
+                "similarity": 31.349
+              },
+              {
+                "page": 3,
+                "similarity": 32.753
+              }
+            ],
+            "mean_page_similarity": 35.493,
+            "original_pages": 3,
+            "compiled_pages": 3,
+            "reference_tokens": 1163,
+            "compiled_tokens": 1163,
+            "text_token_precision": 100.0,
+            "text_token_recall": 100.0,
+            "text_token_f1": 100.0
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "success",
+          "metrics": {
+            "similarity": 99.895,
+            "target": 90,
+            "matches": true,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 99.898
+              },
+              {
+                "page": 2,
+                "similarity": 99.895
+              },
+              {
+                "page": 3,
+                "similarity": 99.918
+              }
+            ],
+            "mean_page_similarity": 99.904,
+            "original_pages": 3,
+            "compiled_pages": 3,
+            "reference_tokens": 1163,
+            "compiled_tokens": 1163,
+            "text_token_precision": 100.0,
+            "text_token_recall": 100.0,
+            "text_token_f1": 100.0
+          },
+          "error": null
+        }
+      },
+      "after": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 99.921,
+            "target": 95,
+            "matches": true,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 99.921
+              },
+              {
+                "page": 2,
+                "similarity": 99.955
+              },
+              {
+                "page": 3,
+                "similarity": 99.968
+              }
+            ],
+            "mean_page_similarity": 99.948,
+            "original_pages": 3,
+            "compiled_pages": 3,
+            "reference_tokens": 1163,
+            "compiled_tokens": 1163,
+            "text_token_precision": 100.0,
+            "text_token_recall": 100.0,
+            "text_token_f1": 100.0
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "success",
+          "metrics": {
+            "similarity": 99.895,
+            "target": 90,
+            "matches": true,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 99.898
+              },
+              {
+                "page": 2,
+                "similarity": 99.895
+              },
+              {
+                "page": 3,
+                "similarity": 99.918
+              }
+            ],
+            "mean_page_similarity": 99.904,
+            "original_pages": 3,
+            "compiled_pages": 3,
+            "reference_tokens": 1163,
+            "compiled_tokens": 1163,
+            "text_token_precision": 100.0,
+            "text_token_recall": 100.0,
+            "text_token_f1": 100.0
+          },
+          "error": null
+        }
+      }
+    },
+    "3I3G2ZKLILXKCZTX77LVBWNF5IR2ZM7E": {
+      "before": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 0,
+            "target": 95,
+            "matches": false,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 0.238
+              },
+              {
+                "page": 2,
+                "similarity": 0
+              }
+            ],
+            "mean_page_similarity": 0.119,
+            "original_pages": 2,
+            "compiled_pages": 2,
+            "reference_tokens": 433,
+            "compiled_tokens": 429,
+            "text_token_precision": 98.834,
+            "text_token_recall": 97.921,
+            "text_token_f1": 98.376
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "conversion_failed",
+          "metrics": null,
+          "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+        }
+      },
+      "after": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 86.262,
+            "target": 95,
+            "matches": false,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 87.27
+              },
+              {
+                "page": 2,
+                "similarity": 86.262
+              }
+            ],
+            "mean_page_similarity": 86.766,
+            "original_pages": 2,
+            "compiled_pages": 2,
+            "reference_tokens": 433,
+            "compiled_tokens": 0,
+            "text_token_precision": 0,
+            "text_token_recall": 0.0,
+            "text_token_f1": 0
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "conversion_failed",
+          "metrics": null,
+          "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+        }
+      },
+      "trace_types": {
+        "original": {
+          "3": 400
+        },
+        "compiled": {}
+      }
+    },
+    "ESIAEQENN4LMSOASECP7GLHB4TQ6IDPB": {
+      "before": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 99.998,
+            "target": 95,
+            "matches": true,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 99.998
+              },
+              {
+                "page": 2,
+                "similarity": 99.999
+              },
+              {
+                "page": 3,
+                "similarity": 99.999
+              },
+              {
+                "page": 4,
+                "similarity": 99.999
+              },
+              {
+                "page": 5,
+                "similarity": 99.999
+              },
+              {
+                "page": 6,
+                "similarity": 99.999
+              },
+              {
+                "page": 7,
+                "similarity": 99.999
+              },
+              {
+                "page": 8,
+                "similarity": 99.999
+              },
+              {
+                "page": 9,
+                "similarity": 99.999
+              },
+              {
+                "page": 10,
+                "similarity": 99.999
+              },
+              {
+                "page": 11,
+                "similarity": 99.999
+              },
+              {
+                "page": 12,
+                "similarity": 99.999
+              },
+              {
+                "page": 13,
+                "similarity": 99.998
+              }
+            ],
+            "mean_page_similarity": 99.999,
+            "original_pages": 13,
+            "compiled_pages": 13,
+            "reference_tokens": 0,
+            "compiled_tokens": 0,
+            "text_token_precision": null,
+            "text_token_recall": null,
+            "text_token_f1": null
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "conversion_failed",
+          "metrics": null,
+          "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+        }
+      },
+      "after": {
+        "layout": {
+          "status": "success",
+          "metrics": {
+            "similarity": 99.998,
+            "target": 95,
+            "matches": true,
+            "metric": "Foreground SSIM at up to 144 dpi (2200px cap); lowest page score. Blank margins excluded.",
+            "pages": [
+              {
+                "page": 1,
+                "similarity": 99.998
+              },
+              {
+                "page": 2,
+                "similarity": 99.999
+              },
+              {
+                "page": 3,
+                "similarity": 99.999
+              },
+              {
+                "page": 4,
+                "similarity": 99.999
+              },
+              {
+                "page": 5,
+                "similarity": 99.999
+              },
+              {
+                "page": 6,
+                "similarity": 99.999
+              },
+              {
+                "page": 7,
+                "similarity": 99.999
+              },
+              {
+                "page": 8,
+                "similarity": 99.999
+              },
+              {
+                "page": 9,
+                "similarity": 99.999
+              },
+              {
+                "page": 10,
+                "similarity": 99.999
+              },
+              {
+                "page": 11,
+                "similarity": 99.999
+              },
+              {
+                "page": 12,
+                "similarity": 99.999
+              },
+              {
+                "page": 13,
+                "similarity": 99.998
+              }
+            ],
+            "mean_page_similarity": 99.999,
+            "original_pages": 13,
+            "compiled_pages": 13,
+            "reference_tokens": 0,
+            "compiled_tokens": 0,
+            "text_token_precision": null,
+            "text_token_recall": null,
+            "text_token_f1": null
+          },
+          "error": null
+        },
+        "portable": {
+          "status": "conversion_failed",
+          "metrics": null,
+          "error": "Page 1 has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX."
+        }
+      }
+    }
+  },
+  "lost_compiles": {
+    "layout": [
+      {
+        "input": "Pdf/2F73J4NP2YHKVISKHDIDJ7RGPDKTQZ7D.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/3IFL3YAHHYK5PMUEVWZZ2PHZ7TYPPTET.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/3PILGMQ4BBDRSLAPZCPVAHBNX53K2NUJ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/44CC3S6FHPO5OFLW26RYVMNN3CLMBFU5.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/5DRAZXKISWU5KHFNDUABKC7KUKS6IXDK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/666HXEHN6OLTL3QKGACG3DJ7UL4L5NWL.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/6QJJJ7KLDUS7SZA75TV36J7KF4BXERLH.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/6Z3CUWVPRPVEBPROWQCD6EZJ22CLL5OY.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/74e685ae7e7ff7d88ce66cc6cb6ba62d54c2300a.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font MCUQAC+Roboto-Bold: ValueError: Nonstandard Type 1 font matrix requires an explicit transform",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/A7KSCZYZQUBH6PEDXX3YKPP3NRNTAF2X.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/AZ7NEETDHP5PGNW2OI4D5AUJBQMF3OYE.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/B4BDQGQ5WNDFTCQP46PNPZW2DUJ56GJH.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/BMDXYCXAUG3GS32B5SW6Q65PRQJTWEOZ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/BYKJN2BUL5GMFA37AT54WTXVMPB5CXQL.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/BZO3QEJ3CE2OQFGHA7ZD3CDOWHI543UM.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font GXXEHC+Univers-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/CIPZA5WZQ5JAE4AXBJTWO4PFGT7ORKB7.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font MPLHEP+Helvetica-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/CJ32H5HOWQQX3XKCOKS7HVZ4Z4RO33YK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/CPQ3LPSTBRDPAQHGNDKS2SHAB3JLT2MG.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/CYINDTQC52PLSE235SEE2FHV4OVS5UHQ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/CYPB3G76MAY6ESGBZ5FW7V4AHG5YVS7F.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/CYXM4LWKACZDGNELK57MUBGVEYKQFW24.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/D3BLEFGEYIMPXCDAJJUYBTSMJEAURKTV.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font KPSHBO+Symbol: TTLibError: not enough 'hmtx' table data: expected 626 bytes, got 484",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/D3UTL7WXYMB5VHKSTM53DZCP5NDOK2J5.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/D4CM47RUIGRB3ELSBVH4KECQCVU7DJZF.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font GFEDCB+MinionPC: ValueError: Nonstandard Type 1 font matrix requires an explicit transform",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/DAMU2TVQKZEDZ6ZJN7NZBERHFU6I6ZZG.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font GLCGOG+Helvetica-Narrow-Bold: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/DLCKN67W6R4KMBYO4VLF2H7MTP665HIJ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/DT6DEEFX7TAPKGTNNF5C4FOJQQ3QLCQV.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/DTMCZXA4EUHAELLHVHGOH573C4OZ7KM4.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/EQDIZLFPMDEBKUMF53WGJTJNZCBWBPPH.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font ArialNarrow-BoldItalic: TTLibError: not enough 'glyf' table data",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/ES5LDB5OV2PKIMVD3Z72CVQK4RSDBYJI.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/FSZZW6LXFYIZLWSPDS3LUIYELMYHQLUI.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font T1: RuntimeError: FT_Open_Face (ft2font.cpp line 200) failed with error 0x55: invalid stream operation",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/GBMOB4WD5UEJPVB2OTTQNMICMOP3PG4R.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/GMXUAMD4SJ3SI277ABZBVOOUHXVRMUPA.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/GVQFFTBHO2WYEON7YRSWGOKKT4BFLY3P.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/GZ4X7A3RHNQOWPWZQJ5LHKIZ3JTHSIZI.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/GZ62LWSF6OMAXHC5VDCOYD53D7GSE2HO.pdf",
+        "status": "conversion_failed",
+        "error": "Conversion failed. For scans, check the server's OCR model download and try again.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/H7U4KMXPQKUBDKIPQQRC6ETJZEZR3OCZ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/HB2IHQ5EY4MV6YIJNCKSZ5L2EA6BPV75.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/HSZJLPQSI6NJU2NBWZWZY2CHBUKDXG2M.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font VNZQXL+Tahoma,Bold: TTLibError: not enough 'hmtx' table data: expected 4250 bytes, got 356",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/I2DMPRJ5EOG5AE7BCMHS5IB2KPWKG322.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/IJEACIRWFTFAIA4OFQIWDFMFTRYC7SDS.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/IKOIMACPLTOKKI2XAQPQOCR7HL2E7MCY.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/IO77HAUREG5W6P2DKSLD5HBNNDJU5SQI.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font ASIQSV+Calibri: TTLibError: not enough 'hmtx' table data: expected 4184 bytes, got 3970",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/IPSOTZ2PBHPSDMON7CRCOAQD5CNYYOVE.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/JOANY6YW3IYN75OYEU7X3JEXQQAJPEUP.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/K3IGHYFHR26MTI4I6GKU2LRQHYXKEUVN.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Predefined CFF charsets not supported yet"
+        ]
+      },
+      {
+        "input": "Pdf/KBEV4F2NJWE2NHI6CMYRY5GAXEJ3N7QD.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font CHMRMR+Arial,Bold: TTLibError: not enough 'hmtx' table data: expected 7200 bytes, got 716",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/KHFVIIN7BUD6WPBAO3FNRJXTCS5FVIOK.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font EJJVUC+TT26Et00: TTLibError: not enough 'hmtx' table data: expected 652 bytes, got 376",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/KL6VJRI6EUVHA6S4QIIZ76GT5VIPPD5Y.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Predefined CFF charsets not supported yet"
+        ]
+      },
+      {
+        "input": "Pdf/KNOSFODTQCUVGFKMJLWBF6KZS3RVBESD.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/KV5Z5OWVEYBYAPKWADO2QJVXEMZKZTJR.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font Helvetica-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/KVHILAJFL5JLBNQSY47V3U5QMWNYXI43.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/LLMXYLFSHQA3ZZUSNU4HCBJQ24N7LH6U.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/LVPLZHNQEROUW3S5W7HNU42LCJB2IX6E.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/MBYNVOAVDILB2AZ6AU7FGZA3BWG3XXZ4.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/MCE7YVRKTXPMRN7DYB25B22RCFFLLHOE.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font CNIOJD+Courier-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/MLTHHOQT47LRXDG7YYRMF2QXDUPSXSF4.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/MQEBFDFL5UXUNOUE3E336V4RPBSQS6F6.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/MYKPH7XVYJANM6NEUFMBWLHISDBHMI2C.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/NG33GO534UD2QX6Z7DBE7KHLGNGIEU4R.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/NM76DD2NN5OG5VHK5TQMZV3OO3T6UDAK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/NXQWVJBI6J23JG35UF2PBILHUJXOKLKW.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/O4Z3IEED7ROYYCKDRARK2BBHSZGR4M5Y.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/O7N4FHZJHLMQ5QI2XPMYC2MSSNJ6DCNT.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/OMIUL266TMW75QUBWV2CUTRL56PSFGDK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/ORLP2EPAWI7SXKJRKMSGUIKONQPFFWIO.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/P3PTNPUPTDOHMP74AZKCKHXHZHBD5TTB.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font KPSHBO+TimesNewRoman: TTLibError: not enough 'hmtx' table data: expected 3356 bytes, got 16",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/P7BCU2OYC6JMB6JKYILFFYNACDO4MAXG.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/PCW6KUWFIKXHZIELKOYPYOLWVEQT4HOX.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/PKUP7YPNPYN6ZP26TRK25TL7U6WLNSGT.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/PPDKIO5ID33EK2RASLKYC2VUBKAMZPNO.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/PPFVISZB3VX72X34A67YWBPDCA3BBVCF.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font CIYRPL+TTE1AE4008t00: TTLibError: not enough 'hmtx' table data: expected 888 bytes, got 736",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/PVW3BCYZZQIFEHTAV4LFTP25PEF7ZF2E.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/QAPP7VH3R3TX4TUR6WSDP6HW52K2LPAK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/QCAENKSZWWWKYHPTET6HQGFKTLKEUTEO.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/QLBRTJBPTEPSW266VK6E34FMP47KXTDL.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/QNKRV7UHP5TEQSOYA73EJYJ7MSG66S3D.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/RJDPY3BZNDDW3TTJUKWZULNVI6JFGCNP.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/S2M644RTRLI4BC6XSMMWE2MRFB76F4KC.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/SGU5XQOYWHC2ADXS74XA3FLWFRGL5RDW.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/STG36KDTBPEJTVEWCY734EISHQ5ZUVWF.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font Helvetica-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/SUMLKDI5IC2PYJY6ANGU6KYA37YZLFAD.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/T5YDZLEHT6CHH5L4TRKYQOFOCKXWR5DM.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/T6UERWTWNYUVPT45YBOFTBSDVEH7SR2E.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font HDHABL+Courier-Oblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/UA55FQO7YFJPF45VIJCGELKJ6KPWTIFY.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/VGYROI7GPRFUEH3N7Q6KKH6AVQRI2NYK.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/VUMOVKDPOEUGGP54MMN5XZJ2S5QHSWPF.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/WISRMPD3QYTNVKXVWDZF36QTIOUTKZGB.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/WP773WVW3LFU7XGWDWWZBIK4SD5KDTTF.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font AHDPDF+BroadbandICGRegular: UnicodeDecodeError: 'ascii' codec can't decode byte 0xa9 in position 1: ordinal not in range(128)",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/WXR2YY3TSXGUNVC2VECKTVIJO7PMECRS.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/XYKJN65G53ZKHHSTN4BM6WZEXSYDKAVJ.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font SDMWJR+LubalinGraph-DemiOblique: FontError: Nonstandard CFF font matrix requires an explicit transform.",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/YE5PQJ6NUYA6UOWHADZIVVMCINU4AYZF.pdf",
+        "status": "conversion_failed",
+        "error": "Cannot reconstruct font LLIMEA+BritannicBold: ValueError: Nonstandard Type 1 font matrix requires an explicit transform",
+        "compiler_causes": []
+      },
+      {
+        "input": "Pdf/YS6AIKVZKRRKLU2JGEBFS3PO665RXHWI.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/YTZFSDRLFKSKIT5B6YTESDKRXLM2ZBWZ.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/YVM7OB53IEXWGJUUIKINFKKEDK23PC5K.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/ZBOY7WHWU4JUMTIM2RO2TCO5VONTYYE4.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/ZKNFU42LM7BXETBTWEC42DOXCGU2MDLS.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      },
+      {
+        "input": "Pdf/ZUWRZSXWC4YCHANQID44W33VTJ4XQU4I.pdf",
+        "status": "compile_failed",
+        "error": "LaTeX compilation failed. Check the compiler log and edit the source.",
+        "compiler_causes": [
+          "error: something bad happened inside xdvipdfmx; its output follows:",
+          "error: the xdvipdfmx engine had an unrecoverable error",
+          "caused by: Type2 Charstring Parser: Parsing charstring failed: (status=-1, stack=0)"
+        ]
+      }
+    ],
+    "portable": []
+  },
+  "source_pipeline_matches_working_tree": true,
+  "baseline_archive_compiler_and_package_hashes_match": true,
+  "test_suite": {
+    "passed": 53,
+    "skipped": 6,
+    "warning": "Starlette httpx deprecation"
+  }
+}

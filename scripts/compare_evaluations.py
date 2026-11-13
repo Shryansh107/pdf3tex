@@ -26,8 +26,8 @@ def compare(before, after):
         score_after = new.get('metrics', {}).get('similarity', 0) if new['status'] == 'success' else 0
         changes.append({'input': key[0], 'mode': key[1], 'before_status': old['status'], 'after_status': new['status'],
                         'before_score': score_before, 'after_score': score_after, 'delta': round(score_after-score_before, 3),
-                        'before_pass': old.get('metrics', {}).get('matches', False),
-                        'after_pass': new.get('metrics', {}).get('matches', False)})
+                        'before_pass': old['status'] == 'success' and old.get('metrics', {}).get('matches', False),
+                        'after_pass': new['status'] == 'success' and new.get('metrics', {}).get('matches', False)})
     for mode in ('layout', 'portable'):
         rows = [c for c in changes if c['mode'] == mode]
         paired = [c for c in rows if c['before_status'] == c['after_status'] == 'success']
@@ -92,12 +92,12 @@ def main():
             lines.append(f'| {mode} | {phase} | {s["compiled"]} | {s["passed"]} | {s["dataset_score"]:.3f}% | {s["grade"]} |')
     lines += ['', 'Overall score averages the minimum page foreground SSIM for every PDF; failures and rejections count as zero. Portable passes at 90%; layout at 95%. Metrics and input limits are unchanged.', '', '## Gains and regressions', '']
     for mode, m in result['modes'].items():
-        lines += [f'- **{mode}:** {m["new_compiles"]} new compiles, {m["lost_compiles"]} lost compiles; {m["new_passes"]} new passes, {m["lost_passes"]} lost passes.',
+        lines += [f'- **{mode}:** {m["new_compiles"]} new compiles, {m["lost_compiles"]} lost compiles; {m["new_passes"]} new visual passes, {m["lost_passes"]} visual passes lost.',
                   f'  Among {m["paired_successes"]} inputs compiled in both runs, {m["paired_improved_over_1pp"]} improved and {m["paired_regressed_over_1pp"]} regressed by more than 1 percentage point. Mean minimum-page SSIM: {m["paired_mean_score_before"]}% → {m["paired_mean_score_after"]}%.']
     lines += ['', 'Full per-input changes and status transitions are in [comparison.json](comparison.json). Open [comparison.html](comparison.html) for the interactive chart. See [results.json](results.json) for all current scores and [the baseline](../kaggle/FINDINGS.md) for the original findings.', '',
               '## Largest coverage-adjusted regressions', '', '| Mode | PDF | Before | After | Current outcome |', '| --- | --- | ---: | ---: | --- |']
     for mode in ('layout', 'portable'):
-        for row in sorted((c for c in result['changes'] if c['mode'] == mode), key=lambda c:c['delta'])[:5]:
+        for row in sorted((c for c in result['changes'] if c['mode'] == mode and c['delta'] < 0), key=lambda c:c['delta'])[:5]:
             lines.append(f'| {mode} | `{row["input"]}` | {row["before_score"]}% | {row["after_score"]}% | {row["after_status"]} |')
     (args.output / 'COMPARISON.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(json.dumps(compact, indent=2))

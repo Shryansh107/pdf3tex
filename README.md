@@ -95,16 +95,14 @@ The original PDF is sent back to the local server during compilation for compari
 
 The server binds to localhost by default. This is a personal local tool, with no authentication or production deployment configuration. OCR may take several minutes for large scans.
 
-## Tests
-
-### Font reconstruction and editable source
+## Font reconstruction and editable source
 
 Layout mode associates every visible text trace with its actual MuPDF font
 program, identified by SHA-256. Different subsets with the same PostScript name
 remain separate, including on the same page. Observed Unicode/glyph pairs repair
 the exported font's character map. TrueType outlines and CFF hinting are retained;
 Type 1 programs are converted to OpenType. Damaged or unsupported fonts produce
-a conversion error rather than a silent substitution.
+a conversion error.
 
 Invisible OCR and zero-opacity text are omitted from visible reconstruction.
 Image stencils retain their paint color and transparency, and supported drawings,
@@ -117,12 +115,12 @@ Fonts with missing or conflicting Unicode mappings use explicit character codes;
 these glyphs do not establish semantic text recovery.
 
 Portable mode selects standard Times, Helvetica, Courier, or known TeX faces
-using the original family and style. Common punctuation, accents, and ligatures
-remain text. Rare supported symbols can use inline outlines, normalized to the
+using the original family and style. Supported standard-font punctuation,
+accents, and ligatures remain text. Other supported symbols can use inline outlines, normalized to the
 original font's units. Portable exports still contain only `main.tex`; scans,
 rotated text, and unsupported writing systems can require another mode.
 
-### Run the suite
+## Tests
 
 ```bash
 uv pip install --python .venv/bin/python pytest httpx
@@ -137,18 +135,24 @@ For real compilation regression tests, install Tectonic and run `LATEX_COMPILER=
 
 ## Evaluate a PDF dataset
 
-The [full Kaggle evaluation](reports/kaggle/FINDINGS.md) covers all 1,076 PDFs.
-Portable mode scores **17.932% (F)** and layout mode **26.161% (F)** across the
-dataset, averaging each document's lowest page SSIM and counting failures and
-rejections as zero. Portable compiles 242 inputs and meets its 90% target on 119;
-layout compiles 855 and meets its 95% target on 8. See the report for successful
-document scores, text retention, limitations, and concrete failure examples.
+The [milestone 1 evaluation](reports/kaggle-milestone1/FINDINGS.md) compares all
+1,076 PDFs with the [preserved baseline](reports/kaggle/FINDINGS.md).
+
+| Mode | Compiled before → after | Every page meets target before → after | Overall score before → after | Current grade |
+| --- | ---: | ---: | ---: | :---: |
+| layout | 855 → 883 | 8 → 492 | 26.161% → 67.391% | D |
+| portable | 242 → 589 | 119 → 275 | 17.932% → 41.688% | F |
+
+The overall score averages each PDF’s lowest page foreground SSIM, counting
+failures and rejections as zero. Targets remain 90% portable and 95% layout.
+The report includes paired gains and regressions, text retention, remaining
+compiler/font limitations, and the checksum audit for reused measurements.
 
 For a dataset evaluation of this app alone, install both compiler images, put
 the input PDFs under the ignored `data/` directory, and run:
 
 ```bash
-python scripts/evaluate_dataset.py --inputs data/kaggle/pdfs --output output/kaggle --report-dir reports/kaggle
+python scripts/evaluate_dataset.py --inputs data/kaggle/pdfs --output output/new-evaluation --report-dir reports/new-evaluation
 ```
 
 This evaluates every PDF recursively in portable and layout modes using the
