@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Convert a PDF into editable LaTeX with local text extraction and OCR.">
+  <title>PDF3TeX — PDF to LaTeX workspace</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="/" aria-label="PDF3TeX home"><span class="brand-icon">T<span>e</span>X</span> PDF<span class="brand-light">3</span>TeX</a><span class="header-note"><i></i> Local conversion workspace</span></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">DOCUMENT TO SOURCE</p><h1>Your PDF, in LaTeX.</h1><p>Upload a document. Get editable source you can make your own.</p></div><span class="format-chip">.pdf <span>→</span> .tex</span></div>
+    <div class="workspace">
+      <section class="input-panel" aria-labelledby="input-heading">
+        <div class="panel-title"><h2 id="input-heading"><span class="step">01</span> Source document</h2><button id="reset" class="text-button" hidden>Clear</button></div>
+        <div class="input-content">
+          <input type="file" id="file" accept=".pdf,application/pdf" hidden>
+          <button id="dropzone" class="dropzone" type="button" aria-label="Choose a PDF or drop one here">
+            <span class="upload-icon" aria-hidden="true">↑</span><strong id="file-title">Drop your PDF here</strong><span id="file-detail">or click to browse files</span><span class="file-limit">PDF · Up to 20 MB · 50 pages</span>
+          </button>
+          <label class="mode-label" for="conversion-mode">Conversion mode</label>
+          <select id="conversion-mode"><option value="portable">Portable single .tex · 90% target</option><option value="layout">Preserve original layout · project ZIP</option><option value="text">Reflow editable text / OCR</option></select>
+          <button id="convert" class="primary-button" disabled>Convert to LaTeX <span aria-hidden="true">↗</span></button>
+          <div id="status" role="status" aria-live="polite">Choose a PDF to get started.</div>
+          <div id="error" role="alert" hidden></div>
+          <div id="preview-wrap" hidden><div class="preview-label">DOCUMENT PREVIEW <a id="open-pdf" target="_blank" rel="noopener">Open PDF ↗</a></div><iframe id="pdf-preview" title="Selected PDF preview"></iframe></div>
+          <div class="notes"><h3>A little context</h3><p>Portable mode produces one self-contained .tex file. Copy all the code into a standard LaTeX editor and compile with pdfLaTeX. No separate fonts or images are needed.</p><p>Text remains editable at fixed line positions. Symbols and illustrations use inline vectors. Compile PDF checks every page against your original, with a 90% target for portable mode. Scans need Reflow / OCR; original semantic macros cannot be recovered.</p><p class="privacy">Files stay on this server and are not saved by the app. OCR models download on first use.</p></div>
+        </div>
+      </section>
+      <section class="output-panel" aria-labelledby="output-heading">
+        <div class="panel-title"><h2 id="output-heading"><span class="step">02</span> LaTeX source</h2><span id="output-state" class="state-chip">Waiting for PDF</span></div>
+        <div class="editor-toolbar"><span><i class="file-dot"></i> main.tex</span><button id="copy" class="editor-button" disabled>Copy code</button></div>
+        <div id="empty-state" class="empty-state"><span class="code-symbol" aria-hidden="true">{ }</span><h3>Ready when you are.</h3><p>Your generated LaTeX will appear here.<br>Edit it, copy it, or download the project.</p><span class="empty-code">\begin{document}<br><span> &nbsp; Your next draft starts here.</span><br>\end{document}</span></div>
+        <textarea id="source" aria-label="Editable LaTeX source" spellcheck="false" autocapitalize="off" hidden></textarea>
+        <div class="output-footer"><span id="stats">Single .tex · pdfLaTeX · no extra assets</span><div><button id="compile" class="secondary-button compile-button" disabled>Compile PDF</button><button id="download-tex" class="secondary-button" disabled>Download .tex</button><button id="download-zip" class="secondary-button" disabled title="Downloads the original conversion; Download .tex includes your edits">Original project ZIP ↓</button></div></div>
+        <div class="compile-results" id="compile-results" hidden>
+          <div class="compile-heading"><h3>Compiled PDF</h3><button id="download-pdf" class="secondary-button" disabled>Download PDF ↓</button></div>
+          <p id="compile-status" role="status" aria-live="polite"></p>
+          <div id="comparison-result" hidden><strong id="comparison-score"></strong><p id="comparison-metric"></p><p id="comparison-pages"></p></div>
+          <iframe id="compiled-preview" title="Compiled LaTeX PDF preview" hidden></iframe>
+          <details id="compiler-details" hidden><summary>Compiler log</summary><pre id="compiler-log"></pre></details>
+        </div>
+      </section>
+    </div>
+    <div id="warnings" role="status" hidden></div>
+    <p class="compile-note">Portable mode: copy the entire source or download .tex, then compile with pdfLaTeX in Overleaf, TeX Live or MiKTeX. Standard packages must be installed. Preserve original layout mode uses XeLaTeX and needs the project ZIP. After editing, compile again to update the PDF.</p>
+    <footer><span>Built for the next draft.</span><span>PDF3TeX · PyMuPDF · EasyOCR</span></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+\documentclass{article}
+\usepackage{fontspec,graphicx,color,iftex,pgf}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setsansfont{lmsans10-regular.otf}[BoldFont=lmsans10-bold.otf,ItalicFont=lmsans10-oblique.otf,BoldItalicFont=lmsans10-boldoblique.otf]
+\begin{document}
+Regular \textbf{bold} \textit{italic} \textbf{\textit{both}}.
+{\sffamily Regular \textbf{bold} \textit{italic} \textbf{\textit{both}}.}
+\def\WarmCM#1{{\font\warm=#1 at 10bp\warm ABCdef123.\par}}
+\WarmCM{cmr10}\WarmCM{cmcsc10}\WarmCM{cmbx12}\WarmCM{cmbx10}
+\WarmCM{cmti10}\WarmCM{cmsy10}\WarmCM{cmbsy10}
+\WarmCM{cmr6}\WarmCM{cmr7}\WarmCM{cmr9}\WarmCM{cmbx7}\WarmCM{cmex9}
+\WarmCM{cmmi10}\WarmCM{cmmi5}\WarmCM{cmmi6}\WarmCM{cmmi7}\WarmCM{cmmi9}\WarmCM{cmmib10}
+\WarmCM{cmsy6}\WarmCM{cmsy7}\WarmCM{cmsy9}\WarmCM{msbm10}\WarmCM{cmr12}\WarmCM{cmss10}\WarmCM{cmtt10}
+\WarmCM{ptmr8r}\WarmCM{ptmb8r}\WarmCM{ptmri8r}\WarmCM{ptmbi8r}\WarmCM{ec-lmtt10}
+\WarmCM{phvr8r}\WarmCM{phvb8r}\WarmCM{phvro8r}\WarmCM{phvbo8r}
+\WarmCM{pcrr8r}\WarmCM{pcrb8r}\WarmCM{pcrro8r}\WarmCM{pcrbo8r}
+\begin{pgfpicture}\pgfpathrectangle{\pgfpointorigin}{\pgfpoint{10pt}{10pt}}\pgfusepath{stroke}\end{pgfpicture}
+\end{document}

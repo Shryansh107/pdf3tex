@@ -1,0 +1,9 @@
+FROM python:3.12-slim
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+       texlive-latex-base texlive-latex-recommended texlive-fonts-recommended \
+       texlive-pictures lmodern \
+    && rm -rf /var/lib/apt/lists/*
+ENV HOME=/tmp TEXMFVAR=/tmp/texmf-var TEXMFCONFIG=/tmp/texmf-config
+WORKDIR /work
+ENTRYPOINT ["pdflatex"]
