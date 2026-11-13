@@ -77,10 +77,13 @@ def compile_latex(tex, project_zip='', original_pdf='', engine='tectonic'):
             '--network=none', '--read-only', '--cap-drop=ALL',
             '--security-opt=no-new-privileges', '--cpus=2', '--memory=768m',
             '--pids-limit=64', '--ulimit', 'fsize=33554432:33554432',
-            '--user', f'{os.getuid()}:{os.getgid()}',
             '--tmpfs', '/tmp:rw,noexec,nosuid,size=64m',
             '--mount', f'type=bind,src={directory},dst=/work',
         ]
+        # Docker Desktop translates Windows bind mounts; Windows has no POSIX
+        # uid/gid. Linux hosts still need their own user to own generated files.
+        if os.name != 'nt':
+            command += ['--user', f'{os.getuid()}:{os.getgid()}']
         if engine == 'pdflatex':
             command += [PDFLATEX_IMAGE, '-no-shell-escape', '-interaction=nonstopmode',
                         '-halt-on-error', '-file-line-error', 'main.tex']

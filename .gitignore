@@ -7,3 +7,12 @@ tmp/
 .tools/
 output/
 pdfs/
+data/
+.kaggle/
+kaggle.json
+*.py[cod]
+*.egg-info/
+.coverage
+htmlcov/
+.env.*
+!.env.example

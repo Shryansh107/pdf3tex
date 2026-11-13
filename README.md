@@ -110,6 +110,25 @@ For real compilation regression tests, install Tectonic and run `LATEX_COMPILER=
 
 ## Benchmark another MCP project
 
+For a dataset evaluation of this app alone, install both compiler images, put
+the input PDFs under the ignored `data/` directory, and run:
+
+```bash
+python scripts/evaluate_dataset.py --inputs data/kaggle/pdfs --output output/kaggle --report-dir reports/kaggle
+```
+
+This evaluates every PDF recursively in portable and layout modes using the
+real conversion and compilation APIs. It keeps generated sources, PDFs and logs
+under `output/` and writes a compact report and JSON results under `reports/`.
+Failed and rejected documents count as zero in the overall score; successful
+document scores and text token retention are also reported separately. Two
+isolated worker processes run by default; use `--workers 1` for a serial run.
+Matching completed results resume automatically. See `--help` for options.
+
+Docker compilation supports Linux and Windows with Docker Desktop using Linux
+containers. The shell compiler installers require Linux; on Windows the
+pdfLaTeX image can be built with `docker build -t pdf3tex-pdflatex:local -f compiler/Dockerfile.pdflatex compiler`.
+
 `scripts/benchmark.py` compares PDFs in a folder using this running server and the separate Lattedit MCP CLI project. It writes sources, compiled PDFs, logs, per-page foreground SSIM, token recall/precision/F1, and failure details under an output directory. Neither converter is edited. Use a new output directory per benchmark:
 
 ```bash
