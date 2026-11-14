@@ -1,5 +1,5 @@
-# Pin the project matching the screenshot, rather than the unrelated PyPI 0.2 package.
-pdf2tex @ git+https://github.com/p3nGu1nZz/pdf2tex.git@a5d6f7c62ae6f8922bfffb2a5e38dae6a365c7cb
+pymupdf>=1.26,<3
+matplotlib>=3.10,<4
 fastapi>=0.115,<1
 uvicorn>=0.34,<1
 python-multipart>=0.0.20,<1

@@ -40,12 +40,12 @@ def test_upload_returns_escaped_source_and_complete_project():
         assert any(p.endswith(('.otf', '.ttf')) for p in archive.namelist())
 
 
-def test_scan_routes_through_ocr(monkeypatch):
-    monkeypatch.setattr('converter.read_scan', lambda page: ['Scanned page & OCR'])
-    result = convert_pdf(pdf_bytes(text='', image=True), 'scan.pdf')
-    assert result['ocr_pages'] == 1
-    assert r'Scanned page \& OCR' in result['tex']
-    assert result['images'] == 0
+def test_removed_ocr_mode_is_rejected():
+    response = client.post('/api/convert', data={'mode': 'text'},
+                           files={'file': ('scan.pdf', pdf_bytes(text='', image=True))})
+    assert response.status_code == 422
+    with pytest.raises(ValueError, match='Choose Readable LaTeX'):
+        convert_pdf(pdf_bytes(), 'example.pdf', 'text')
 
 
 @pytest.mark.parametrize('filename,data,status', [

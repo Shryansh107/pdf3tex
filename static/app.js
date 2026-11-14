@@ -25,7 +25,7 @@ function clearOutput() {
   $('output-state').textContent = 'Waiting for PDF';
   $('output-state').classList.remove('ready');
   $('warnings').hidden = true;
-  $('stats').textContent = $('conversion-mode').value === 'portable' ? 'Single .tex · pdfLaTeX · no extra assets' : 'Layout: XeLaTeX + ZIP · Reflow: XeLaTeX / LuaLaTeX';
+  $('stats').textContent = $('conversion-mode').value === 'readable' ? 'Readable source · pdfLaTeX' : 'Layout: XeLaTeX + project ZIP';
   actions.forEach(id => $(id).disabled = true);
 }
 function error(message) { $('error').textContent = message; $('error').hidden = false; }
@@ -76,7 +76,7 @@ $('convert').addEventListener('click', async () => {
   $('convert').textContent = 'Converting…';
   $('output-state').textContent = 'Converting';
   const start = Date.now();
-  const update = () => $('status').textContent = `Extracting text and images… ${Math.floor((Date.now() - start) / 1000)}s. Scans take longer, especially on first use.`;
+  const update = () => $('status').textContent = `Reconstructing LaTeX… ${Math.floor((Date.now() - start) / 1000)}s. Large documents can take longer.`;
   update(); const timer = setInterval(update, 1000);
   try {
     const form = new FormData(); form.append('file', selected); form.append('mode', $('conversion-mode').value);
@@ -87,7 +87,7 @@ $('convert').addEventListener('click', async () => {
     $('source').value = result.tex;
     $('source').hidden = false; $('empty-state').hidden = true;
     $('output-state').textContent = 'Ready to edit'; $('output-state').classList.add('ready');
-    $('stats').textContent = `${result.pages} page${result.pages === 1 ? '' : 's'} · ${result.images} illustrations · ${result.mode === 'portable' ? 'single .tex · pdfLaTeX' : result.ocr_pages + ' OCR pages'}`;
+    $('stats').textContent = `${result.pages} page${result.pages === 1 ? '' : 's'} · ${result.images} illustrations · ${result.mode === 'readable' ? 'readable source · pdfLaTeX' : 'layout project ZIP'}`;
     $('status').textContent = 'Conversion complete. Review your source before compiling.';
     actions.forEach(id => $(id).disabled = false);
     if (result.warnings.length) { $('warnings').textContent = result.warnings.join(' '); $('warnings').hidden = false; }
@@ -154,7 +154,7 @@ $('compile').addEventListener('click', async () => {
   try {
     const response = await fetch('/api/compile', {
       method: 'POST', headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({tex, project_zip: result.mode === 'portable' ? '' : result.zip,
+      body: JSON.stringify({tex, project_zip: result.mode === 'readable' ? '' : result.zip,
         engine: result.engine || 'tectonic', fidelity_target: result.fidelity_target || 95,
         original_pdf: await originalBase64(selected)})
     });
@@ -178,8 +178,8 @@ $('compile').addEventListener('click', async () => {
     if (payload.comparison) {
       const comparison = payload.comparison;
       $('comparison-result').hidden = false;
-      $('comparison-result').classList.toggle('match', comparison.matches);
-      $('comparison-score').textContent = `${comparison.similarity.toFixed(2)}% visual match · ${comparison.matches ? comparison.target + '% target met' : 'below ' + comparison.target + '% target'}`;
+      $('comparison-result').classList.toggle('match', result.mode !== 'readable' && comparison.matches);
+      $('comparison-score').textContent = result.mode === 'readable' ? `${comparison.similarity.toFixed(2)}% visual match · readable source reflows` : `${comparison.similarity.toFixed(2)}% visual match · ${comparison.matches ? comparison.target + '% target met' : 'below ' + comparison.target + '% target'}`;
       $('comparison-metric').textContent = comparison.metric;
       $('comparison-pages').textContent = comparison.pages.map(page => `Page ${page.page}: ${page.similarity.toFixed(2)}%${page.reason ? ' — ' + page.reason : ''}`).join(' · ');
     }

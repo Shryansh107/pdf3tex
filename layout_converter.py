@@ -5,12 +5,18 @@ import math
 from zipfile import ZipFile, ZIP_DEFLATED
 
 import pymupdf
-from pdf2tex import Utils
 from PIL import Image, ImageChops
 
 from font_reconstruction import FontError, recover_font
 from pdf_fonts import FontRegistry, visible
 from portable_converter import editable_words, letters
+
+
+def escape_latex(text):
+    special = {'&': r'\&', '%': r'\%', '$': r'\$', '#': r'\#', '_': r'\_',
+               '{': r'\{', '}': r'\}', '~': r'\textasciitilde{}',
+               '^': r'\textasciicircum{}', '\\': r'\textbackslash{}'}
+    return ''.join(special.get(char, char) for char in text)
 
 
 def recovered_words(trace, font):
@@ -78,7 +84,7 @@ def trace_lines(trace, font):
         elif code >= 0xF0000 or code in (127, 0x2028, 0x2029):
             parts.append('\\char"' + format(code, 'X') + '{}')
         else:
-            parts.append(Utils.escape_special_chars(chr(code)))
+            parts.append(escape_latex(chr(code)))
         width = font['space'] if whitespace else font['advances'][gid] / 1000
         cursor = along + width * size
     if origin is not None:
@@ -215,7 +221,7 @@ def convert_layout(data, filename):
             if number != len(doc):
                 body.append('\\newpage')
         if not char_count:
-            warnings.append('This PDF has no visible editable text layer; its scanned images are preserved in layout mode. Use editable-text mode for OCR.')
+            warnings.append('This PDF has no visible editable text layer; its scanned images are preserved in layout mode. Scanned text is not editable.')
         source = preamble + '\n'.join(body) + '\n\\end{document}\n'
         buffer = BytesIO()
         with ZipFile(buffer, 'w', ZIP_DEFLATED) as archive:

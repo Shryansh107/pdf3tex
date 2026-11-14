@@ -31,7 +31,8 @@ from comparison import compare_pdfs
 from converter import MAX_PAGES
 
 DATASET_URL = 'https://www.kaggle.com/datasets/manisha717/dataset-of-pdf-files'
-TARGETS = {'portable': 90, 'layout': 95}
+TARGETS = {'readable': 90, 'layout': 95, 'portable': 90}  # Legacy report aggregation.
+SUPPORTED_MODES = ('readable', 'layout')
 
 
 def save_json(path, value):
@@ -113,15 +114,15 @@ def evaluate(client, path, entry, mode, directory, stage_callback=lambda stage: 
         return record | {'status': 'conversion_failed', 'error': response.json().get('detail'), 'seconds': record['conversion_seconds']}
     project = response.json()
     (directory / 'main.tex').write_text(project['tex'], encoding='utf-8')
-    # Portable mode deliberately supplies no assets to the compiler.
-    if mode != 'portable':
+    # Readable mode compiles standalone source; layout mode supplies assets.
+    if mode == 'layout':
         (directory / 'project.zip').write_bytes(base64.b64decode(project['zip']))
     metadata = {k: v for k, v in project.items() if k not in ('tex', 'zip')}
     save_json(directory / 'conversion.json', metadata)
     record['warnings'] = project.get('warnings', [])
     stage_callback('compilation')
     response = client.post('/api/compile', json={
-        'tex': project['tex'], 'project_zip': project['zip'] if mode != 'portable' else '',
+        'tex': project['tex'], 'project_zip': project['zip'] if mode == 'layout' else '',
         'engine': project.get('engine', 'tectonic'), 'fidelity_target': TARGETS[mode],
     })
     record['compile_http_status'] = response.status_code
@@ -269,7 +270,7 @@ def write_reports(directory, manifest, records):
         lines.append(f"| {mode} | {values['compiled']}/{values['documents']} | {values['passed']}/{values['documents']} (target {values['target']}%) | {values['dataset_score']}% | {values['grade']} | {values['successful_mean_lowest_page_ssim']}% |")
     lines += ['', '## Method', '',
               'All PDFs are inventoried. Unlocked, readable inputs within the application 20 MiB/50-page limits are submitted to the real `/api/convert` and `/api/compile` endpoints. Preflight rejections count as zero. Portable output compiles from only its generated `.tex`; layout output includes its extracted assets. No converter fallback, source repair, page splitting, registration or score-threshold changes are applied. Each conversion/comparison phase is bounded by the recorded phase timeout; compilation retains its existing 90-second timeout.', '',
-              'Visual similarity uses the existing foreground SSIM at up to 144 dpi with a 2200-pixel cap and a two-pixel foreground halo. The document score is its lowest page score; missing pages score zero. Blank margins cannot increase the score. A document passes only when every page meets the existing mode target (90% portable, 95% layout).', '',
+              'Visual similarity uses the existing foreground SSIM at up to 144 dpi with a 2200-pixel cap and a two-pixel foreground halo. The document score is its lowest page score; missing pages score zero. Blank margins cannot increase the score. A document passes only when every page meets the existing mode target (90% readable comparison reference, 95% layout target; readable mode does not promise fixed layout).', '',
               'The **dataset score** is the arithmetic mean of document scores across all evaluated files, with every rejected/failed document assigned zero. Grades: A >= 90, B >= 80, C >= 70, D >= 60, F < 60. This is an explicit benchmark rubric, not a standardized assessment. The JSON also reports a score limited to unlocked, readable inputs within the application upload/page limits.', '',
               'Token precision/recall/F1 compare case-folded Unicode word multisets extracted from the original and compiled PDFs. Image-only originals have no text ground truth, so their text scores are null. These scores do not establish reading order, semantic LaTeX quality, equation correctness or OCR accuracy. Layout can reproduce scanned images without recovering editable text; image-only successes are counted separately.', '',
               'This dataset supplies PDFs, not paired original TeX sources. The evaluation measures visual reconstruction and extracted-text retention, not recovery of original macros. Repeated files remain in the file-weighted score; the manifest includes hashes so duplication is visible.', '',
@@ -296,7 +297,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--report-dir', type=Path, default=Path('reports/kaggle'))
     parser.add_argument('--archive', type=Path, help='Record the SHA-256 of the downloaded dataset ZIP.')
-    parser.add_argument('--modes', nargs='+', choices=TARGETS, default=list(TARGETS))
+    parser.add_argument('--modes', nargs='+', choices=SUPPORTED_MODES, default=list(SUPPORTED_MODES))
     parser.add_argument('--workers', type=int, default=2, choices=range(1, 5))
     parser.add_argument('--phase-timeout', type=int, default=240)
     args = parser.parse_args()
@@ -308,7 +309,7 @@ def main():
     paths = sorted((path for path in inputs.rglob('*') if path.suffix.lower() == '.pdf'), key=lambda path: path.relative_to(inputs).as_posix())
     if not paths:
         parser.error(f'No PDFs found under {inputs}')
-    pipeline = ['app.py', 'converter.py', 'portable_converter.py', 'layout_converter.py', 'font_reconstruction.py', 'pdf_fonts.py', 'compiler.py', 'comparison.py', 'portable_fonts.json']
+    pipeline = ['app.py', 'converter.py', 'readable_converter.py', 'portable_converter.py', 'layout_converter.py', 'font_reconstruction.py', 'pdf_fonts.py', 'compiler.py', 'comparison.py', 'portable_fonts.json']
     pipeline_hash = hashlib.sha256()
     for name in pipeline:
         pipeline_hash.update(name.encode() + (ROOT / name).read_bytes())
@@ -328,7 +329,7 @@ def main():
     if args.archive:
         with args.archive.open('rb') as archive:
             manifest['archive_sha256'] = hashlib.file_digest(archive, 'sha256').hexdigest()
-    images = {'portable': 'pdf3tex-pdflatex:local', 'layout': 'pdf3tex-tectonic:0.17.0'}
+    images = {'readable': 'pdf3tex-pdflatex:local', 'layout': 'pdf3tex-tectonic:0.17.0'}
     for image in {images[mode] for mode in args.modes}:
         result = subprocess.run(['docker', 'image', 'inspect', image, '--format', '{{.Id}}'], capture_output=True, text=True)
         if result.returncode:

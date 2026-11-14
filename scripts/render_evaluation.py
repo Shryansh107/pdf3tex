@@ -42,7 +42,7 @@ th:first-child,td:first-child{text-align:left}th{font-weight:500;color:var(--mut
 <p class="note" id="metric-note"></p>
 <table><thead><tr><th>Mode</th><th>Compiled</th><th>Meets target</th><th>Overall score</th><th>Grade</th></tr></thead><tbody id="summary"></tbody></table>
 <div class="details" id="details"></div>
-<p class="note">Document similarity is the lowest page foreground SSIM at up to 144 dpi (2200px cap). A portable document passes at 90%; layout passes at 95%. Overall score averages all document scores and assigns zero to every failure or rejection. Grades: A ≥90, B ≥80, C ≥70, D ≥60, F &lt;60. Text F1 does not validate reading order, equations, OCR, or semantic LaTeX. Image-only layout outputs may reproduce scans without editable text.</p>
+<p class="note">Document similarity is the lowest page foreground SSIM at up to 144 dpi (2200px cap). Mode comparison targets are listed in the summary. Readable output reflows and does not promise a visual match; layout targets 95%. Overall score averages all document scores and assigns zero to every failure or rejection. Grades: A ≥90, B ≥80, C ≥70, D ≥60, F &lt;60. Text F1 does not validate reading order, equations, OCR, or semantic LaTeX. Image-only layout outputs may reproduce scans without editable text.</p>
 <script>
 const summary=__DATA__;
 const labels={success:'Compiled',conversion_failed:'Conversion failed',compile_failed:'Compilation failed',input_rejected:'Input rejected',error:'Processing error',timeout:'Timed out',worker_failed:'Worker failed'};

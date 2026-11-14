@@ -13,7 +13,7 @@ import pytest
 
 from app import app
 from compiler import compile_latex, PDFLATEX_IMAGE
-from converter import convert_pdf
+from portable_converter import convert_portable
 from tests.test_app import pdf_bytes
 
 client = TestClient(app)
@@ -22,26 +22,16 @@ engine = pytest.mark.skipif(not AVAILABLE,reason='Run ./install_pdflatex.sh')
 REFERENCES = [p for p in os.environ.get('PDF3TEX_REFERENCES','').split(os.pathsep) if p]
 
 
-def test_default_upload_is_self_contained():
-    response = client.post('/api/convert',files={'file':('sample.pdf',pdf_bytes(image=True))})
-    assert response.status_code == 200, response.text
-    result = response.json()
-    assert result['mode'] == 'portable'
-    assert result['engine'] == 'pdflatex'
-    assert result['fidelity_target'] == 90
-    assert result['images'] == 1
-    assert 'improvement' in result['tex']
-    for dependency in ('fontspec','includegraphics','newfontface','assets/','filecontents','\\input{'):
-        assert dependency not in result['tex']
-    with ZipFile(BytesIO(base64.b64decode(result['zip']))) as archive:
-        assert archive.namelist() == ['main.tex']
-        assert archive.read('main.tex').decode() == result['tex']
+def test_removed_portable_mode_is_rejected():
+    response = client.post('/api/convert', data={'mode': 'portable'},
+                           files={'file': ('sample.pdf', pdf_bytes(image=True))})
+    assert response.status_code == 422
 
 
 @engine
 def test_copy_paste_and_edit_compile_without_zip():
     original = pdf_bytes(image=True)
-    result = convert_pdf(original,'sample.pdf','portable')
+    result = convert_portable(original,'sample.pdf')
     response = client.post('/api/compile',json={
         'tex':result['tex'],'engine':'pdflatex','fidelity_target':90,
         'original_pdf':base64.b64encode(original).decode()})
@@ -62,9 +52,8 @@ def test_scan_is_not_disguised_as_editable_latex():
     with pymupdf.open() as doc:
         page = doc.new_page()
         page.insert_text((72,100),'Invisible OCR',render_mode=3)
-        response = client.post('/api/convert',files={'file':('scan.pdf',doc.tobytes())})
-    assert response.status_code == 422
-    assert 'no visible text layer' in response.json()['detail']
+        with pytest.raises(ValueError, match='no visible text layer'):
+            convert_portable(doc.tobytes(), 'scan.pdf')
 
 
 def test_visual_target_changes_pass_fail_without_changing_score(monkeypatch):
@@ -83,7 +72,7 @@ def test_visual_target_changes_pass_fail_without_changing_score(monkeypatch):
 @pytest.mark.skipif(not REFERENCES,reason='Set PDF3TEX_REFERENCES for private references')
 def test_portable_references_reach_90_on_every_page_without_assets(reference):
     original = Path(reference).read_bytes()
-    result = convert_pdf(original,Path(reference).name,'portable')
+    result = convert_portable(original,Path(reference).name)
     compiled = compile_latex(result['tex'],original_pdf=base64.b64encode(original).decode(),engine='pdflatex')
     comparison = compiled['comparison']
     assert comparison['similarity'] >= 90, comparison

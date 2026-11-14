@@ -56,11 +56,11 @@ def index():
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "engine": "portable single-file / layout reconstruction + EasyOCR"}
+    return {"status": "ok", "engine": "readable / layout reconstruction"}
 
 
 @app.post("/api/convert")
-async def convert(file: UploadFile = File(...), mode: Literal['portable', 'layout', 'text'] = Form('portable')):
+async def convert(file: UploadFile = File(...), mode: Literal['readable', 'layout'] = Form('readable')):
     try:
         if not file.filename or not file.filename.lower().endswith(".pdf"):
             raise HTTPException(400, "Choose a PDF file.")
@@ -74,7 +74,7 @@ async def convert(file: UploadFile = File(...), mode: Literal['portable', 'layou
         async with conversion_lock:
             try:
                 # Shield ensures a disconnected client cannot release the lock
-                # while the underlying OCR worker is still running.
+                # while the underlying conversion worker is still running.
                 task = asyncio.create_task(asyncio.to_thread(convert_pdf, data, Path(file.filename).name, mode))
                 try:
                     return await asyncio.shield(task)
@@ -85,6 +85,6 @@ async def convert(file: UploadFile = File(...), mode: Literal['portable', 'layou
                 raise HTTPException(422, str(exc)) from exc
             except Exception as exc:
                 logging.exception("PDF conversion failed")
-                raise HTTPException(500, "Conversion failed. For scans, check the server's OCR model download and try again.") from exc
+                raise HTTPException(500, "Conversion failed. Check that the PDF is readable and try again.") from exc
     finally:
         await file.close()

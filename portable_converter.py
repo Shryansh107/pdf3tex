@@ -205,7 +205,7 @@ def convert_portable(data, filename):
         # OCR overlays on scanned page images are not visible editable content.
         for i, page_traces in enumerate(traces):
             if not any(visible(t) and t['chars'] for t in page_traces):
-                raise ValueError(f'Page {i+1} has no visible text layer. Portable reconstruction currently supports text PDFs; use Reflow / OCR for scans. A scan image alone would not be editable LaTeX.')
+                raise ValueError(f'Page {i+1} has no visible text layer. Use Preserve original layout to retain scans as images; scanned text cannot be reconstructed as editable LaTeX.')
         definitions, warnings, body = [], [], []
         faces, glyph_definitions = {}, {}
         for resource in registry.resources.values():
@@ -272,7 +272,7 @@ def convert_portable(data, filename):
                     continue
                 x0,y0,x1,y1 = block['bbox']
                 if (x1-x0)*(y1-y0) > .7*w*h:
-                    raise ValueError('Portable mode does not embed full-page scan images. Use Reflow / OCR for a scanned PDF.')
+                    raise ValueError('Portable mode does not embed full-page scan images. Use Preserve original layout to retain a scan as an image.')
                 images += 1
                 command = 'figure' + letters(images-1)
                 definitions.append('% Inline vector illustration ' + str(images) + '\n\\newcommand{\\' + command + '}{' + vector(illustration(block)) + '}')

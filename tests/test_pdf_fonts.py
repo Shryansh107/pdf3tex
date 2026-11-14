@@ -17,7 +17,7 @@ from converter import convert_pdf
 from font_reconstruction import load_font, recover_font
 from layout_converter import image_asset
 from pdf_fonts import FontRegistry, visible
-from portable_converter import OutlinePen, standard_face
+from portable_converter import OutlinePen, standard_face, convert_portable
 from tests.test_portable import engine
 
 
@@ -144,7 +144,7 @@ def test_common_glyphs_remain_text_in_portable_output():
         page = doc.new_page()
         page.insert_font(fontname='Custom', fontbuffer=generated_font())
         page.insert_text((72,100), "AB ' \u2022 _ \u00c9 \ufb02", fontname='Custom')
-        result = convert_pdf(doc.tobytes(), 'punctuation.pdf', 'portable')
+        result = convert_portable(doc.tobytes(), 'punctuation.pdf')
     assert 'AB' in result['tex']
     for code in (31, 149, 95, 201, 3):
         assert f'\\char{code}{{}}' in result['tex']
@@ -162,7 +162,7 @@ def test_invisible_ocr_and_zero_opacity_text_are_not_exported(mode):
         page.insert_text((72,180), 'TransparentOCR', fontname='cour', fill_opacity=0)
         registry = FontRegistry(doc)
         assert [visible(t) for t in registry.pages[0]] == [True, False, False]
-        result = convert_pdf(doc.tobytes(), 'hidden.pdf', mode)
+        result = convert_portable(doc.tobytes(), 'hidden.pdf') if mode == 'portable' else convert_pdf(doc.tobytes(), 'hidden.pdf', mode)
     assert 'Visible' in result['tex'] and 'body' in result['tex']
     assert 'HiddenOCR' not in result['tex'] and 'TransparentOCR' not in result['tex']
     if mode == 'layout':

@@ -2,25 +2,31 @@
 
 A local web app to upload a PDF, view and edit reconstructed LaTeX, compile it into a PDF, copy the source, and download the `.tex`, PDF, or a ZIP with extracted images.
 
-## Portable single-file export (default)
+## Readable LaTeX (default)
 
-Choose **Portable single .tex · 90% target**, convert, then copy the **entire** source or download `.tex`. Paste it into `main.tex` in Overleaf, TeX Live or MiKTeX and compile with **pdfLaTeX**. No ZIP, original PDF, image files, custom fonts, shell escape or external service is needed. Standard packages `iftex`, `pgf`, `xcolor` and `geometry`, plus the standard Computer Modern/AMS, PSNFSS and Latin Modern fonts, must be installed. This mode does not use `fontspec` and also supports XeLaTeX and LuaLaTeX.
+Choose **Readable LaTeX · pdfLaTeX** to generate source organized into sections,
+paragraphs, lists, bold/italic text and hyperlinks. Resume-like documents use
+reusable `\resumeSubheading` commands and skills tables. Words and ligatures are
+recovered from visible text and embedded font metadata; PDF links become
+`\href` commands. The exported `main.tex` compiles with Overleaf's default
+**pdfLaTeX** engine and does not need external fonts or assets.
 
-The converter groups editable text by baseline, uses standard TeX fonts and preserves glyph positioning/spacing. Words stay intact in the source: edit the first argument of `\\Spaced{word}{spacing corrections}` normally. Nonstandard symbols use inline vector outlines; raster illustrations become quantized inline vector contours. It never embeds original pages, full-page screenshots or binary file payloads. The resulting source is larger for illustrated documents: about 34 KB for the résumé and 1.24 MB for the attention paper. Illustrations are represented as vector drawing commands, not recovered editable figure text.
+Structure is inferred from font sizes, formatting and alignment. This does not
+recover the original author's macros. Text reflows after edits; the output does
+not promise a visual similarity threshold. Review reading order, multi-column
+content, equations and tables. Decorative icon glyphs are omitted; unsupported
+characters have explicit placeholders and warnings. This mode currently exports
+text and links, with a warning for omitted embedded images. Use Preserve original layout to retain
+scanned images. Use a layout mode to retain illustrations.
 
-This is a fixed-layout reconstruction, not the original semantic LaTeX template. Longer edits can overlap adjacent material. Equations remain positioned glyphs rather than recovered `\\frac` or equation environments. Scanned pages and invisible OCR overlays are rejected in portable mode: choose **Reflow editable text / OCR** to transcribe scans. Fonts outside the supported standard families may be substituted with a warning, and unsupported glyphs, rotated text or excessive inline graphics produce an explicit error. A 90% match is a measured target, not a guarantee for arbitrary input PDFs.
-
-Install the local default compiler with `./install_pdflatex.sh`. The UI compiles portable source using pdfLaTeX **without passing the project ZIP**. `/api/convert` defaults to `mode=portable` and returns `engine=pdflatex` and `fidelity_target=90`; send these fields, `tex` and optionally `original_pdf` to `/api/compile`. The ZIP for this mode contains only `main.tex`.
-
-Tests compile just the source in an isolated temporary directory, verify visible source edits, and require every private reference page to reach 90%. Standard font encoding/advance metadata lives in `portable_fonts.json`; regenerate it using `.venv/bin/python scripts/build_portable_fonts.py` after building the TeX Live image. The metadata contains no embedded fonts or outlines.
-
-Measured single-file pdfLaTeX results: résumé **99.461%**, attention paper **95.314% lowest page** (all 11 pages pass). The exact same files also pass in Tectonic/XeTeX and LuaLaTeX. These are results for those reference inputs, not an arbitrary-PDF guarantee.
+`POST /api/convert` defaults to `mode=readable` and returns `engine=pdflatex`.
+The available conversion modes are `readable` and `layout`.
 
 ## Layout and visual verification
 
-**Preserve original layout** is the optional asset-based mode (`mode=layout`). It reconstructs editable text at its original coordinates, preserving font sizes, font encodings, horizontal rules, filled rectangles, embedded images and small pictograms. Embedded Type 1 fonts are reconstructed as OpenType fonts using their actual glyph outlines and PDF glyph IDs, including fonts without a `ToUnicode` map. Original glyph advances and kerning are preserved with explicit spacing corrections. Figure soft masks are preserved so transparent drawings keep their original appearance. Embedded TrueType/OpenType fonts are also extracted when available; unsupported fonts are substituted with a warning. The source contains `PDFtext` / `PDFunicode` calls whose final argument is the editable text, sometimes with explicit `kern` commands. Longer edits retain the fixed original positions and may need manual spacing changes. This mode requires XeLaTeX and its project assets. It does not embed the original PDF or turn text pages into screenshots. Scanned pages remain images in this mode; select **Reflow editable text / OCR** to transcribe scans into paragraphs instead.
+**Preserve original layout** is the optional asset-based mode (`mode=layout`). It reconstructs editable text at its original coordinates, preserving font sizes, font encodings, horizontal rules, filled rectangles, embedded images and small pictograms. Embedded Type 1 fonts are reconstructed as OpenType fonts using their actual glyph outlines and PDF glyph IDs, including fonts without a `ToUnicode` map. Original glyph advances and kerning are preserved with explicit spacing corrections. Figure soft masks are preserved so transparent drawings keep their original appearance. Embedded TrueType/OpenType fonts are also extracted when available; unsupported fonts are substituted with a warning. The source contains `PDFtext` / `PDFunicode` calls whose final argument is the editable text, sometimes with explicit `kern` commands. Longer edits retain the fixed original positions and may need manual spacing changes. This mode requires XeLaTeX and its project assets. It does not embed the original PDF or turn text pages into screenshots. Scanned pages remain images in this mode; scanned text is not editable.
 
-**Compile PDF** compares its output against the original selected upload and reports a visual match percentage, a pass/fail result (90% portable, 95% layout), and each page's score. It renders both PDFs with the same PyMuPDF renderer at up to 144 dpi (a 2200-pixel dimension cap), computes structural similarity over foreground regions with a two-pixel halo, and reports the lowest page score. Blank margins cannot inflate the score; missing pages score zero. The metric itself is unchanged. This is a visual measurement, not a guarantee of recovered original macros or semantic correctness.
+**Compile PDF** compares its output against the original selected upload and reports a visual match percentage, a 95% pass/fail target for layout mode, and each page's score. It renders both PDFs with the same PyMuPDF renderer at up to 144 dpi (a 2200-pixel dimension cap), computes structural similarity over foreground regions with a two-pixel halo, and reports the lowest page score. Blank margins cannot inflate the score; missing pages score zero. The metric itself is unchanged. This is a visual measurement, not a guarantee of recovered original macros or semantic correctness.
 
 The résumé reference exceeds 99% foreground SSIM. The 11-page attention-paper reference, formerly at 23.43% mean similarity, now exceeds 95% on every page (about 98.68% mean, 97.38% lowest page) after font/glyph reconstruction and spacing fixes. Both retain selectable text and their original page counts. Regression tests verify that editing the source changes the compiled text. These are measured results for the tested documents, not a guarantee for arbitrary PDFs. Font substitutions, unusual vector paths, rotated text, nonstandard font matrices and mixed page sizes may need additional reconstruction. Equations are reconstructed from positioned glyphs; original semantic math macros are not recovered. Original PDF hyperlinks are not currently reconstructed.
 
@@ -44,7 +50,7 @@ Open **http://127.0.0.1:8000**. Set `PORT=8001 ./run.sh` to use another port.
 
 ## Compile the generated LaTeX
 
-PDF3TeX compiles portable output with **pdfLaTeX (TeX Live)** and asset-based output with **Tectonic 0.17.0 (XeTeX)**. Convert a document, then click **Compile PDF** below the editor. Portable mode compiles only your current editor contents with pdfLaTeX; asset-based modes also supply their extracted assets to Tectonic. The resulting PDF appears below the source, with a **Download PDF** button and an expandable compiler log. Compilation errors appear with their log so you can edit and retry. Editing the source clears the previous preview/download until you compile again.
+PDF3TeX compiles readable output with **pdfLaTeX (TeX Live)** and asset-based output with **Tectonic 0.17.0 (XeTeX)**. Convert a document, then click **Compile PDF** below the editor. Readable mode compiles only your current editor contents with pdfLaTeX; asset-based modes also supply their extracted assets to Tectonic. The resulting PDF appears below the source, with a **Download PDF** button and an expandable compiler log. Compilation errors appear with their log so you can edit and retry. Editing the source clears the previous preview/download until you compile again.
 
 For imported pdfLaTeX projects (including Lattedit's TikZ layout exports), `/api/compile` also accepts `engine: "pdflatex"` and a base64 project ZIP containing `background.pdf`; `tex` remains the exact supplied source. This engine runs twice for TikZ remember-picture positioning under the same overall 90-second limit and container isolation. No source rewriting or local PDF-to-LaTeX conversion is needed to compile an imported export.
 
@@ -60,30 +66,27 @@ The installer downloads the pinned official Tectonic binary, warms its package/f
 
 ## Install on another machine
 
-Requires Python 3.11+ and Git. CPU-only PyTorch avoids unnecessary GPU packages:
+Requires Python 3.11+ and Git:
 
 ```bash
 uv venv .venv
-uv pip install --python .venv/bin/python torch torchvision --index-url https://download.pytorch.org/whl/cpu
 uv pip install --python .venv/bin/python -r requirements.txt
 ./run.sh
 ```
 
 Alternatively, use `python3 -m venv .venv` and `.venv/bin/python -m pip install` in place of `uv pip install`.
 
-## Utility and conversion behavior
+## Conversion behavior
 
-The screenshot matches [p3nGu1nZz/pdf2tex](https://github.com/p3nGu1nZz/pdf2tex), version 0.1.2. This app pins Git commit `a5d6f7c62ae6f8922bfffb2a5e38dae6a365c7cb`. The newer PyPI package named `pdf2tex` has a different CLI and infrastructure requirements.
+Readable mode extracts visible text, formatting, links, section rules and
+underlines into ordinary LaTeX commands. Layout mode reconstructs
+text at its original positions. Text extraction and font reconstruction run
+locally with PyMuPDF and fontTools. OCR/reflow mode has been removed; no OCR
+models or PyTorch installation are required. Scans can be retained as images in
+layout mode, with no editable text recovered from those images.
 
-The original utility is installed and accessible through `.venv/bin/pdf2tex --help`. Its unmodified OCR pipeline has upstream defects (including missing string conversions and nested semaphore acquisition). The app therefore uses `converter.py` to route portable, layout and text/OCR requests. The text/OCR adapter uses the installed utility's LaTeX escaping, PyMuPDF extraction and EasyOCR. It does not invoke the defective upstream conversion pipeline. The following details apply to text/OCR and asset-based modes:
-
-- Selectable text is extracted directly, keeping paragraphs and page order.
-- Pages with no text layer use English EasyOCR on CPU. Initial use downloads OCR weights into `~/.EasyOCR`; this requires internet. Later conversions use the cached models.
-- Embedded images on text pages are exported as PNG assets and included after that page's text. Full scan bitmaps are omitted to avoid duplicating OCR output. Mixed text-and-scan pages only extract their text layer; text inside figures is not transcribed.
-- Compile `main.tex` using **XeLaTeX or LuaLaTeX** for Unicode support. The preamble also supports pdfLaTeX for basic Latin text. Install a TeX distribution or upload the ZIP to Overleaf and select XeLaTeX in the project settings.
-- Extract the entire ZIP before compiling to include images and any embedded fonts. A `.tex` file alone cannot reproduce those assets. Reflow mode supports pdfLaTeX for basic text; layout mode requires XeLaTeX.
-- **Download .tex** includes editor changes. **Original project ZIP** contains the original conversion and images; replace `main.tex` inside the ZIP with your edited `.tex` if needed.
-- PDF conversion cannot restore the original macros or exact layout. Equations, tables, columns, reading order and figure placement need review. This is a text/OCR converter, not a mathematical expression recognition model.
+PDF conversion cannot restore the original macros. Review equations, tables,
+columns and reading order after conversion.
 
 ## Limits and privacy
 
@@ -93,7 +96,7 @@ Compilation accepts up to 2 million source characters and 48 MB of extracted ima
 
 The original PDF is sent back to the local server during compilation for comparison, then discarded. Generated artifacts under `output/`, private reference PDFs, local engines/caches, and the virtual environment are excluded from Git.
 
-The server binds to localhost by default. This is a personal local tool, with no authentication or production deployment configuration. OCR may take several minutes for large scans.
+The server binds to localhost by default. This is a personal local tool, with no authentication or production deployment configuration.
 
 ## Font reconstruction and editable source
 
@@ -114,12 +117,6 @@ can overlap after longer edits, and embedded subsets may lack new letters.
 Fonts with missing or conflicting Unicode mappings use explicit character codes;
 these glyphs do not establish semantic text recovery.
 
-Portable mode selects standard Times, Helvetica, Courier, or known TeX faces
-using the original family and style. Supported standard-font punctuation,
-accents, and ligatures remain text. Other supported symbols can use inline outlines, normalized to the
-original font's units. Portable exports still contain only `main.tex`; scans,
-rotated text, and unsupported writing systems can require another mode.
-
 ## Tests
 
 ```bash
@@ -127,7 +124,7 @@ uv pip install --python .venv/bin/python pytest httpx
 .venv/bin/python -m pytest -q
 ```
 
-Tests cover real text and image extraction, ZIP contents, escaping, page ordering, upload validation, encrypted documents and OCR routing. OCR routing is mocked in the test suite to avoid downloading models during tests.
+Tests cover text and image extraction, readable document structure, rules and underlines, ZIP contents, escaping, page ordering, upload validation, encrypted documents and rejection of the removed OCR mode.
 
 With the compiler image installed, the suite also exercises the real `/api/compile` flow, edited source and image inclusion, compiler errors, filesystem isolation, timeout cleanup, and ZIP validation. The Docker integration cases skip when the image is not installed.
 
@@ -135,7 +132,7 @@ For real compilation regression tests, install Tectonic and run `LATEX_COMPILER=
 
 ## Evaluate a PDF dataset
 
-The [milestone 1 evaluation](reports/kaggle-milestone1/FINDINGS.md) compares all
+The historical [milestone 1 evaluation](reports/kaggle-milestone1/FINDINGS.md) compares the former portable mode and layout mode across all
 1,076 PDFs with the [preserved baseline](reports/kaggle/FINDINGS.md).
 
 | Mode | Compiled before → after | Every page meets target before → after | Overall score before → after | Current grade |
@@ -155,7 +152,7 @@ the input PDFs under the ignored `data/` directory, and run:
 python scripts/evaluate_dataset.py --inputs data/kaggle/pdfs --output output/new-evaluation --report-dir reports/new-evaluation
 ```
 
-This evaluates every PDF recursively in portable and layout modes using the
+This evaluates every PDF recursively in readable and layout modes using the
 real conversion and compilation APIs. It keeps generated sources, PDFs and logs
 under `output/` and writes a compact report and JSON results under `reports/`.
 Failed and rejected documents count as zero in the overall score; successful
