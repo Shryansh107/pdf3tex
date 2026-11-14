@@ -17,6 +17,7 @@ from fontTools import agl
 
 from font_reconstruction import FontError
 from pdf_fonts import FontRegistry, visible
+from readable_icons import IconExporter, icon_font
 
 
 @dataclass
@@ -31,10 +32,11 @@ class Run:
     smallcaps: bool = False
     url: str = ''
     underline: bool = False
+    icon: str = ''
 
     @property
     def style(self):
-        return self.bold, self.italic, self.smallcaps, self.url, self.underline
+        return self.bold, self.italic, self.smallcaps, self.url, self.underline, self.icon
 
 
 @dataclass
@@ -95,7 +97,7 @@ def render(runs, missing):
     """Coalesce adjacent words with the same formatting into readable commands."""
     groups = []
     for run in runs:
-        if groups and groups[-1].style == run.style:
+        if groups and not run.icon and groups[-1].style == run.style:
             groups[-1] = replace(groups[-1], text=groups[-1].text + run.text)
         else:
             groups.append(replace(run))
@@ -103,7 +105,7 @@ def render(runs, missing):
     for run in groups:
         leading = ' ' if run.text.startswith(' ') else ''
         trailing = ' ' if run.text.endswith(' ') else ''
-        value = escape(run.text.strip(), missing)
+        value = run.icon or escape(run.text.strip(), missing)
         if not value:
             values.append(' ')
             continue
@@ -145,19 +147,16 @@ def horizontal_rules(page):
     return rules
 
 
-def extract_lines(page, traces, resources, warnings):
+def extract_lines(page, traces, resources, warnings, icons):
     links = [link for link in page.get_links() if link.get('uri')]
     rules = horizontal_rules(page)
     chars = []
+    icon_chars = []
     for trace in traces:
         if not visible(trace):
             continue
         resource = resources[trace['font_key']]
         name = resource.name.lower()
-        # Icon fonts do not carry prose. Link annotations on their labels remain.
-        if 'fontawesome' in name or 'dingbat' in name:
-            warnings.add('Decorative icon glyphs are omitted; linked text is retained.')
-            continue
         try:
             program = resource.program()
         except FontError:
@@ -188,9 +187,13 @@ def extract_lines(page, traces, resources, warnings):
             uri = next((link['uri'] for link in links
                         if link['from'].contains(pymupdf.Point((bbox[0] + bbox[2]) / 2,
                                                               (bbox[1] + bbox[3]) / 2))), '')
+            if icon_font(name) and gid >= 0:
+                icon_chars.append((Run('\ufffc', x, bbox[2], y, trace['size'], url=uri),
+                                   resource, program, gid, code))
+                continue
             underlined = any(
                 right - left < page.rect.width * .6 and left - .5 <= (x + bbox[2]) / 2 <= right + .5
-                and .3 <= rule_y - y <= max(2.8, trace['size'] * .3)
+                and .3 <= rule_y - y <= max(2.8, trace['size'] * .4)
                 for left, right, rule_y in rules)
             chars.append(Run(value, x, bbox[2], y, trace['size'],
                              bool(flags & 16) or 'bold' in name or 'cmbx' in name,
@@ -203,6 +206,18 @@ def extract_lines(page, traces, resources, warnings):
             min(candidates, key=lambda line: abs(line.y - char.y)).runs.append(char)
         else:
             lines.append(Line([char]))
+    # Superscript icons have their own baseline. Attach them to the nearest
+    # prose line, then retain their original rise in the reusable icon macro.
+    for run, resource, program, gid, code in icon_chars:
+        nearby = [line for line in lines
+                  if abs(line.y - run.y) <= max(run.size * 1.4, line.size * .9)]
+        line = min(nearby, key=lambda candidate: abs(candidate.y - run.y)) if nearby else None
+        rise = line.y - run.y if line else 0
+        run.icon = icons.command(resource, program, gid, code, run.size, rise)
+        if line:
+            line.runs.append(replace(run, y=line.y))
+        else:
+            lines.append(Line([run]))
     for line in lines:
         runs = sorted(line.runs, key=lambda r: r.x)
         output = []
@@ -211,8 +226,8 @@ def extract_lines(page, traces, resources, warnings):
                     and run.text[0] not in ',.;:!?)]}' and output[-1].text[-1] not in '([{'):
                 if not output[-1].text.endswith(' ') and not run.text.startswith(' '):
                     gap_url = run.url if output[-1].url == run.url else ''
-                    output.append(replace(run, text=' ', x=output[-1].end, end=run.x, url=gap_url))
-            if (output and not output[-1].text.isspace() and output[-1].style == run.style
+                    output.append(replace(run, text=' ', x=output[-1].end, end=run.x, url=gap_url, icon=''))
+            if (output and not run.icon and not output[-1].text.isspace() and output[-1].style == run.style
                     and abs(output[-1].size - run.size) < .1):
                 output[-1] = replace(output[-1], text=output[-1].text + run.text, end=run.end)
             else:
@@ -377,9 +392,10 @@ def document_body(pages, body_size, missing):
 
 def convert_readable(data, filename):
     warnings, missing = set(), set()
+    icons = IconExporter(warnings)
     with pymupdf.open(stream=data, filetype='pdf') as doc:
         registry = FontRegistry(doc)
-        pages = [extract_lines(page, traces, registry.resources, warnings)
+        pages = [extract_lines(page, traces, registry.resources, warnings, icons)
                  for page, traces in zip(doc, registry.pages)]
         if any(not lines for lines in pages):
             raise ValueError('Readable LaTeX needs visible text on every page. Scanned pages can be retained as images in Preserve original layout mode.')
@@ -431,6 +447,7 @@ def convert_readable(data, filename):
                        '  \\par\\nobreak\\vspace{-2pt}%\n'
                        '  \\hrule height 0.4pt\\relax\n'
                        '  \\nobreak\\vspace{3pt}%\n}\n')
+        source += icons.preamble()
         source += '\n\\begin{document}\n\n' + body + '\n\\end{document}\n'
         warnings.add('Structure and line wrapping are inferred. Review headings, lists, tables and equations; visual layout can change as text reflows.')
         if missing:

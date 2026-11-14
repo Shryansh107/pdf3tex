@@ -309,7 +309,7 @@ def main():
     paths = sorted((path for path in inputs.rglob('*') if path.suffix.lower() == '.pdf'), key=lambda path: path.relative_to(inputs).as_posix())
     if not paths:
         parser.error(f'No PDFs found under {inputs}')
-    pipeline = ['app.py', 'converter.py', 'readable_converter.py', 'portable_converter.py', 'layout_converter.py', 'font_reconstruction.py', 'pdf_fonts.py', 'compiler.py', 'comparison.py', 'portable_fonts.json']
+    pipeline = ['app.py', 'converter.py', 'readable_converter.py', 'readable_icons.py', 'icon_fonts.json', 'portable_converter.py', 'layout_converter.py', 'font_reconstruction.py', 'pdf_fonts.py', 'compiler.py', 'comparison.py', 'portable_fonts.json']
     pipeline_hash = hashlib.sha256()
     for name in pipeline:
         pipeline_hash.update(name.encode() + (ROOT / name).read_bytes())

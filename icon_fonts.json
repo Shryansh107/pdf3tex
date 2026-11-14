@@ -1,0 +1,7293 @@
+{
+  "icons": {
+    "500px": {
+      "command": "\\faIcon{500px}",
+      "family": "brands",
+      "unicode": 62062
+    },
+    "accessible-icon": {
+      "command": "\\faAccessibleIcon",
+      "family": "brands",
+      "unicode": 62312
+    },
+    "accusoft": {
+      "command": "\\faAccusoft",
+      "family": "brands",
+      "unicode": 62313
+    },
+    "acquisitions-incorporated": {
+      "command": "\\faAcquisitionsIncorporated",
+      "family": "brands",
+      "unicode": 63151
+    },
+    "ad": {
+      "command": "\\faAd",
+      "family": "free",
+      "unicode": 63041
+    },
+    "address-book": {
+      "command": "\\faAddressBook",
+      "family": "free",
+      "unicode": 62137
+    },
+    "address-card": {
+      "command": "\\faAddressCard",
+      "family": "free",
+      "unicode": 62139
+    },
+    "adjust": {
+      "command": "\\faAdjust",
+      "family": "free",
+      "unicode": 61506
+    },
+    "adn": {
+      "command": "\\faAdn",
+      "family": "brands",
+      "unicode": 61808
+    },
+    "adversal": {
+      "command": "\\faAdversal",
+      "family": "brands",
+      "unicode": 62314
+    },
+    "affiliatetheme": {
+      "command": "\\faAffiliatetheme",
+      "family": "brands",
+      "unicode": 62315
+    },
+    "air-freshener": {
+      "command": "\\faAirFreshener",
+      "family": "free",
+      "unicode": 62928
+    },
+    "airbnb": {
+      "command": "\\faAirbnb",
+      "family": "brands",
+      "unicode": 63540
+    },
+    "algolia": {
+      "command": "\\faAlgolia",
+      "family": "brands",
+      "unicode": 62316
+    },
+    "align-center": {
+      "command": "\\faAlignCenter",
+      "family": "free",
+      "unicode": 61495
+    },
+    "align-justify": {
+      "command": "\\faAlignJustify",
+      "family": "free",
+      "unicode": 61497
+    },
+    "align-left": {
+      "command": "\\faAlignLeft",
+      "family": "free",
+      "unicode": 61494
+    },
+    "align-right": {
+      "command": "\\faAlignRight",
+      "family": "free",
+      "unicode": 61496
+    },
+    "alipay": {
+      "command": "\\faAlipay",
+      "family": "brands",
+      "unicode": 63042
+    },
+    "allergies": {
+      "command": "\\faAllergies",
+      "family": "free",
+      "unicode": 62561
+    },
+    "amazon": {
+      "command": "\\faAmazon",
+      "family": "brands",
+      "unicode": 62064
+    },
+    "amazon-pay": {
+      "command": "\\faAmazonPay",
+      "family": "brands",
+      "unicode": 62508
+    },
+    "ambulance": {
+      "command": "\\faAmbulance",
+      "family": "free",
+      "unicode": 61689
+    },
+    "american-sign-language-interpreting": {
+      "command": "\\faAmericanSignLanguageInterpreting",
+      "family": "free",
+      "unicode": 62115
+    },
+    "amilia": {
+      "command": "\\faAmilia",
+      "family": "brands",
+      "unicode": 62317
+    },
+    "anchor": {
+      "command": "\\faAnchor",
+      "family": "free",
+      "unicode": 61757
+    },
+    "android": {
+      "command": "\\faAndroid",
+      "family": "brands",
+      "unicode": 61819
+    },
+    "angellist": {
+      "command": "\\faAngellist",
+      "family": "brands",
+      "unicode": 61961
+    },
+    "angle-double-down": {
+      "command": "\\faAngleDoubleDown",
+      "family": "free",
+      "unicode": 61699
+    },
+    "angle-double-left": {
+      "command": "\\faAngleDoubleLeft",
+      "family": "free",
+      "unicode": 61696
+    },
+    "angle-double-right": {
+      "command": "\\faAngleDoubleRight",
+      "family": "free",
+      "unicode": 61697
+    },
+    "angle-double-up": {
+      "command": "\\faAngleDoubleUp",
+      "family": "free",
+      "unicode": 61698
+    },
+    "angle-down": {
+      "command": "\\faAngleDown",
+      "family": "free",
+      "unicode": 61703
+    },
+    "angle-left": {
+      "command": "\\faAngleLeft",
+      "family": "free",
+      "unicode": 61700
+    },
+    "angle-right": {
+      "command": "\\faAngleRight",
+      "family": "free",
+      "unicode": 61701
+    },
+    "angle-up": {
+      "command": "\\faAngleUp",
+      "family": "free",
+      "unicode": 61702
+    },
+    "angry": {
+      "command": "\\faAngry",
+      "family": "free",
+      "unicode": 62806
+    },
+    "angrycreative": {
+      "command": "\\faAngrycreative",
+      "family": "brands",
+      "unicode": 62318
+    },
+    "angular": {
+      "command": "\\faAngular",
+      "family": "brands",
+      "unicode": 62496
+    },
+    "ankh": {
+      "command": "\\faAnkh",
+      "family": "free",
+      "unicode": 63044
+    },
+    "app-store": {
+      "command": "\\faAppStore",
+      "family": "brands",
+      "unicode": 62319
+    },
+    "app-store-ios": {
+      "command": "\\faAppStoreIos",
+      "family": "brands",
+      "unicode": 62320
+    },
+    "apper": {
+      "command": "\\faApper",
+      "family": "brands",
+      "unicode": 62321
+    },
+    "apple": {
+      "command": "\\faApple",
+      "family": "brands",
+      "unicode": 61817
+    },
+    "apple-alt": {
+      "command": "\\faIcon{apple-alt}",
+      "family": "free",
+      "unicode": 62929
+    },
+    "apple-pay": {
+      "command": "\\faApplePay",
+      "family": "brands",
+      "unicode": 62485
+    },
+    "archive": {
+      "command": "\\faArchive",
+      "family": "free",
+      "unicode": 61831
+    },
+    "archway": {
+      "command": "\\faArchway",
+      "family": "free",
+      "unicode": 62807
+    },
+    "arrow-alt-circle-down": {
+      "command": "\\faArrowAltCircleDown",
+      "family": "free",
+      "unicode": 62296
+    },
+    "arrow-alt-circle-left": {
+      "command": "\\faArrowAltCircleLeft",
+      "family": "free",
+      "unicode": 62297
+    },
+    "arrow-alt-circle-right": {
+      "command": "\\faArrowAltCircleRight",
+      "family": "free",
+      "unicode": 62298
+    },
+    "arrow-alt-circle-up": {
+      "command": "\\faArrowAltCircleUp",
+      "family": "free",
+      "unicode": 62299
+    },
+    "arrow-circle-down": {
+      "command": "\\faArrowCircleDown",
+      "family": "free",
+      "unicode": 61611
+    },
+    "arrow-circle-left": {
+      "command": "\\faArrowCircleLeft",
+      "family": "free",
+      "unicode": 61608
+    },
+    "arrow-circle-right": {
+      "command": "\\faArrowCircleRight",
+      "family": "free",
+      "unicode": 61609
+    },
+    "arrow-circle-up": {
+      "command": "\\faArrowCircleUp",
+      "family": "free",
+      "unicode": 61610
+    },
+    "arrow-down": {
+      "command": "\\faArrowDown",
+      "family": "free",
+      "unicode": 61539
+    },
+    "arrow-left": {
+      "command": "\\faArrowLeft",
+      "family": "free",
+      "unicode": 61536
+    },
+    "arrow-right": {
+      "command": "\\faArrowRight",
+      "family": "free",
+      "unicode": 61537
+    },
+    "arrow-up": {
+      "command": "\\faArrowUp",
+      "family": "free",
+      "unicode": 61538
+    },
+    "arrows-alt": {
+      "command": "\\faIcon{arrows-alt}",
+      "family": "free",
+      "unicode": 61618
+    },
+    "arrows-alt-h": {
+      "command": "\\faArrowsAltH",
+      "family": "free",
+      "unicode": 62263
+    },
+    "arrows-alt-v": {
+      "command": "\\faArrowsAltV",
+      "family": "free",
+      "unicode": 62264
+    },
+    "artstation": {
+      "command": "\\faArtstation",
+      "family": "brands",
+      "unicode": 63354
+    },
+    "assistive-listening-systems": {
+      "command": "\\faAssistiveListeningSystems",
+      "family": "free",
+      "unicode": 62114
+    },
+    "asterisk": {
+      "command": "\\faAsterisk",
+      "family": "free",
+      "unicode": 61545
+    },
+    "asymmetrik": {
+      "command": "\\faAsymmetrik",
+      "family": "brands",
+      "unicode": 62322
+    },
+    "at": {
+      "command": "\\faAt",
+      "family": "free",
+      "unicode": 61946
+    },
+    "atlas": {
+      "command": "\\faAtlas",
+      "family": "free",
+      "unicode": 62808
+    },
+    "atlassian": {
+      "command": "\\faAtlassian",
+      "family": "brands",
+      "unicode": 63355
+    },
+    "atom": {
+      "command": "\\faAtom",
+      "family": "free",
+      "unicode": 62930
+    },
+    "audible": {
+      "command": "\\faAudible",
+      "family": "brands",
+      "unicode": 62323
+    },
+    "audio-description": {
+      "command": "\\faAudioDescription",
+      "family": "free",
+      "unicode": 62110
+    },
+    "autoprefixer": {
+      "command": "\\faAutoprefixer",
+      "family": "brands",
+      "unicode": 62492
+    },
+    "avianex": {
+      "command": "\\faAvianex",
+      "family": "brands",
+      "unicode": 62324
+    },
+    "aviato": {
+      "command": "\\faAviato",
+      "family": "brands",
+      "unicode": 62497
+    },
+    "award": {
+      "command": "\\faAward",
+      "family": "free",
+      "unicode": 62809
+    },
+    "aws": {
+      "command": "\\faAws",
+      "family": "brands",
+      "unicode": 62325
+    },
+    "baby": {
+      "command": "\\faBaby",
+      "family": "free",
+      "unicode": 63356
+    },
+    "baby-carriage": {
+      "command": "\\faBabyCarriage",
+      "family": "free",
+      "unicode": 63357
+    },
+    "backspace": {
+      "command": "\\faBackspace",
+      "family": "free",
+      "unicode": 62810
+    },
+    "backward": {
+      "command": "\\faBackward",
+      "family": "free",
+      "unicode": 61514
+    },
+    "bacon": {
+      "command": "\\faBacon",
+      "family": "free",
+      "unicode": 63461
+    },
+    "bacteria": {
+      "command": "\\faBacteria",
+      "family": "free",
+      "unicode": 57433
+    },
+    "bacterium": {
+      "command": "\\faBacterium",
+      "family": "free",
+      "unicode": 57434
+    },
+    "bahai": {
+      "command": "\\faBahai",
+      "family": "free",
+      "unicode": 63078
+    },
+    "balance-scale": {
+      "command": "\\faBalanceScale",
+      "family": "free",
+      "unicode": 62030
+    },
+    "balance-scale-left": {
+      "command": "\\faBalanceScaleLeft",
+      "family": "free",
+      "unicode": 62741
+    },
+    "balance-scale-right": {
+      "command": "\\faBalanceScaleRight",
+      "family": "free",
+      "unicode": 62742
+    },
+    "ban": {
+      "command": "\\faBan",
+      "family": "free",
+      "unicode": 61534
+    },
+    "band-aid": {
+      "command": "\\faBandAid",
+      "family": "free",
+      "unicode": 62562
+    },
+    "bandcamp": {
+      "command": "\\faBandcamp",
+      "family": "brands",
+      "unicode": 62165
+    },
+    "barcode": {
+      "command": "\\faBarcode",
+      "family": "free",
+      "unicode": 61482
+    },
+    "bars": {
+      "command": "\\faBars",
+      "family": "free",
+      "unicode": 61641
+    },
+    "baseball-ball": {
+      "command": "\\faBaseballBall",
+      "family": "free",
+      "unicode": 62515
+    },
+    "basketball-ball": {
+      "command": "\\faBasketballBall",
+      "family": "free",
+      "unicode": 62516
+    },
+    "bath": {
+      "command": "\\faBath",
+      "family": "free",
+      "unicode": 62157
+    },
+    "battery-empty": {
+      "command": "\\faBatteryEmpty",
+      "family": "free",
+      "unicode": 62020
+    },
+    "battery-full": {
+      "command": "\\faBatteryFull",
+      "family": "free",
+      "unicode": 62016
+    },
+    "battery-half": {
+      "command": "\\faBatteryHalf",
+      "family": "free",
+      "unicode": 62018
+    },
+    "battery-quarter": {
+      "command": "\\faBatteryQuarter",
+      "family": "free",
+      "unicode": 62019
+    },
+    "battery-three-quarters": {
+      "command": "\\faBatteryThreeQuarters",
+      "family": "free",
+      "unicode": 62017
+    },
+    "battle-net": {
+      "command": "\\faBattleNet",
+      "family": "brands",
+      "unicode": 63541
+    },
+    "bed": {
+      "command": "\\faBed",
+      "family": "free",
+      "unicode": 62006
+    },
+    "beer": {
+      "command": "\\faBeer",
+      "family": "free",
+      "unicode": 61692
+    },
+    "behance": {
+      "command": "\\faBehance",
+      "family": "brands",
+      "unicode": 61876
+    },
+    "behance-square": {
+      "command": "\\faBehanceSquare",
+      "family": "brands",
+      "unicode": 61877
+    },
+    "bell": {
+      "command": "\\faBell",
+      "family": "free",
+      "unicode": 61683
+    },
+    "bell-slash": {
+      "command": "\\faBellSlash",
+      "family": "free",
+      "unicode": 61942
+    },
+    "bezier-curve": {
+      "command": "\\faBezierCurve",
+      "family": "free",
+      "unicode": 62811
+    },
+    "bible": {
+      "command": "\\faBible",
+      "family": "free",
+      "unicode": 63047
+    },
+    "bicycle": {
+      "command": "\\faBicycle",
+      "family": "free",
+      "unicode": 61958
+    },
+    "biking": {
+      "command": "\\faBiking",
+      "family": "free",
+      "unicode": 63562
+    },
+    "bimobject": {
+      "command": "\\faBimobject",
+      "family": "brands",
+      "unicode": 62328
+    },
+    "binoculars": {
+      "command": "\\faBinoculars",
+      "family": "free",
+      "unicode": 61925
+    },
+    "biohazard": {
+      "command": "\\faBiohazard",
+      "family": "free",
+      "unicode": 63360
+    },
+    "birthday-cake": {
+      "command": "\\faBirthdayCake",
+      "family": "free",
+      "unicode": 61949
+    },
+    "bitbucket": {
+      "command": "\\faBitbucket",
+      "family": "brands",
+      "unicode": 61809
+    },
+    "bitcoin": {
+      "command": "\\faBitcoin",
+      "family": "brands",
+      "unicode": 62329
+    },
+    "bity": {
+      "command": "\\faBity",
+      "family": "brands",
+      "unicode": 62330
+    },
+    "black-tie": {
+      "command": "\\faBlackTie",
+      "family": "brands",
+      "unicode": 62078
+    },
+    "blackberry": {
+      "command": "\\faBlackberry",
+      "family": "brands",
+      "unicode": 62331
+    },
+    "blender": {
+      "command": "\\faBlender",
+      "family": "free",
+      "unicode": 62743
+    },
+    "blender-phone": {
+      "command": "\\faBlenderPhone",
+      "family": "free",
+      "unicode": 63158
+    },
+    "blind": {
+      "command": "\\faBlind",
+      "family": "free",
+      "unicode": 62109
+    },
+    "blog": {
+      "command": "\\faBlog",
+      "family": "free",
+      "unicode": 63361
+    },
+    "blogger": {
+      "command": "\\faBlogger",
+      "family": "brands",
+      "unicode": 62332
+    },
+    "blogger-b": {
+      "command": "\\faBloggerB",
+      "family": "brands",
+      "unicode": 62333
+    },
+    "bluetooth": {
+      "command": "\\faBluetooth",
+      "family": "brands",
+      "unicode": 62099
+    },
+    "bluetooth-b": {
+      "command": "\\faBluetoothB",
+      "family": "brands",
+      "unicode": 62100
+    },
+    "bold": {
+      "command": "\\faBold",
+      "family": "free",
+      "unicode": 61490
+    },
+    "bolt": {
+      "command": "\\faBolt",
+      "family": "free",
+      "unicode": 61671
+    },
+    "bomb": {
+      "command": "\\faBomb",
+      "family": "free",
+      "unicode": 61922
+    },
+    "bone": {
+      "command": "\\faBone",
+      "family": "free",
+      "unicode": 62935
+    },
+    "bong": {
+      "command": "\\faBong",
+      "family": "free",
+      "unicode": 62812
+    },
+    "book": {
+      "command": "\\faBook",
+      "family": "free",
+      "unicode": 61485
+    },
+    "book-dead": {
+      "command": "\\faBookDead",
+      "family": "free",
+      "unicode": 63159
+    },
+    "book-medical": {
+      "command": "\\faBookMedical",
+      "family": "free",
+      "unicode": 63462
+    },
+    "book-open": {
+      "command": "\\faBookOpen",
+      "family": "free",
+      "unicode": 62744
+    },
+    "book-reader": {
+      "command": "\\faBookReader",
+      "family": "free",
+      "unicode": 62938
+    },
+    "bookmark": {
+      "command": "\\faBookmark",
+      "family": "free",
+      "unicode": 61486
+    },
+    "bootstrap": {
+      "command": "\\faBootstrap",
+      "family": "brands",
+      "unicode": 63542
+    },
+    "border-all": {
+      "command": "\\faBorderAll",
+      "family": "free",
+      "unicode": 63564
+    },
+    "border-none": {
+      "command": "\\faBorderNone",
+      "family": "free",
+      "unicode": 63568
+    },
+    "border-style": {
+      "command": "\\faBorderStyle",
+      "family": "free",
+      "unicode": 63571
+    },
+    "bowling-ball": {
+      "command": "\\faBowlingBall",
+      "family": "free",
+      "unicode": 62518
+    },
+    "box": {
+      "command": "\\faBox",
+      "family": "free",
+      "unicode": 62566
+    },
+    "box-open": {
+      "command": "\\faBoxOpen",
+      "family": "free",
+      "unicode": 62622
+    },
+    "box-tissue": {
+      "command": "\\faBoxTissue",
+      "family": "free",
+      "unicode": 57435
+    },
+    "boxes": {
+      "command": "\\faBoxes",
+      "family": "free",
+      "unicode": 62568
+    },
+    "braille": {
+      "command": "\\faBraille",
+      "family": "free",
+      "unicode": 62113
+    },
+    "brain": {
+      "command": "\\faBrain",
+      "family": "free",
+      "unicode": 62940
+    },
+    "bread-slice": {
+      "command": "\\faBreadSlice",
+      "family": "free",
+      "unicode": 63468
+    },
+    "briefcase": {
+      "command": "\\faBriefcase",
+      "family": "free",
+      "unicode": 61617
+    },
+    "briefcase-medical": {
+      "command": "\\faBriefcaseMedical",
+      "family": "free",
+      "unicode": 62569
+    },
+    "broadcast-tower": {
+      "command": "\\faBroadcastTower",
+      "family": "free",
+      "unicode": 62745
+    },
+    "broom": {
+      "command": "\\faBroom",
+      "family": "free",
+      "unicode": 62746
+    },
+    "brush": {
+      "command": "\\faBrush",
+      "family": "free",
+      "unicode": 62813
+    },
+    "btc": {
+      "command": "\\faBtc",
+      "family": "brands",
+      "unicode": 61786
+    },
+    "buffer": {
+      "command": "\\faBuffer",
+      "family": "brands",
+      "unicode": 63543
+    },
+    "bug": {
+      "command": "\\faBug",
+      "family": "free",
+      "unicode": 61832
+    },
+    "building": {
+      "command": "\\faBuilding",
+      "family": "free",
+      "unicode": 61869
+    },
+    "bullhorn": {
+      "command": "\\faBullhorn",
+      "family": "free",
+      "unicode": 61601
+    },
+    "bullseye": {
+      "command": "\\faBullseye",
+      "family": "free",
+      "unicode": 61760
+    },
+    "burn": {
+      "command": "\\faBurn",
+      "family": "free",
+      "unicode": 62570
+    },
+    "buromobelexperte": {
+      "command": "\\faBuromobelexperte",
+      "family": "brands",
+      "unicode": 62335
+    },
+    "bus": {
+      "command": "\\faBus",
+      "family": "free",
+      "unicode": 61959
+    },
+    "bus-alt": {
+      "command": "\\faIcon{bus-alt}",
+      "family": "free",
+      "unicode": 62814
+    },
+    "business-time": {
+      "command": "\\faBusinessTime",
+      "family": "free",
+      "unicode": 63050
+    },
+    "buy-n-large": {
+      "command": "\\faBuyNLarge",
+      "family": "brands",
+      "unicode": 63654
+    },
+    "buysellads": {
+      "command": "\\faBuysellads",
+      "family": "brands",
+      "unicode": 61965
+    },
+    "calculator": {
+      "command": "\\faCalculator",
+      "family": "free",
+      "unicode": 61932
+    },
+    "calendar": {
+      "command": "\\faCalendar",
+      "family": "free",
+      "unicode": 61747
+    },
+    "calendar-alt": {
+      "command": "\\faIcon{calendar-alt}",
+      "family": "free",
+      "unicode": 61555
+    },
+    "calendar-check": {
+      "command": "\\faCalendarCheck",
+      "family": "free",
+      "unicode": 62068
+    },
+    "calendar-day": {
+      "command": "\\faCalendarDay",
+      "family": "free",
+      "unicode": 63363
+    },
+    "calendar-minus": {
+      "command": "\\faCalendarMinus",
+      "family": "free",
+      "unicode": 62066
+    },
+    "calendar-plus": {
+      "command": "\\faCalendarPlus",
+      "family": "free",
+      "unicode": 62065
+    },
+    "calendar-times": {
+      "command": "\\faCalendarTimes",
+      "family": "free",
+      "unicode": 62067
+    },
+    "calendar-week": {
+      "command": "\\faCalendarWeek",
+      "family": "free",
+      "unicode": 63364
+    },
+    "camera": {
+      "command": "\\faCamera",
+      "family": "free",
+      "unicode": 61488
+    },
+    "camera-retro": {
+      "command": "\\faCameraRetro",
+      "family": "free",
+      "unicode": 61571
+    },
+    "campground": {
+      "command": "\\faCampground",
+      "family": "free",
+      "unicode": 63163
+    },
+    "canadian-maple-leaf": {
+      "command": "\\faCanadianMapleLeaf",
+      "family": "brands",
+      "unicode": 63365
+    },
+    "candy-cane": {
+      "command": "\\faCandyCane",
+      "family": "free",
+      "unicode": 63366
+    },
+    "cannabis": {
+      "command": "\\faCannabis",
+      "family": "free",
+      "unicode": 62815
+    },
+    "capsules": {
+      "command": "\\faCapsules",
+      "family": "free",
+      "unicode": 62571
+    },
+    "car": {
+      "command": "\\faCar",
+      "family": "free",
+      "unicode": 61881
+    },
+    "car-alt": {
+      "command": "\\faIcon{car-alt}",
+      "family": "free",
+      "unicode": 62942
+    },
+    "car-battery": {
+      "command": "\\faCarBattery",
+      "family": "free",
+      "unicode": 62943
+    },
+    "car-crash": {
+      "command": "\\faCarCrash",
+      "family": "free",
+      "unicode": 62945
+    },
+    "car-side": {
+      "command": "\\faCarSide",
+      "family": "free",
+      "unicode": 62948
+    },
+    "caravan": {
+      "command": "\\faCaravan",
+      "family": "free",
+      "unicode": 63743
+    },
+    "caret-down": {
+      "command": "\\faCaretDown",
+      "family": "free",
+      "unicode": 61655
+    },
+    "caret-left": {
+      "command": "\\faCaretLeft",
+      "family": "free",
+      "unicode": 61657
+    },
+    "caret-right": {
+      "command": "\\faCaretRight",
+      "family": "free",
+      "unicode": 61658
+    },
+    "caret-square-down": {
+      "command": "\\faCaretSquareDown",
+      "family": "free",
+      "unicode": 61776
+    },
+    "caret-square-left": {
+      "command": "\\faCaretSquareLeft",
+      "family": "free",
+      "unicode": 61841
+    },
+    "caret-square-right": {
+      "command": "\\faCaretSquareRight",
+      "family": "free",
+      "unicode": 61778
+    },
+    "caret-square-up": {
+      "command": "\\faCaretSquareUp",
+      "family": "free",
+      "unicode": 61777
+    },
+    "caret-up": {
+      "command": "\\faCaretUp",
+      "family": "free",
+      "unicode": 61656
+    },
+    "carrot": {
+      "command": "\\faCarrot",
+      "family": "free",
+      "unicode": 63367
+    },
+    "cart-arrow-down": {
+      "command": "\\faCartArrowDown",
+      "family": "free",
+      "unicode": 61976
+    },
+    "cart-plus": {
+      "command": "\\faCartPlus",
+      "family": "free",
+      "unicode": 61975
+    },
+    "cash-register": {
+      "command": "\\faCashRegister",
+      "family": "free",
+      "unicode": 63368
+    },
+    "cat": {
+      "command": "\\faCat",
+      "family": "free",
+      "unicode": 63166
+    },
+    "cc-amazon-pay": {
+      "command": "\\faCcAmazonPay",
+      "family": "brands",
+      "unicode": 62509
+    },
+    "cc-amex": {
+      "command": "\\faCcAmex",
+      "family": "brands",
+      "unicode": 61939
+    },
+    "cc-apple-pay": {
+      "command": "\\faCcApplePay",
+      "family": "brands",
+      "unicode": 62486
+    },
+    "cc-diners-club": {
+      "command": "\\faCcDinersClub",
+      "family": "brands",
+      "unicode": 62028
+    },
+    "cc-discover": {
+      "command": "\\faCcDiscover",
+      "family": "brands",
+      "unicode": 61938
+    },
+    "cc-jcb": {
+      "command": "\\faCcJcb",
+      "family": "brands",
+      "unicode": 62027
+    },
+    "cc-mastercard": {
+      "command": "\\faCcMastercard",
+      "family": "brands",
+      "unicode": 61937
+    },
+    "cc-paypal": {
+      "command": "\\faCcPaypal",
+      "family": "brands",
+      "unicode": 61940
+    },
+    "cc-stripe": {
+      "command": "\\faCcStripe",
+      "family": "brands",
+      "unicode": 61941
+    },
+    "cc-visa": {
+      "command": "\\faCcVisa",
+      "family": "brands",
+      "unicode": 61936
+    },
+    "centercode": {
+      "command": "\\faCentercode",
+      "family": "brands",
+      "unicode": 62336
+    },
+    "centos": {
+      "command": "\\faCentos",
+      "family": "brands",
+      "unicode": 63369
+    },
+    "certificate": {
+      "command": "\\faCertificate",
+      "family": "free",
+      "unicode": 61603
+    },
+    "chair": {
+      "command": "\\faChair",
+      "family": "free",
+      "unicode": 63168
+    },
+    "chalkboard": {
+      "command": "\\faChalkboard",
+      "family": "free",
+      "unicode": 62747
+    },
+    "chalkboard-teacher": {
+      "command": "\\faChalkboardTeacher",
+      "family": "free",
+      "unicode": 62748
+    },
+    "charging-station": {
+      "command": "\\faChargingStation",
+      "family": "free",
+      "unicode": 62951
+    },
+    "chart-area": {
+      "command": "\\faChartArea",
+      "family": "free",
+      "unicode": 61950
+    },
+    "chart-bar": {
+      "command": "\\faChartBar",
+      "family": "free",
+      "unicode": 61568
+    },
+    "chart-line": {
+      "command": "\\faChartLine",
+      "family": "free",
+      "unicode": 61953
+    },
+    "chart-pie": {
+      "command": "\\faChartPie",
+      "family": "free",
+      "unicode": 61952
+    },
+    "check": {
+      "command": "\\faCheck",
+      "family": "free",
+      "unicode": 61452
+    },
+    "check-circle": {
+      "command": "\\faCheckCircle",
+      "family": "free",
+      "unicode": 61528
+    },
+    "check-double": {
+      "command": "\\faCheckDouble",
+      "family": "free",
+      "unicode": 62816
+    },
+    "check-square": {
+      "command": "\\faCheckSquare",
+      "family": "free",
+      "unicode": 61770
+    },
+    "cheese": {
+      "command": "\\faCheese",
+      "family": "free",
+      "unicode": 63471
+    },
+    "chess": {
+      "command": "\\faChess",
+      "family": "free",
+      "unicode": 62521
+    },
+    "chess-bishop": {
+      "command": "\\faChessBishop",
+      "family": "free",
+      "unicode": 62522
+    },
+    "chess-board": {
+      "command": "\\faChessBoard",
+      "family": "free",
+      "unicode": 62524
+    },
+    "chess-king": {
+      "command": "\\faChessKing",
+      "family": "free",
+      "unicode": 62527
+    },
+    "chess-knight": {
+      "command": "\\faChessKnight",
+      "family": "free",
+      "unicode": 62529
+    },
+    "chess-pawn": {
+      "command": "\\faChessPawn",
+      "family": "free",
+      "unicode": 62531
+    },
+    "chess-queen": {
+      "command": "\\faChessQueen",
+      "family": "free",
+      "unicode": 62533
+    },
+    "chess-rook": {
+      "command": "\\faChessRook",
+      "family": "free",
+      "unicode": 62535
+    },
+    "chevron-circle-down": {
+      "command": "\\faChevronCircleDown",
+      "family": "free",
+      "unicode": 61754
+    },
+    "chevron-circle-left": {
+      "command": "\\faChevronCircleLeft",
+      "family": "free",
+      "unicode": 61751
+    },
+    "chevron-circle-right": {
+      "command": "\\faChevronCircleRight",
+      "family": "free",
+      "unicode": 61752
+    },
+    "chevron-circle-up": {
+      "command": "\\faChevronCircleUp",
+      "family": "free",
+      "unicode": 61753
+    },
+    "chevron-down": {
+      "command": "\\faChevronDown",
+      "family": "free",
+      "unicode": 61560
+    },
+    "chevron-left": {
+      "command": "\\faChevronLeft",
+      "family": "free",
+      "unicode": 61523
+    },
+    "chevron-right": {
+      "command": "\\faChevronRight",
+      "family": "free",
+      "unicode": 61524
+    },
+    "chevron-up": {
+      "command": "\\faChevronUp",
+      "family": "free",
+      "unicode": 61559
+    },
+    "child": {
+      "command": "\\faChild",
+      "family": "free",
+      "unicode": 61870
+    },
+    "chrome": {
+      "command": "\\faChrome",
+      "family": "brands",
+      "unicode": 62056
+    },
+    "chromecast": {
+      "command": "\\faChromecast",
+      "family": "brands",
+      "unicode": 63544
+    },
+    "church": {
+      "command": "\\faChurch",
+      "family": "free",
+      "unicode": 62749
+    },
+    "circle": {
+      "command": "\\faCircle",
+      "family": "free",
+      "unicode": 61713
+    },
+    "circle-notch": {
+      "command": "\\faCircleNotch",
+      "family": "free",
+      "unicode": 61902
+    },
+    "city": {
+      "command": "\\faCity",
+      "family": "free",
+      "unicode": 63055
+    },
+    "clinic-medical": {
+      "command": "\\faClinicMedical",
+      "family": "free",
+      "unicode": 63474
+    },
+    "clipboard": {
+      "command": "\\faClipboard",
+      "family": "free",
+      "unicode": 62248
+    },
+    "clipboard-check": {
+      "command": "\\faClipboardCheck",
+      "family": "free",
+      "unicode": 62572
+    },
+    "clipboard-list": {
+      "command": "\\faClipboardList",
+      "family": "free",
+      "unicode": 62573
+    },
+    "clock": {
+      "command": "\\faClock",
+      "family": "free",
+      "unicode": 61463
+    },
+    "clone": {
+      "command": "\\faClone",
+      "family": "free",
+      "unicode": 62029
+    },
+    "closed-captioning": {
+      "command": "\\faClosedCaptioning",
+      "family": "free",
+      "unicode": 61962
+    },
+    "cloud": {
+      "command": "\\faCloud",
+      "family": "free",
+      "unicode": 61634
+    },
+    "cloud-download-alt": {
+      "command": "\\faIcon{cloud-download-alt}",
+      "family": "free",
+      "unicode": 62337
+    },
+    "cloud-meatball": {
+      "command": "\\faCloudMeatball",
+      "family": "free",
+      "unicode": 63291
+    },
+    "cloud-moon": {
+      "command": "\\faCloudMoon",
+      "family": "free",
+      "unicode": 63171
+    },
+    "cloud-moon-rain": {
+      "command": "\\faCloudMoonRain",
+      "family": "free",
+      "unicode": 63292
+    },
+    "cloud-rain": {
+      "command": "\\faCloudRain",
+      "family": "free",
+      "unicode": 63293
+    },
+    "cloud-showers-heavy": {
+      "command": "\\faCloudShowersHeavy",
+      "family": "free",
+      "unicode": 63296
+    },
+    "cloud-sun": {
+      "command": "\\faCloudSun",
+      "family": "free",
+      "unicode": 63172
+    },
+    "cloud-sun-rain": {
+      "command": "\\faCloudSunRain",
+      "family": "free",
+      "unicode": 63299
+    },
+    "cloud-upload-alt": {
+      "command": "\\faIcon{cloud-upload-alt}",
+      "family": "free",
+      "unicode": 62338
+    },
+    "cloudflare": {
+      "command": "\\faCloudflare",
+      "family": "brands",
+      "unicode": 57469
+    },
+    "cloudscale": {
+      "command": "\\faCloudscale",
+      "family": "brands",
+      "unicode": 62339
+    },
+    "cloudsmith": {
+      "command": "\\faCloudsmith",
+      "family": "brands",
+      "unicode": 62340
+    },
+    "cloudversify": {
+      "command": "\\faCloudversify",
+      "family": "brands",
+      "unicode": 62341
+    },
+    "cocktail": {
+      "command": "\\faCocktail",
+      "family": "free",
+      "unicode": 62817
+    },
+    "code": {
+      "command": "\\faCode",
+      "family": "free",
+      "unicode": 61729
+    },
+    "code-branch": {
+      "command": "\\faCodeBranch",
+      "family": "free",
+      "unicode": 61734
+    },
+    "codepen": {
+      "command": "\\faCodepen",
+      "family": "brands",
+      "unicode": 61899
+    },
+    "codiepie": {
+      "command": "\\faCodiepie",
+      "family": "brands",
+      "unicode": 62084
+    },
+    "coffee": {
+      "command": "\\faCoffee",
+      "family": "free",
+      "unicode": 61684
+    },
+    "cog": {
+      "command": "\\faCog",
+      "family": "free",
+      "unicode": 61459
+    },
+    "cogs": {
+      "command": "\\faCogs",
+      "family": "free",
+      "unicode": 61573
+    },
+    "coins": {
+      "command": "\\faCoins",
+      "family": "free",
+      "unicode": 62750
+    },
+    "columns": {
+      "command": "\\faColumns",
+      "family": "free",
+      "unicode": 61659
+    },
+    "comment": {
+      "command": "\\faComment",
+      "family": "free",
+      "unicode": 61557
+    },
+    "comment-alt": {
+      "command": "\\faIcon{comment-alt}",
+      "family": "free",
+      "unicode": 62074
+    },
+    "comment-dollar": {
+      "command": "\\faCommentDollar",
+      "family": "free",
+      "unicode": 63057
+    },
+    "comment-dots": {
+      "command": "\\faCommentDots",
+      "family": "free",
+      "unicode": 62637
+    },
+    "comment-medical": {
+      "command": "\\faCommentMedical",
+      "family": "free",
+      "unicode": 63477
+    },
+    "comment-slash": {
+      "command": "\\faCommentSlash",
+      "family": "free",
+      "unicode": 62643
+    },
+    "comments": {
+      "command": "\\faComments",
+      "family": "free",
+      "unicode": 61574
+    },
+    "comments-dollar": {
+      "command": "\\faCommentsDollar",
+      "family": "free",
+      "unicode": 63059
+    },
+    "compact-disc": {
+      "command": "\\faCompactDisc",
+      "family": "free",
+      "unicode": 62751
+    },
+    "compass": {
+      "command": "\\faCompass",
+      "family": "free",
+      "unicode": 61774
+    },
+    "compress": {
+      "command": "\\faCompress",
+      "family": "free",
+      "unicode": 61542
+    },
+    "compress-alt": {
+      "command": "\\faIcon{compress-alt}",
+      "family": "free",
+      "unicode": 62498
+    },
+    "compress-arrows-alt": {
+      "command": "\\faIcon{compress-arrows-alt}",
+      "family": "free",
+      "unicode": 63372
+    },
+    "concierge-bell": {
+      "command": "\\faConciergeBell",
+      "family": "free",
+      "unicode": 62818
+    },
+    "confluence": {
+      "command": "\\faConfluence",
+      "family": "brands",
+      "unicode": 63373
+    },
+    "connectdevelop": {
+      "command": "\\faConnectdevelop",
+      "family": "brands",
+      "unicode": 61966
+    },
+    "contao": {
+      "command": "\\faContao",
+      "family": "brands",
+      "unicode": 62061
+    },
+    "cookie": {
+      "command": "\\faCookie",
+      "family": "free",
+      "unicode": 62819
+    },
+    "cookie-bite": {
+      "command": "\\faCookieBite",
+      "family": "free",
+      "unicode": 62820
+    },
+    "copy": {
+      "command": "\\faCopy",
+      "family": "free",
+      "unicode": 61637
+    },
+    "copyright": {
+      "command": "\\faCopyright",
+      "family": "free",
+      "unicode": 61945
+    },
+    "cotton-bureau": {
+      "command": "\\faCottonBureau",
+      "family": "brands",
+      "unicode": 63646
+    },
+    "couch": {
+      "command": "\\faCouch",
+      "family": "free",
+      "unicode": 62648
+    },
+    "cpanel": {
+      "command": "\\faCpanel",
+      "family": "brands",
+      "unicode": 62344
+    },
+    "creative-commons": {
+      "command": "\\faCreativeCommons",
+      "family": "brands",
+      "unicode": 62046
+    },
+    "creative-commons-by": {
+      "command": "\\faCreativeCommonsBy",
+      "family": "brands",
+      "unicode": 62695
+    },
+    "creative-commons-nc": {
+      "command": "\\faCreativeCommonsNc",
+      "family": "brands",
+      "unicode": 62696
+    },
+    "creative-commons-nc-eu": {
+      "command": "\\faCreativeCommonsNcEu",
+      "family": "brands",
+      "unicode": 62697
+    },
+    "creative-commons-nc-jp": {
+      "command": "\\faCreativeCommonsNcJp",
+      "family": "brands",
+      "unicode": 62698
+    },
+    "creative-commons-nd": {
+      "command": "\\faCreativeCommonsNd",
+      "family": "brands",
+      "unicode": 62699
+    },
+    "creative-commons-pd": {
+      "command": "\\faCreativeCommonsPd",
+      "family": "brands",
+      "unicode": 62700
+    },
+    "creative-commons-pd-alt": {
+      "command": "\\faIcon{creative-commons-pd-alt}",
+      "family": "brands",
+      "unicode": 62701
+    },
+    "creative-commons-remix": {
+      "command": "\\faCreativeCommonsRemix",
+      "family": "brands",
+      "unicode": 62702
+    },
+    "creative-commons-sa": {
+      "command": "\\faCreativeCommonsSa",
+      "family": "brands",
+      "unicode": 62703
+    },
+    "creative-commons-sampling": {
+      "command": "\\faCreativeCommonsSampling",
+      "family": "brands",
+      "unicode": 62704
+    },
+    "creative-commons-sampling-plus": {
+      "command": "\\faCreativeCommonsSamplingPlus",
+      "family": "brands",
+      "unicode": 62705
+    },
+    "creative-commons-share": {
+      "command": "\\faCreativeCommonsShare",
+      "family": "brands",
+      "unicode": 62706
+    },
+    "creative-commons-zero": {
+      "command": "\\faCreativeCommonsZero",
+      "family": "brands",
+      "unicode": 62707
+    },
+    "credit-card": {
+      "command": "\\faCreditCard",
+      "family": "free",
+      "unicode": 61597
+    },
+    "critical-role": {
+      "command": "\\faCriticalRole",
+      "family": "brands",
+      "unicode": 63177
+    },
+    "crop": {
+      "command": "\\faCrop",
+      "family": "free",
+      "unicode": 61733
+    },
+    "crop-alt": {
+      "command": "\\faIcon{crop-alt}",
+      "family": "free",
+      "unicode": 62821
+    },
+    "cross": {
+      "command": "\\faCross",
+      "family": "free",
+      "unicode": 63060
+    },
+    "crosshairs": {
+      "command": "\\faCrosshairs",
+      "family": "free",
+      "unicode": 61531
+    },
+    "crow": {
+      "command": "\\faCrow",
+      "family": "free",
+      "unicode": 62752
+    },
+    "crown": {
+      "command": "\\faCrown",
+      "family": "free",
+      "unicode": 62753
+    },
+    "crutch": {
+      "command": "\\faCrutch",
+      "family": "free",
+      "unicode": 63479
+    },
+    "css3": {
+      "command": "\\faCss3",
+      "family": "brands",
+      "unicode": 61756
+    },
+    "css3-alt": {
+      "command": "\\faIcon{css3-alt}",
+      "family": "brands",
+      "unicode": 62347
+    },
+    "cube": {
+      "command": "\\faCube",
+      "family": "free",
+      "unicode": 61874
+    },
+    "cubes": {
+      "command": "\\faCubes",
+      "family": "free",
+      "unicode": 61875
+    },
+    "cut": {
+      "command": "\\faCut",
+      "family": "free",
+      "unicode": 61636
+    },
+    "cuttlefish": {
+      "command": "\\faCuttlefish",
+      "family": "brands",
+      "unicode": 62348
+    },
+    "d-and-d": {
+      "command": "\\faDAndD",
+      "family": "brands",
+      "unicode": 62349
+    },
+    "d-and-d-beyond": {
+      "command": "\\faDAndDBeyond",
+      "family": "brands",
+      "unicode": 63178
+    },
+    "dailymotion": {
+      "command": "\\faDailymotion",
+      "family": "brands",
+      "unicode": 57426
+    },
+    "dashcube": {
+      "command": "\\faDashcube",
+      "family": "brands",
+      "unicode": 61968
+    },
+    "database": {
+      "command": "\\faDatabase",
+      "family": "free",
+      "unicode": 61888
+    },
+    "deaf": {
+      "command": "\\faDeaf",
+      "family": "free",
+      "unicode": 62116
+    },
+    "deezer": {
+      "command": "\\faDeezer",
+      "family": "brands",
+      "unicode": 57463
+    },
+    "delicious": {
+      "command": "\\faDelicious",
+      "family": "brands",
+      "unicode": 61861
+    },
+    "democrat": {
+      "command": "\\faDemocrat",
+      "family": "free",
+      "unicode": 63303
+    },
+    "deploydog": {
+      "command": "\\faDeploydog",
+      "family": "brands",
+      "unicode": 62350
+    },
+    "deskpro": {
+      "command": "\\faDeskpro",
+      "family": "brands",
+      "unicode": 62351
+    },
+    "desktop": {
+      "command": "\\faDesktop",
+      "family": "free",
+      "unicode": 61704
+    },
+    "dev": {
+      "command": "\\faDev",
+      "family": "brands",
+      "unicode": 63180
+    },
+    "deviantart": {
+      "command": "\\faDeviantart",
+      "family": "brands",
+      "unicode": 61885
+    },
+    "dharmachakra": {
+      "command": "\\faDharmachakra",
+      "family": "free",
+      "unicode": 63061
+    },
+    "dhl": {
+      "command": "\\faDhl",
+      "family": "brands",
+      "unicode": 63376
+    },
+    "diagnoses": {
+      "command": "\\faDiagnoses",
+      "family": "free",
+      "unicode": 62576
+    },
+    "diaspora": {
+      "command": "\\faDiaspora",
+      "family": "brands",
+      "unicode": 63377
+    },
+    "dice": {
+      "command": "\\faDice",
+      "family": "free",
+      "unicode": 62754
+    },
+    "dice-d20": {
+      "command": "\\faIcon{dice-d20}",
+      "family": "free",
+      "unicode": 63183
+    },
+    "dice-d6": {
+      "command": "\\faIcon{dice-d6}",
+      "family": "free",
+      "unicode": 63185
+    },
+    "dice-five": {
+      "command": "\\faDiceFive",
+      "family": "free",
+      "unicode": 62755
+    },
+    "dice-four": {
+      "command": "\\faDiceFour",
+      "family": "free",
+      "unicode": 62756
+    },
+    "dice-one": {
+      "command": "\\faDiceOne",
+      "family": "free",
+      "unicode": 62757
+    },
+    "dice-six": {
+      "command": "\\faDiceSix",
+      "family": "free",
+      "unicode": 62758
+    },
+    "dice-three": {
+      "command": "\\faDiceThree",
+      "family": "free",
+      "unicode": 62759
+    },
+    "dice-two": {
+      "command": "\\faDiceTwo",
+      "family": "free",
+      "unicode": 62760
+    },
+    "digg": {
+      "command": "\\faDigg",
+      "family": "brands",
+      "unicode": 61862
+    },
+    "digital-ocean": {
+      "command": "\\faDigitalOcean",
+      "family": "brands",
+      "unicode": 62353
+    },
+    "digital-tachograph": {
+      "command": "\\faDigitalTachograph",
+      "family": "free",
+      "unicode": 62822
+    },
+    "directions": {
+      "command": "\\faDirections",
+      "family": "free",
+      "unicode": 62955
+    },
+    "discord": {
+      "command": "\\faDiscord",
+      "family": "brands",
+      "unicode": 62354
+    },
+    "discourse": {
+      "command": "\\faDiscourse",
+      "family": "brands",
+      "unicode": 62355
+    },
+    "disease": {
+      "command": "\\faDisease",
+      "family": "free",
+      "unicode": 63482
+    },
+    "divide": {
+      "command": "\\faDivide",
+      "family": "free",
+      "unicode": 62761
+    },
+    "dizzy": {
+      "command": "\\faDizzy",
+      "family": "free",
+      "unicode": 62823
+    },
+    "dna": {
+      "command": "\\faDna",
+      "family": "free",
+      "unicode": 62577
+    },
+    "dochub": {
+      "command": "\\faDochub",
+      "family": "brands",
+      "unicode": 62356
+    },
+    "docker": {
+      "command": "\\faDocker",
+      "family": "brands",
+      "unicode": 62357
+    },
+    "dog": {
+      "command": "\\faDog",
+      "family": "free",
+      "unicode": 63187
+    },
+    "dollar-sign": {
+      "command": "\\faDollarSign",
+      "family": "free",
+      "unicode": 61781
+    },
+    "dolly": {
+      "command": "\\faDolly",
+      "family": "free",
+      "unicode": 62578
+    },
+    "dolly-flatbed": {
+      "command": "\\faDollyFlatbed",
+      "family": "free",
+      "unicode": 62580
+    },
+    "donate": {
+      "command": "\\faDonate",
+      "family": "free",
+      "unicode": 62649
+    },
+    "door-closed": {
+      "command": "\\faDoorClosed",
+      "family": "free",
+      "unicode": 62762
+    },
+    "door-open": {
+      "command": "\\faDoorOpen",
+      "family": "free",
+      "unicode": 62763
+    },
+    "dot-circle": {
+      "command": "\\faDotCircle",
+      "family": "free",
+      "unicode": 61842
+    },
+    "dove": {
+      "command": "\\faDove",
+      "family": "free",
+      "unicode": 62650
+    },
+    "download": {
+      "command": "\\faDownload",
+      "family": "free",
+      "unicode": 61465
+    },
+    "draft2digital": {
+      "command": "\\faDraft2digital",
+      "family": "brands",
+      "unicode": 62358
+    },
+    "drafting-compass": {
+      "command": "\\faDraftingCompass",
+      "family": "free",
+      "unicode": 62824
+    },
+    "dragon": {
+      "command": "\\faDragon",
+      "family": "free",
+      "unicode": 63189
+    },
+    "draw-polygon": {
+      "command": "\\faDrawPolygon",
+      "family": "free",
+      "unicode": 62958
+    },
+    "dribbble": {
+      "command": "\\faDribbble",
+      "family": "brands",
+      "unicode": 61821
+    },
+    "dribbble-square": {
+      "command": "\\faDribbbleSquare",
+      "family": "brands",
+      "unicode": 62359
+    },
+    "dropbox": {
+      "command": "\\faDropbox",
+      "family": "brands",
+      "unicode": 61803
+    },
+    "drum": {
+      "command": "\\faDrum",
+      "family": "free",
+      "unicode": 62825
+    },
+    "drum-steelpan": {
+      "command": "\\faDrumSteelpan",
+      "family": "free",
+      "unicode": 62826
+    },
+    "drumstick-bite": {
+      "command": "\\faDrumstickBite",
+      "family": "free",
+      "unicode": 63191
+    },
+    "drupal": {
+      "command": "\\faDrupal",
+      "family": "brands",
+      "unicode": 61865
+    },
+    "dumbbell": {
+      "command": "\\faDumbbell",
+      "family": "free",
+      "unicode": 62539
+    },
+    "dumpster": {
+      "command": "\\faDumpster",
+      "family": "free",
+      "unicode": 63379
+    },
+    "dumpster-fire": {
+      "command": "\\faDumpsterFire",
+      "family": "free",
+      "unicode": 63380
+    },
+    "dungeon": {
+      "command": "\\faDungeon",
+      "family": "free",
+      "unicode": 63193
+    },
+    "dyalog": {
+      "command": "\\faDyalog",
+      "family": "brands",
+      "unicode": 62361
+    },
+    "earlybirds": {
+      "command": "\\faEarlybirds",
+      "family": "brands",
+      "unicode": 62362
+    },
+    "ebay": {
+      "command": "\\faEbay",
+      "family": "brands",
+      "unicode": 62708
+    },
+    "edge": {
+      "command": "\\faEdge",
+      "family": "brands",
+      "unicode": 62082
+    },
+    "edge-legacy": {
+      "command": "\\faEdgeLegacy",
+      "family": "brands",
+      "unicode": 57464
+    },
+    "edit": {
+      "command": "\\faEdit",
+      "family": "free",
+      "unicode": 61508
+    },
+    "egg": {
+      "command": "\\faEgg",
+      "family": "free",
+      "unicode": 63483
+    },
+    "eject": {
+      "command": "\\faEject",
+      "family": "free",
+      "unicode": 61522
+    },
+    "elementor": {
+      "command": "\\faElementor",
+      "family": "brands",
+      "unicode": 62512
+    },
+    "ellipsis-h": {
+      "command": "\\faEllipsisH",
+      "family": "free",
+      "unicode": 61761
+    },
+    "ellipsis-v": {
+      "command": "\\faEllipsisV",
+      "family": "free",
+      "unicode": 61762
+    },
+    "ello": {
+      "command": "\\faEllo",
+      "family": "brands",
+      "unicode": 62961
+    },
+    "ember": {
+      "command": "\\faEmber",
+      "family": "brands",
+      "unicode": 62499
+    },
+    "empire": {
+      "command": "\\faEmpire",
+      "family": "brands",
+      "unicode": 61905
+    },
+    "envelope": {
+      "command": "\\faEnvelope",
+      "family": "free",
+      "unicode": 61664
+    },
+    "envelope-open": {
+      "command": "\\faEnvelopeOpen",
+      "family": "free",
+      "unicode": 62134
+    },
+    "envelope-open-text": {
+      "command": "\\faEnvelopeOpenText",
+      "family": "free",
+      "unicode": 63064
+    },
+    "envelope-square": {
+      "command": "\\faEnvelopeSquare",
+      "family": "free",
+      "unicode": 61849
+    },
+    "envira": {
+      "command": "\\faEnvira",
+      "family": "brands",
+      "unicode": 62105
+    },
+    "equals": {
+      "command": "\\faEquals",
+      "family": "free",
+      "unicode": 62764
+    },
+    "eraser": {
+      "command": "\\faEraser",
+      "family": "free",
+      "unicode": 61741
+    },
+    "erlang": {
+      "command": "\\faErlang",
+      "family": "brands",
+      "unicode": 62365
+    },
+    "ethereum": {
+      "command": "\\faEthereum",
+      "family": "brands",
+      "unicode": 62510
+    },
+    "ethernet": {
+      "command": "\\faEthernet",
+      "family": "free",
+      "unicode": 63382
+    },
+    "etsy": {
+      "command": "\\faEtsy",
+      "family": "brands",
+      "unicode": 62167
+    },
+    "euro-sign": {
+      "command": "\\faEuroSign",
+      "family": "free",
+      "unicode": 61779
+    },
+    "evernote": {
+      "command": "\\faEvernote",
+      "family": "brands",
+      "unicode": 63545
+    },
+    "exchange-alt": {
+      "command": "\\faIcon{exchange-alt}",
+      "family": "free",
+      "unicode": 62306
+    },
+    "exclamation": {
+      "command": "\\faExclamation",
+      "family": "free",
+      "unicode": 61738
+    },
+    "exclamation-circle": {
+      "command": "\\faExclamationCircle",
+      "family": "free",
+      "unicode": 61546
+    },
+    "exclamation-triangle": {
+      "command": "\\faExclamationTriangle",
+      "family": "free",
+      "unicode": 61553
+    },
+    "expand": {
+      "command": "\\faExpand",
+      "family": "free",
+      "unicode": 61541
+    },
+    "expand-alt": {
+      "command": "\\faIcon{expand-alt}",
+      "family": "free",
+      "unicode": 62500
+    },
+    "expand-arrows-alt": {
+      "command": "\\faIcon{expand-arrows-alt}",
+      "family": "free",
+      "unicode": 62238
+    },
+    "expeditedssl": {
+      "command": "\\faExpeditedssl",
+      "family": "brands",
+      "unicode": 62014
+    },
+    "external-link-alt": {
+      "command": "\\faExternalLink*",
+      "family": "free",
+      "unicode": 62301
+    },
+    "external-link-square-alt": {
+      "command": "\\faIcon{external-link-square-alt}",
+      "family": "free",
+      "unicode": 62304
+    },
+    "eye": {
+      "command": "\\faEye",
+      "family": "free",
+      "unicode": 61550
+    },
+    "eye-dropper": {
+      "command": "\\faEyeDropper",
+      "family": "free",
+      "unicode": 61947
+    },
+    "eye-slash": {
+      "command": "\\faEyeSlash",
+      "family": "free",
+      "unicode": 61552
+    },
+    "facebook": {
+      "command": "\\faFacebook",
+      "family": "brands",
+      "unicode": 61594
+    },
+    "facebook-f": {
+      "command": "\\faFacebookF",
+      "family": "brands",
+      "unicode": 62366
+    },
+    "facebook-messenger": {
+      "command": "\\faFacebookMessenger",
+      "family": "brands",
+      "unicode": 62367
+    },
+    "facebook-square": {
+      "command": "\\faFacebookSquare",
+      "family": "brands",
+      "unicode": 61570
+    },
+    "fan": {
+      "command": "\\faFan",
+      "family": "free",
+      "unicode": 63587
+    },
+    "fantasy-flight-games": {
+      "command": "\\faFantasyFlightGames",
+      "family": "brands",
+      "unicode": 63196
+    },
+    "fast-backward": {
+      "command": "\\faFastBackward",
+      "family": "free",
+      "unicode": 61513
+    },
+    "fast-forward": {
+      "command": "\\faFastForward",
+      "family": "free",
+      "unicode": 61520
+    },
+    "faucet": {
+      "command": "\\faFaucet",
+      "family": "free",
+      "unicode": 57349
+    },
+    "fax": {
+      "command": "\\faFax",
+      "family": "free",
+      "unicode": 61868
+    },
+    "feather": {
+      "command": "\\faFeather",
+      "family": "free",
+      "unicode": 62765
+    },
+    "feather-alt": {
+      "command": "\\faIcon{feather-alt}",
+      "family": "free",
+      "unicode": 62827
+    },
+    "fedex": {
+      "command": "\\faFedex",
+      "family": "brands",
+      "unicode": 63383
+    },
+    "fedora": {
+      "command": "\\faFedora",
+      "family": "brands",
+      "unicode": 63384
+    },
+    "female": {
+      "command": "\\faFemale",
+      "family": "free",
+      "unicode": 61826
+    },
+    "fighter-jet": {
+      "command": "\\faFighterJet",
+      "family": "free",
+      "unicode": 61691
+    },
+    "figma": {
+      "command": "\\faFigma",
+      "family": "brands",
+      "unicode": 63385
+    },
+    "file": {
+      "command": "\\faFile",
+      "family": "free",
+      "unicode": 61787
+    },
+    "file-alt": {
+      "command": "\\faIcon{file-alt}",
+      "family": "free",
+      "unicode": 61788
+    },
+    "file-archive": {
+      "command": "\\faFileArchive",
+      "family": "free",
+      "unicode": 61894
+    },
+    "file-audio": {
+      "command": "\\faFileAudio",
+      "family": "free",
+      "unicode": 61895
+    },
+    "file-code": {
+      "command": "\\faFileCode",
+      "family": "free",
+      "unicode": 61897
+    },
+    "file-contract": {
+      "command": "\\faFileContract",
+      "family": "free",
+      "unicode": 62828
+    },
+    "file-csv": {
+      "command": "\\faFileCsv",
+      "family": "free",
+      "unicode": 63197
+    },
+    "file-download": {
+      "command": "\\faFileDownload",
+      "family": "free",
+      "unicode": 62829
+    },
+    "file-excel": {
+      "command": "\\faFileExcel",
+      "family": "free",
+      "unicode": 61891
+    },
+    "file-export": {
+      "command": "\\faFileExport",
+      "family": "free",
+      "unicode": 62830
+    },
+    "file-image": {
+      "command": "\\faFileImage",
+      "family": "free",
+      "unicode": 61893
+    },
+    "file-import": {
+      "command": "\\faFileImport",
+      "family": "free",
+      "unicode": 62831
+    },
+    "file-invoice": {
+      "command": "\\faFileInvoice",
+      "family": "free",
+      "unicode": 62832
+    },
+    "file-invoice-dollar": {
+      "command": "\\faFileInvoiceDollar",
+      "family": "free",
+      "unicode": 62833
+    },
+    "file-medical": {
+      "command": "\\faFileMedical",
+      "family": "free",
+      "unicode": 62583
+    },
+    "file-medical-alt": {
+      "command": "\\faIcon{file-medical-alt}",
+      "family": "free",
+      "unicode": 62584
+    },
+    "file-pdf": {
+      "command": "\\faFilePdf",
+      "family": "free",
+      "unicode": 61889
+    },
+    "file-powerpoint": {
+      "command": "\\faFilePowerpoint",
+      "family": "free",
+      "unicode": 61892
+    },
+    "file-prescription": {
+      "command": "\\faFilePrescription",
+      "family": "free",
+      "unicode": 62834
+    },
+    "file-signature": {
+      "command": "\\faFileSignature",
+      "family": "free",
+      "unicode": 62835
+    },
+    "file-upload": {
+      "command": "\\faFileUpload",
+      "family": "free",
+      "unicode": 62836
+    },
+    "file-video": {
+      "command": "\\faFileVideo",
+      "family": "free",
+      "unicode": 61896
+    },
+    "file-word": {
+      "command": "\\faFileWord",
+      "family": "free",
+      "unicode": 61890
+    },
+    "fill": {
+      "command": "\\faFill",
+      "family": "free",
+      "unicode": 62837
+    },
+    "fill-drip": {
+      "command": "\\faFillDrip",
+      "family": "free",
+      "unicode": 62838
+    },
+    "film": {
+      "command": "\\faFilm",
+      "family": "free",
+      "unicode": 61448
+    },
+    "filter": {
+      "command": "\\faFilter",
+      "family": "free",
+      "unicode": 61616
+    },
+    "fingerprint": {
+      "command": "\\faFingerprint",
+      "family": "free",
+      "unicode": 62839
+    },
+    "fire": {
+      "command": "\\faFire",
+      "family": "free",
+      "unicode": 61549
+    },
+    "fire-alt": {
+      "command": "\\faIcon{fire-alt}",
+      "family": "free",
+      "unicode": 63460
+    },
+    "fire-extinguisher": {
+      "command": "\\faFireExtinguisher",
+      "family": "free",
+      "unicode": 61748
+    },
+    "firefox": {
+      "command": "\\faFirefox",
+      "family": "brands",
+      "unicode": 62057
+    },
+    "firefox-browser": {
+      "command": "\\faFirefoxBrowser",
+      "family": "brands",
+      "unicode": 57351
+    },
+    "first-aid": {
+      "command": "\\faFirstAid",
+      "family": "free",
+      "unicode": 62585
+    },
+    "first-order": {
+      "command": "\\faFirstOrder",
+      "family": "brands",
+      "unicode": 62128
+    },
+    "first-order-alt": {
+      "command": "\\faIcon{first-order-alt}",
+      "family": "brands",
+      "unicode": 62730
+    },
+    "firstdraft": {
+      "command": "\\faFirstdraft",
+      "family": "brands",
+      "unicode": 62369
+    },
+    "fish": {
+      "command": "\\faFish",
+      "family": "free",
+      "unicode": 62840
+    },
+    "fist-raised": {
+      "command": "\\faFistRaised",
+      "family": "free",
+      "unicode": 63198
+    },
+    "flag": {
+      "command": "\\faFlag",
+      "family": "free",
+      "unicode": 61476
+    },
+    "flag-checkered": {
+      "command": "\\faFlagCheckered",
+      "family": "free",
+      "unicode": 61726
+    },
+    "flag-usa": {
+      "command": "\\faFlagUsa",
+      "family": "free",
+      "unicode": 63309
+    },
+    "flask": {
+      "command": "\\faFlask",
+      "family": "free",
+      "unicode": 61635
+    },
+    "flickr": {
+      "command": "\\faFlickr",
+      "family": "brands",
+      "unicode": 61806
+    },
+    "flipboard": {
+      "command": "\\faFlipboard",
+      "family": "brands",
+      "unicode": 62541
+    },
+    "flushed": {
+      "command": "\\faFlushed",
+      "family": "free",
+      "unicode": 62841
+    },
+    "fly": {
+      "command": "\\faFly",
+      "family": "brands",
+      "unicode": 62487
+    },
+    "folder": {
+      "command": "\\faFolder",
+      "family": "free",
+      "unicode": 61563
+    },
+    "folder-minus": {
+      "command": "\\faFolderMinus",
+      "family": "free",
+      "unicode": 63069
+    },
+    "folder-open": {
+      "command": "\\faFolderOpen",
+      "family": "free",
+      "unicode": 61564
+    },
+    "folder-plus": {
+      "command": "\\faFolderPlus",
+      "family": "free",
+      "unicode": 63070
+    },
+    "font": {
+      "command": "\\faFont",
+      "family": "free",
+      "unicode": 61489
+    },
+    "font-awesome": {
+      "command": "\\faFontAwesome",
+      "family": "brands",
+      "unicode": 62132
+    },
+    "font-awesome-alt": {
+      "command": "\\faIcon{font-awesome-alt}",
+      "family": "brands",
+      "unicode": 62300
+    },
+    "font-awesome-flag": {
+      "command": "\\faFontAwesomeFlag",
+      "family": "brands",
+      "unicode": 62501
+    },
+    "fonticons": {
+      "command": "\\faFonticons",
+      "family": "brands",
+      "unicode": 62080
+    },
+    "fonticons-fi": {
+      "command": "\\faFonticonsFi",
+      "family": "brands",
+      "unicode": 62370
+    },
+    "football-ball": {
+      "command": "\\faFootballBall",
+      "family": "free",
+      "unicode": 62542
+    },
+    "fort-awesome": {
+      "command": "\\faFortAwesome",
+      "family": "brands",
+      "unicode": 62086
+    },
+    "fort-awesome-alt": {
+      "command": "\\faIcon{fort-awesome-alt}",
+      "family": "brands",
+      "unicode": 62371
+    },
+    "forumbee": {
+      "command": "\\faForumbee",
+      "family": "brands",
+      "unicode": 61969
+    },
+    "forward": {
+      "command": "\\faForward",
+      "family": "free",
+      "unicode": 61518
+    },
+    "foursquare": {
+      "command": "\\faFoursquare",
+      "family": "brands",
+      "unicode": 61824
+    },
+    "free-code-camp": {
+      "command": "\\faFreeCodeCamp",
+      "family": "brands",
+      "unicode": 62149
+    },
+    "freebsd": {
+      "command": "\\faFreebsd",
+      "family": "brands",
+      "unicode": 62372
+    },
+    "frog": {
+      "command": "\\faFrog",
+      "family": "free",
+      "unicode": 62766
+    },
+    "frown": {
+      "command": "\\faFrown",
+      "family": "free",
+      "unicode": 61721
+    },
+    "frown-open": {
+      "command": "\\faFrownOpen",
+      "family": "free",
+      "unicode": 62842
+    },
+    "fulcrum": {
+      "command": "\\faFulcrum",
+      "family": "brands",
+      "unicode": 62731
+    },
+    "funnel-dollar": {
+      "command": "\\faFunnelDollar",
+      "family": "free",
+      "unicode": 63074
+    },
+    "futbol": {
+      "command": "\\faFutbol",
+      "family": "free",
+      "unicode": 61923
+    },
+    "galactic-republic": {
+      "command": "\\faGalacticRepublic",
+      "family": "brands",
+      "unicode": 62732
+    },
+    "galactic-senate": {
+      "command": "\\faGalacticSenate",
+      "family": "brands",
+      "unicode": 62733
+    },
+    "gamepad": {
+      "command": "\\faGamepad",
+      "family": "free",
+      "unicode": 61723
+    },
+    "gas-pump": {
+      "command": "\\faGasPump",
+      "family": "free",
+      "unicode": 62767
+    },
+    "gavel": {
+      "command": "\\faGavel",
+      "family": "free",
+      "unicode": 61667
+    },
+    "gem": {
+      "command": "\\faGem",
+      "family": "free",
+      "unicode": 62373
+    },
+    "genderless": {
+      "command": "\\faGenderless",
+      "family": "free",
+      "unicode": 61997
+    },
+    "get-pocket": {
+      "command": "\\faGetPocket",
+      "family": "brands",
+      "unicode": 62053
+    },
+    "gg": {
+      "command": "\\faGg",
+      "family": "brands",
+      "unicode": 62048
+    },
+    "gg-circle": {
+      "command": "\\faGgCircle",
+      "family": "brands",
+      "unicode": 62049
+    },
+    "ghost": {
+      "command": "\\faGhost",
+      "family": "free",
+      "unicode": 63202
+    },
+    "gift": {
+      "command": "\\faGift",
+      "family": "free",
+      "unicode": 61547
+    },
+    "gifts": {
+      "command": "\\faGifts",
+      "family": "free",
+      "unicode": 63388
+    },
+    "git": {
+      "command": "\\faGit",
+      "family": "brands",
+      "unicode": 61907
+    },
+    "git-alt": {
+      "command": "\\faIcon{git-alt}",
+      "family": "brands",
+      "unicode": 63553
+    },
+    "git-square": {
+      "command": "\\faGitSquare",
+      "family": "brands",
+      "unicode": 61906
+    },
+    "github": {
+      "command": "\\faGithub",
+      "family": "brands",
+      "unicode": 61595
+    },
+    "github-alt": {
+      "command": "\\faIcon{github-alt}",
+      "family": "brands",
+      "unicode": 61715
+    },
+    "github-square": {
+      "command": "\\faGithubSquare",
+      "family": "brands",
+      "unicode": 61586
+    },
+    "gitkraken": {
+      "command": "\\faGitkraken",
+      "family": "brands",
+      "unicode": 62374
+    },
+    "gitlab": {
+      "command": "\\faGitlab",
+      "family": "brands",
+      "unicode": 62102
+    },
+    "gitter": {
+      "command": "\\faGitter",
+      "family": "brands",
+      "unicode": 62502
+    },
+    "glass-cheers": {
+      "command": "\\faGlassCheers",
+      "family": "free",
+      "unicode": 63391
+    },
+    "glass-martini": {
+      "command": "\\faGlassMartini",
+      "family": "free",
+      "unicode": 61440
+    },
+    "glass-martini-alt": {
+      "command": "\\faIcon{glass-martini-alt}",
+      "family": "free",
+      "unicode": 62843
+    },
+    "glass-whiskey": {
+      "command": "\\faGlassWhiskey",
+      "family": "free",
+      "unicode": 63392
+    },
+    "glasses": {
+      "command": "\\faGlasses",
+      "family": "free",
+      "unicode": 62768
+    },
+    "glide": {
+      "command": "\\faGlide",
+      "family": "brands",
+      "unicode": 62117
+    },
+    "glide-g": {
+      "command": "\\faGlideG",
+      "family": "brands",
+      "unicode": 62118
+    },
+    "globe": {
+      "command": "\\faGlobe",
+      "family": "free",
+      "unicode": 61612
+    },
+    "globe-africa": {
+      "command": "\\faGlobeAfrica",
+      "family": "free",
+      "unicode": 62844
+    },
+    "globe-americas": {
+      "command": "\\faGlobeAmericas",
+      "family": "free",
+      "unicode": 62845
+    },
+    "globe-asia": {
+      "command": "\\faGlobeAsia",
+      "family": "free",
+      "unicode": 62846
+    },
+    "globe-europe": {
+      "command": "\\faGlobeEurope",
+      "family": "free",
+      "unicode": 63394
+    },
+    "gofore": {
+      "command": "\\faGofore",
+      "family": "brands",
+      "unicode": 62375
+    },
+    "golf-ball": {
+      "command": "\\faGolfBall",
+      "family": "free",
+      "unicode": 62544
+    },
+    "goodreads": {
+      "command": "\\faGoodreads",
+      "family": "brands",
+      "unicode": 62376
+    },
+    "goodreads-g": {
+      "command": "\\faGoodreadsG",
+      "family": "brands",
+      "unicode": 62377
+    },
+    "google": {
+      "command": "\\faGoogle",
+      "family": "brands",
+      "unicode": 61856
+    },
+    "google-drive": {
+      "command": "\\faGoogleDrive",
+      "family": "brands",
+      "unicode": 62378
+    },
+    "google-pay": {
+      "command": "\\faGooglePay",
+      "family": "brands",
+      "unicode": 57465
+    },
+    "google-play": {
+      "command": "\\faGooglePlay",
+      "family": "brands",
+      "unicode": 62379
+    },
+    "google-plus": {
+      "command": "\\faGooglePlus",
+      "family": "brands",
+      "unicode": 62131
+    },
+    "google-plus-g": {
+      "command": "\\faGooglePlusG",
+      "family": "brands",
+      "unicode": 61653
+    },
+    "google-plus-square": {
+      "command": "\\faGooglePlusSquare",
+      "family": "brands",
+      "unicode": 61652
+    },
+    "google-wallet": {
+      "command": "\\faGoogleWallet",
+      "family": "brands",
+      "unicode": 61934
+    },
+    "gopuram": {
+      "command": "\\faGopuram",
+      "family": "free",
+      "unicode": 63076
+    },
+    "graduation-cap": {
+      "command": "\\faGraduationCap",
+      "family": "free",
+      "unicode": 61853
+    },
+    "gratipay": {
+      "command": "\\faGratipay",
+      "family": "brands",
+      "unicode": 61828
+    },
+    "grav": {
+      "command": "\\faGrav",
+      "family": "brands",
+      "unicode": 62166
+    },
+    "greater-than": {
+      "command": "\\faGreaterThan",
+      "family": "free",
+      "unicode": 62769
+    },
+    "greater-than-equal": {
+      "command": "\\faGreaterThanEqual",
+      "family": "free",
+      "unicode": 62770
+    },
+    "grimace": {
+      "command": "\\faGrimace",
+      "family": "free",
+      "unicode": 62847
+    },
+    "grin": {
+      "command": "\\faGrin",
+      "family": "free",
+      "unicode": 62848
+    },
+    "grin-alt": {
+      "command": "\\faIcon{grin-alt}",
+      "family": "free",
+      "unicode": 62849
+    },
+    "grin-beam": {
+      "command": "\\faGrinBeam",
+      "family": "free",
+      "unicode": 62850
+    },
+    "grin-beam-sweat": {
+      "command": "\\faGrinBeamSweat",
+      "family": "free",
+      "unicode": 62851
+    },
+    "grin-hearts": {
+      "command": "\\faGrinHearts",
+      "family": "free",
+      "unicode": 62852
+    },
+    "grin-squint": {
+      "command": "\\faGrinSquint",
+      "family": "free",
+      "unicode": 62853
+    },
+    "grin-squint-tears": {
+      "command": "\\faGrinSquintTears",
+      "family": "free",
+      "unicode": 62854
+    },
+    "grin-stars": {
+      "command": "\\faGrinStars",
+      "family": "free",
+      "unicode": 62855
+    },
+    "grin-tears": {
+      "command": "\\faGrinTears",
+      "family": "free",
+      "unicode": 62856
+    },
+    "grin-tongue": {
+      "command": "\\faGrinTongue",
+      "family": "free",
+      "unicode": 62857
+    },
+    "grin-tongue-squint": {
+      "command": "\\faGrinTongueSquint",
+      "family": "free",
+      "unicode": 62858
+    },
+    "grin-tongue-wink": {
+      "command": "\\faGrinTongueWink",
+      "family": "free",
+      "unicode": 62859
+    },
+    "grin-wink": {
+      "command": "\\faGrinWink",
+      "family": "free",
+      "unicode": 62860
+    },
+    "grip-horizontal": {
+      "command": "\\faGripHorizontal",
+      "family": "free",
+      "unicode": 62861
+    },
+    "grip-lines": {
+      "command": "\\faGripLines",
+      "family": "free",
+      "unicode": 63396
+    },
+    "grip-lines-vertical": {
+      "command": "\\faGripLinesVertical",
+      "family": "free",
+      "unicode": 63397
+    },
+    "grip-vertical": {
+      "command": "\\faGripVertical",
+      "family": "free",
+      "unicode": 62862
+    },
+    "gripfire": {
+      "command": "\\faGripfire",
+      "family": "brands",
+      "unicode": 62380
+    },
+    "grunt": {
+      "command": "\\faGrunt",
+      "family": "brands",
+      "unicode": 62381
+    },
+    "guilded": {
+      "command": "\\faGuilded",
+      "family": "brands",
+      "unicode": 57470
+    },
+    "guitar": {
+      "command": "\\faGuitar",
+      "family": "free",
+      "unicode": 63398
+    },
+    "gulp": {
+      "command": "\\faGulp",
+      "family": "brands",
+      "unicode": 62382
+    },
+    "h-square": {
+      "command": "\\faHSquare",
+      "family": "free",
+      "unicode": 61693
+    },
+    "hacker-news": {
+      "command": "\\faHackerNews",
+      "family": "brands",
+      "unicode": 61908
+    },
+    "hacker-news-square": {
+      "command": "\\faHackerNewsSquare",
+      "family": "brands",
+      "unicode": 62383
+    },
+    "hackerrank": {
+      "command": "\\faHackerrank",
+      "family": "brands",
+      "unicode": 62967
+    },
+    "hamburger": {
+      "command": "\\faHamburger",
+      "family": "free",
+      "unicode": 63493
+    },
+    "hammer": {
+      "command": "\\faHammer",
+      "family": "free",
+      "unicode": 63203
+    },
+    "hamsa": {
+      "command": "\\faHamsa",
+      "family": "free",
+      "unicode": 63077
+    },
+    "hand-holding": {
+      "command": "\\faHandHolding",
+      "family": "free",
+      "unicode": 62653
+    },
+    "hand-holding-heart": {
+      "command": "\\faHandHoldingHeart",
+      "family": "free",
+      "unicode": 62654
+    },
+    "hand-holding-medical": {
+      "command": "\\faHandHoldingMedical",
+      "family": "free",
+      "unicode": 57436
+    },
+    "hand-holding-usd": {
+      "command": "\\faHandHoldingUsd",
+      "family": "free",
+      "unicode": 62656
+    },
+    "hand-holding-water": {
+      "command": "\\faHandHoldingWater",
+      "family": "free",
+      "unicode": 62657
+    },
+    "hand-lizard": {
+      "command": "\\faHandLizard",
+      "family": "free",
+      "unicode": 62040
+    },
+    "hand-middle-finger": {
+      "command": "\\faHandMiddleFinger",
+      "family": "free",
+      "unicode": 63494
+    },
+    "hand-paper": {
+      "command": "\\faHandPaper",
+      "family": "free",
+      "unicode": 62038
+    },
+    "hand-peace": {
+      "command": "\\faHandPeace",
+      "family": "free",
+      "unicode": 62043
+    },
+    "hand-point-down": {
+      "command": "\\faHandPointDown",
+      "family": "free",
+      "unicode": 61607
+    },
+    "hand-point-left": {
+      "command": "\\faHandPointLeft",
+      "family": "free",
+      "unicode": 61605
+    },
+    "hand-point-right": {
+      "command": "\\faHandPointRight",
+      "family": "free",
+      "unicode": 61604
+    },
+    "hand-point-up": {
+      "command": "\\faHandPointUp",
+      "family": "free",
+      "unicode": 61606
+    },
+    "hand-pointer": {
+      "command": "\\faHandPointer",
+      "family": "free",
+      "unicode": 62042
+    },
+    "hand-rock": {
+      "command": "\\faHandRock",
+      "family": "free",
+      "unicode": 62037
+    },
+    "hand-scissors": {
+      "command": "\\faHandScissors",
+      "family": "free",
+      "unicode": 62039
+    },
+    "hand-sparkles": {
+      "command": "\\faHandSparkles",
+      "family": "free",
+      "unicode": 57437
+    },
+    "hand-spock": {
+      "command": "\\faHandSpock",
+      "family": "free",
+      "unicode": 62041
+    },
+    "hands": {
+      "command": "\\faHands",
+      "family": "free",
+      "unicode": 62658
+    },
+    "hands-helping": {
+      "command": "\\faHandsHelping",
+      "family": "free",
+      "unicode": 62660
+    },
+    "hands-wash": {
+      "command": "\\faHandsWash",
+      "family": "free",
+      "unicode": 57438
+    },
+    "handshake": {
+      "command": "\\faHandshake",
+      "family": "free",
+      "unicode": 62133
+    },
+    "handshake-alt-slash": {
+      "command": "\\faHandshakeAltSlash",
+      "family": "free",
+      "unicode": 57439
+    },
+    "handshake-slash": {
+      "command": "\\faHandshakeSlash",
+      "family": "free",
+      "unicode": 57440
+    },
+    "hanukiah": {
+      "command": "\\faHanukiah",
+      "family": "free",
+      "unicode": 63206
+    },
+    "hard-hat": {
+      "command": "\\faHardHat",
+      "family": "free",
+      "unicode": 63495
+    },
+    "hashtag": {
+      "command": "\\faHashtag",
+      "family": "free",
+      "unicode": 62098
+    },
+    "hat-cowboy": {
+      "command": "\\faHatCowboy",
+      "family": "free",
+      "unicode": 63680
+    },
+    "hat-cowboy-side": {
+      "command": "\\faHatCowboySide",
+      "family": "free",
+      "unicode": 63681
+    },
+    "hat-wizard": {
+      "command": "\\faHatWizard",
+      "family": "free",
+      "unicode": 63208
+    },
+    "hdd": {
+      "command": "\\faHdd",
+      "family": "free",
+      "unicode": 61600
+    },
+    "head-side-cough": {
+      "command": "\\faHeadSideCough",
+      "family": "free",
+      "unicode": 57441
+    },
+    "head-side-cough-slash": {
+      "command": "\\faHeadSideCoughSlash",
+      "family": "free",
+      "unicode": 57442
+    },
+    "head-side-mask": {
+      "command": "\\faHeadSideMask",
+      "family": "free",
+      "unicode": 57443
+    },
+    "head-side-virus": {
+      "command": "\\faHeadSideVirus",
+      "family": "free",
+      "unicode": 57444
+    },
+    "heading": {
+      "command": "\\faHeading",
+      "family": "free",
+      "unicode": 61916
+    },
+    "headphones": {
+      "command": "\\faHeadphones",
+      "family": "free",
+      "unicode": 61477
+    },
+    "headphones-alt": {
+      "command": "\\faIcon{headphones-alt}",
+      "family": "free",
+      "unicode": 62863
+    },
+    "headset": {
+      "command": "\\faHeadset",
+      "family": "free",
+      "unicode": 62864
+    },
+    "heart": {
+      "command": "\\faHeart",
+      "family": "free",
+      "unicode": 61444
+    },
+    "heart-broken": {
+      "command": "\\faHeartBroken",
+      "family": "free",
+      "unicode": 63401
+    },
+    "heartbeat": {
+      "command": "\\faHeartbeat",
+      "family": "free",
+      "unicode": 61982
+    },
+    "helicopter": {
+      "command": "\\faHelicopter",
+      "family": "free",
+      "unicode": 62771
+    },
+    "highlighter": {
+      "command": "\\faHighlighter",
+      "family": "free",
+      "unicode": 62865
+    },
+    "hiking": {
+      "command": "\\faHiking",
+      "family": "free",
+      "unicode": 63212
+    },
+    "hippo": {
+      "command": "\\faHippo",
+      "family": "free",
+      "unicode": 63213
+    },
+    "hips": {
+      "command": "\\faHips",
+      "family": "brands",
+      "unicode": 62546
+    },
+    "hire-a-helper": {
+      "command": "\\faHireAHelper",
+      "family": "brands",
+      "unicode": 62384
+    },
+    "history": {
+      "command": "\\faHistory",
+      "family": "free",
+      "unicode": 61914
+    },
+    "hive": {
+      "command": "\\faHive",
+      "family": "brands",
+      "unicode": 57471
+    },
+    "hockey-puck": {
+      "command": "\\faHockeyPuck",
+      "family": "free",
+      "unicode": 62547
+    },
+    "holly-berry": {
+      "command": "\\faHollyBerry",
+      "family": "free",
+      "unicode": 63402
+    },
+    "home": {
+      "command": "\\faHome",
+      "family": "free",
+      "unicode": 61461
+    },
+    "hooli": {
+      "command": "\\faHooli",
+      "family": "brands",
+      "unicode": 62503
+    },
+    "hornbill": {
+      "command": "\\faHornbill",
+      "family": "brands",
+      "unicode": 62866
+    },
+    "horse": {
+      "command": "\\faHorse",
+      "family": "free",
+      "unicode": 63216
+    },
+    "horse-head": {
+      "command": "\\faHorseHead",
+      "family": "free",
+      "unicode": 63403
+    },
+    "hospital": {
+      "command": "\\faHospital",
+      "family": "free",
+      "unicode": 61688
+    },
+    "hospital-alt": {
+      "command": "\\faIcon{hospital-alt}",
+      "family": "free",
+      "unicode": 62589
+    },
+    "hospital-symbol": {
+      "command": "\\faHospitalSymbol",
+      "family": "free",
+      "unicode": 62590
+    },
+    "hospital-user": {
+      "command": "\\faHospitalUser",
+      "family": "free",
+      "unicode": 63501
+    },
+    "hot-tub": {
+      "command": "\\faHotTub",
+      "family": "free",
+      "unicode": 62867
+    },
+    "hotdog": {
+      "command": "\\faHotdog",
+      "family": "free",
+      "unicode": 63503
+    },
+    "hotel": {
+      "command": "\\faHotel",
+      "family": "free",
+      "unicode": 62868
+    },
+    "hotjar": {
+      "command": "\\faHotjar",
+      "family": "brands",
+      "unicode": 62385
+    },
+    "hourglass": {
+      "command": "\\faHourglass",
+      "family": "free",
+      "unicode": 62036
+    },
+    "hourglass-end": {
+      "command": "\\faHourglassEnd",
+      "family": "free",
+      "unicode": 62035
+    },
+    "hourglass-half": {
+      "command": "\\faHourglassHalf",
+      "family": "free",
+      "unicode": 62034
+    },
+    "hourglass-start": {
+      "command": "\\faHourglassStart",
+      "family": "free",
+      "unicode": 62033
+    },
+    "house-damage": {
+      "command": "\\faHouseDamage",
+      "family": "free",
+      "unicode": 63217
+    },
+    "house-user": {
+      "command": "\\faHouseUser",
+      "family": "free",
+      "unicode": 57445
+    },
+    "houzz": {
+      "command": "\\faHouzz",
+      "family": "brands",
+      "unicode": 62076
+    },
+    "hryvnia": {
+      "command": "\\faHryvnia",
+      "family": "free",
+      "unicode": 63218
+    },
+    "html5": {
+      "command": "\\faHtml5",
+      "family": "brands",
+      "unicode": 61755
+    },
+    "hubspot": {
+      "command": "\\faHubspot",
+      "family": "brands",
+      "unicode": 62386
+    },
+    "i-cursor": {
+      "command": "\\faICursor",
+      "family": "free",
+      "unicode": 62022
+    },
+    "ice-cream": {
+      "command": "\\faIceCream",
+      "family": "free",
+      "unicode": 63504
+    },
+    "icicles": {
+      "command": "\\faIcicles",
+      "family": "free",
+      "unicode": 63405
+    },
+    "icons": {
+      "command": "\\faIcons",
+      "family": "free",
+      "unicode": 63597
+    },
+    "id-badge": {
+      "command": "\\faIdBadge",
+      "family": "free",
+      "unicode": 62145
+    },
+    "id-card": {
+      "command": "\\faIdCard",
+      "family": "free",
+      "unicode": 62146
+    },
+    "id-card-alt": {
+      "command": "\\faIcon{id-card-alt}",
+      "family": "free",
+      "unicode": 62591
+    },
+    "ideal": {
+      "command": "\\faIdeal",
+      "family": "brands",
+      "unicode": 57363
+    },
+    "igloo": {
+      "command": "\\faIgloo",
+      "family": "free",
+      "unicode": 63406
+    },
+    "image": {
+      "command": "\\faImage",
+      "family": "free",
+      "unicode": 61502
+    },
+    "images": {
+      "command": "\\faImages",
+      "family": "free",
+      "unicode": 62210
+    },
+    "imdb": {
+      "command": "\\faImdb",
+      "family": "brands",
+      "unicode": 62168
+    },
+    "inbox": {
+      "command": "\\faInbox",
+      "family": "free",
+      "unicode": 61468
+    },
+    "indent": {
+      "command": "\\faIndent",
+      "family": "free",
+      "unicode": 61500
+    },
+    "industry": {
+      "command": "\\faIndustry",
+      "family": "free",
+      "unicode": 62069
+    },
+    "infinity": {
+      "command": "\\faInfinity",
+      "family": "free",
+      "unicode": 62772
+    },
+    "info": {
+      "command": "\\faInfo",
+      "family": "free",
+      "unicode": 61737
+    },
+    "info-circle": {
+      "command": "\\faInfoCircle",
+      "family": "free",
+      "unicode": 61530
+    },
+    "innosoft": {
+      "command": "\\faInnosoft",
+      "family": "brands",
+      "unicode": 57472
+    },
+    "instagram": {
+      "command": "\\faInstagram",
+      "family": "brands",
+      "unicode": 61805
+    },
+    "instagram-square": {
+      "command": "\\faInstagramSquare",
+      "family": "brands",
+      "unicode": 57429
+    },
+    "instalod": {
+      "command": "\\faInstalod",
+      "family": "brands",
+      "unicode": 57473
+    },
+    "intercom": {
+      "command": "\\faIntercom",
+      "family": "brands",
+      "unicode": 63407
+    },
+    "internet-explorer": {
+      "command": "\\faInternetExplorer",
+      "family": "brands",
+      "unicode": 62059
+    },
+    "invision": {
+      "command": "\\faInvision",
+      "family": "brands",
+      "unicode": 63408
+    },
+    "ioxhost": {
+      "command": "\\faIoxhost",
+      "family": "brands",
+      "unicode": 61960
+    },
+    "italic": {
+      "command": "\\faItalic",
+      "family": "free",
+      "unicode": 61491
+    },
+    "itch-io": {
+      "command": "\\faItchIo",
+      "family": "brands",
+      "unicode": 63546
+    },
+    "itunes": {
+      "command": "\\faItunes",
+      "family": "brands",
+      "unicode": 62388
+    },
+    "itunes-note": {
+      "command": "\\faItunesNote",
+      "family": "brands",
+      "unicode": 62389
+    },
+    "java": {
+      "command": "\\faJava",
+      "family": "brands",
+      "unicode": 62692
+    },
+    "jedi": {
+      "command": "\\faJedi",
+      "family": "free",
+      "unicode": 63081
+    },
+    "jedi-order": {
+      "command": "\\faJediOrder",
+      "family": "brands",
+      "unicode": 62734
+    },
+    "jenkins": {
+      "command": "\\faJenkins",
+      "family": "brands",
+      "unicode": 62390
+    },
+    "jira": {
+      "command": "\\faJira",
+      "family": "brands",
+      "unicode": 63409
+    },
+    "joget": {
+      "command": "\\faJoget",
+      "family": "brands",
+      "unicode": 62391
+    },
+    "joint": {
+      "command": "\\faJoint",
+      "family": "free",
+      "unicode": 62869
+    },
+    "joomla": {
+      "command": "\\faJoomla",
+      "family": "brands",
+      "unicode": 61866
+    },
+    "journal-whills": {
+      "command": "\\faJournalWhills",
+      "family": "free",
+      "unicode": 63082
+    },
+    "js": {
+      "command": "\\faJs",
+      "family": "brands",
+      "unicode": 62392
+    },
+    "js-square": {
+      "command": "\\faJsSquare",
+      "family": "brands",
+      "unicode": 62393
+    },
+    "jsfiddle": {
+      "command": "\\faJsfiddle",
+      "family": "brands",
+      "unicode": 61900
+    },
+    "kaaba": {
+      "command": "\\faKaaba",
+      "family": "free",
+      "unicode": 63083
+    },
+    "kaggle": {
+      "command": "\\faKaggle",
+      "family": "brands",
+      "unicode": 62970
+    },
+    "key": {
+      "command": "\\faKey",
+      "family": "free",
+      "unicode": 61572
+    },
+    "keybase": {
+      "command": "\\faKeybase",
+      "family": "brands",
+      "unicode": 62709
+    },
+    "keyboard": {
+      "command": "\\faKeyboard",
+      "family": "free",
+      "unicode": 61724
+    },
+    "keycdn": {
+      "command": "\\faKeycdn",
+      "family": "brands",
+      "unicode": 62394
+    },
+    "khanda": {
+      "command": "\\faKhanda",
+      "family": "free",
+      "unicode": 63085
+    },
+    "kickstarter": {
+      "command": "\\faKickstarter",
+      "family": "brands",
+      "unicode": 62395
+    },
+    "kickstarter-k": {
+      "command": "\\faKickstarterK",
+      "family": "brands",
+      "unicode": 62396
+    },
+    "kiss": {
+      "command": "\\faKiss",
+      "family": "free",
+      "unicode": 62870
+    },
+    "kiss-beam": {
+      "command": "\\faKissBeam",
+      "family": "free",
+      "unicode": 62871
+    },
+    "kiss-wink-heart": {
+      "command": "\\faKissWinkHeart",
+      "family": "free",
+      "unicode": 62872
+    },
+    "kiwi-bird": {
+      "command": "\\faKiwiBird",
+      "family": "free",
+      "unicode": 62773
+    },
+    "korvue": {
+      "command": "\\faKorvue",
+      "family": "brands",
+      "unicode": 62511
+    },
+    "landmark": {
+      "command": "\\faLandmark",
+      "family": "free",
+      "unicode": 63087
+    },
+    "language": {
+      "command": "\\faLanguage",
+      "family": "free",
+      "unicode": 61867
+    },
+    "laptop": {
+      "command": "\\faLaptop",
+      "family": "free",
+      "unicode": 61705
+    },
+    "laptop-code": {
+      "command": "\\faLaptopCode",
+      "family": "free",
+      "unicode": 62972
+    },
+    "laptop-house": {
+      "command": "\\faLaptopHouse",
+      "family": "free",
+      "unicode": 57446
+    },
+    "laptop-medical": {
+      "command": "\\faLaptopMedical",
+      "family": "free",
+      "unicode": 63506
+    },
+    "laravel": {
+      "command": "\\faLaravel",
+      "family": "brands",
+      "unicode": 62397
+    },
+    "lastfm": {
+      "command": "\\faLastfm",
+      "family": "brands",
+      "unicode": 61954
+    },
+    "lastfm-square": {
+      "command": "\\faLastfmSquare",
+      "family": "brands",
+      "unicode": 61955
+    },
+    "laugh": {
+      "command": "\\faLaugh",
+      "family": "free",
+      "unicode": 62873
+    },
+    "laugh-beam": {
+      "command": "\\faLaughBeam",
+      "family": "free",
+      "unicode": 62874
+    },
+    "laugh-squint": {
+      "command": "\\faLaughSquint",
+      "family": "free",
+      "unicode": 62875
+    },
+    "laugh-wink": {
+      "command": "\\faLaughWink",
+      "family": "free",
+      "unicode": 62876
+    },
+    "layer-group": {
+      "command": "\\faLayerGroup",
+      "family": "free",
+      "unicode": 62973
+    },
+    "leaf": {
+      "command": "\\faLeaf",
+      "family": "free",
+      "unicode": 61548
+    },
+    "leanpub": {
+      "command": "\\faLeanpub",
+      "family": "brands",
+      "unicode": 61970
+    },
+    "lemon": {
+      "command": "\\faLemon",
+      "family": "free",
+      "unicode": 61588
+    },
+    "less": {
+      "command": "\\faLess",
+      "family": "brands",
+      "unicode": 62493
+    },
+    "less-than": {
+      "command": "\\faLessThan",
+      "family": "free",
+      "unicode": 62774
+    },
+    "less-than-equal": {
+      "command": "\\faLessThanEqual",
+      "family": "free",
+      "unicode": 62775
+    },
+    "level-down-alt": {
+      "command": "\\faIcon{level-down-alt}",
+      "family": "free",
+      "unicode": 62398
+    },
+    "level-up-alt": {
+      "command": "\\faIcon{level-up-alt}",
+      "family": "free",
+      "unicode": 62399
+    },
+    "life-ring": {
+      "command": "\\faLifeRing",
+      "family": "free",
+      "unicode": 61901
+    },
+    "lightbulb": {
+      "command": "\\faLightbulb",
+      "family": "free",
+      "unicode": 61675
+    },
+    "line": {
+      "command": "\\faLine",
+      "family": "brands",
+      "unicode": 62400
+    },
+    "link": {
+      "command": "\\faLink",
+      "family": "free",
+      "unicode": 61633
+    },
+    "linkedin": {
+      "command": "\\faLinkedin",
+      "family": "brands",
+      "unicode": 61580
+    },
+    "linkedin-in": {
+      "command": "\\faLinkedinIn",
+      "family": "brands",
+      "unicode": 61665
+    },
+    "linode": {
+      "command": "\\faLinode",
+      "family": "brands",
+      "unicode": 62136
+    },
+    "linux": {
+      "command": "\\faLinux",
+      "family": "brands",
+      "unicode": 61820
+    },
+    "lira-sign": {
+      "command": "\\faLiraSign",
+      "family": "free",
+      "unicode": 61845
+    },
+    "list": {
+      "command": "\\faList",
+      "family": "free",
+      "unicode": 61498
+    },
+    "list-alt": {
+      "command": "\\faIcon{list-alt}",
+      "family": "free",
+      "unicode": 61474
+    },
+    "list-ol": {
+      "command": "\\faListOl",
+      "family": "free",
+      "unicode": 61643
+    },
+    "list-ul": {
+      "command": "\\faListUl",
+      "family": "free",
+      "unicode": 61642
+    },
+    "location-arrow": {
+      "command": "\\faLocationArrow",
+      "family": "free",
+      "unicode": 61732
+    },
+    "lock": {
+      "command": "\\faLock",
+      "family": "free",
+      "unicode": 61475
+    },
+    "lock-open": {
+      "command": "\\faLockOpen",
+      "family": "free",
+      "unicode": 62401
+    },
+    "long-arrow-alt-down": {
+      "command": "\\faLongArrowAltDown",
+      "family": "free",
+      "unicode": 62217
+    },
+    "long-arrow-alt-left": {
+      "command": "\\faLongArrowAltLeft",
+      "family": "free",
+      "unicode": 62218
+    },
+    "long-arrow-alt-right": {
+      "command": "\\faLongArrowAltRight",
+      "family": "free",
+      "unicode": 62219
+    },
+    "long-arrow-alt-up": {
+      "command": "\\faLongArrowAltUp",
+      "family": "free",
+      "unicode": 62220
+    },
+    "low-vision": {
+      "command": "\\faLowVision",
+      "family": "free",
+      "unicode": 62120
+    },
+    "luggage-cart": {
+      "command": "\\faLuggageCart",
+      "family": "free",
+      "unicode": 62877
+    },
+    "lungs": {
+      "command": "\\faLungs",
+      "family": "free",
+      "unicode": 62980
+    },
+    "lungs-virus": {
+      "command": "\\faLungsVirus",
+      "family": "free",
+      "unicode": 57447
+    },
+    "lyft": {
+      "command": "\\faLyft",
+      "family": "brands",
+      "unicode": 62403
+    },
+    "magento": {
+      "command": "\\faMagento",
+      "family": "brands",
+      "unicode": 62404
+    },
+    "magic": {
+      "command": "\\faMagic",
+      "family": "free",
+      "unicode": 61648
+    },
+    "magnet": {
+      "command": "\\faMagnet",
+      "family": "free",
+      "unicode": 61558
+    },
+    "mail-bulk": {
+      "command": "\\faMailBulk",
+      "family": "free",
+      "unicode": 63092
+    },
+    "mailchimp": {
+      "command": "\\faMailchimp",
+      "family": "brands",
+      "unicode": 62878
+    },
+    "male": {
+      "command": "\\faMale",
+      "family": "free",
+      "unicode": 61827
+    },
+    "mandalorian": {
+      "command": "\\faMandalorian",
+      "family": "brands",
+      "unicode": 62735
+    },
+    "map": {
+      "command": "\\faMap",
+      "family": "free",
+      "unicode": 62073
+    },
+    "map-marked": {
+      "command": "\\faMapMarked",
+      "family": "free",
+      "unicode": 62879
+    },
+    "map-marked-alt": {
+      "command": "\\faIcon{map-marked-alt}",
+      "family": "free",
+      "unicode": 62880
+    },
+    "map-marker": {
+      "command": "\\faMapMarker",
+      "family": "free",
+      "unicode": 61505
+    },
+    "map-marker-alt": {
+      "command": "\\faIcon{map-marker-alt}",
+      "family": "free",
+      "unicode": 62405
+    },
+    "map-pin": {
+      "command": "\\faMapPin",
+      "family": "free",
+      "unicode": 62070
+    },
+    "map-signs": {
+      "command": "\\faMapSigns",
+      "family": "free",
+      "unicode": 62071
+    },
+    "markdown": {
+      "command": "\\faMarkdown",
+      "family": "brands",
+      "unicode": 62991
+    },
+    "marker": {
+      "command": "\\faMarker",
+      "family": "free",
+      "unicode": 62881
+    },
+    "mars": {
+      "command": "\\faMars",
+      "family": "free",
+      "unicode": 61986
+    },
+    "mars-double": {
+      "command": "\\faMarsDouble",
+      "family": "free",
+      "unicode": 61991
+    },
+    "mars-stroke": {
+      "command": "\\faMarsStroke",
+      "family": "free",
+      "unicode": 61993
+    },
+    "mars-stroke-h": {
+      "command": "\\faMarsStrokeH",
+      "family": "free",
+      "unicode": 61995
+    },
+    "mars-stroke-v": {
+      "command": "\\faMarsStrokeV",
+      "family": "free",
+      "unicode": 61994
+    },
+    "mask": {
+      "command": "\\faMask",
+      "family": "free",
+      "unicode": 63226
+    },
+    "mastodon": {
+      "command": "\\faMastodon",
+      "family": "brands",
+      "unicode": 62710
+    },
+    "maxcdn": {
+      "command": "\\faMaxcdn",
+      "family": "brands",
+      "unicode": 61750
+    },
+    "mdb": {
+      "command": "\\faMdb",
+      "family": "brands",
+      "unicode": 63690
+    },
+    "medal": {
+      "command": "\\faMedal",
+      "family": "free",
+      "unicode": 62882
+    },
+    "medapps": {
+      "command": "\\faMedapps",
+      "family": "brands",
+      "unicode": 62406
+    },
+    "medium": {
+      "command": "\\faMedium",
+      "family": "brands",
+      "unicode": 62010
+    },
+    "medium-m": {
+      "command": "\\faMediumM",
+      "family": "brands",
+      "unicode": 62407
+    },
+    "medkit": {
+      "command": "\\faMedkit",
+      "family": "free",
+      "unicode": 61690
+    },
+    "medrt": {
+      "command": "\\faMedrt",
+      "family": "brands",
+      "unicode": 62408
+    },
+    "meetup": {
+      "command": "\\faMeetup",
+      "family": "brands",
+      "unicode": 62176
+    },
+    "megaport": {
+      "command": "\\faMegaport",
+      "family": "brands",
+      "unicode": 62883
+    },
+    "meh": {
+      "command": "\\faMeh",
+      "family": "free",
+      "unicode": 61722
+    },
+    "meh-blank": {
+      "command": "\\faMehBlank",
+      "family": "free",
+      "unicode": 62884
+    },
+    "meh-rolling-eyes": {
+      "command": "\\faMehRollingEyes",
+      "family": "free",
+      "unicode": 62885
+    },
+    "memory": {
+      "command": "\\faMemory",
+      "family": "free",
+      "unicode": 62776
+    },
+    "mendeley": {
+      "command": "\\faMendeley",
+      "family": "brands",
+      "unicode": 63411
+    },
+    "menorah": {
+      "command": "\\faMenorah",
+      "family": "free",
+      "unicode": 63094
+    },
+    "mercury": {
+      "command": "\\faMercury",
+      "family": "free",
+      "unicode": 61987
+    },
+    "meteor": {
+      "command": "\\faMeteor",
+      "family": "free",
+      "unicode": 63315
+    },
+    "microblog": {
+      "command": "\\faMicroblog",
+      "family": "brands",
+      "unicode": 57370
+    },
+    "microchip": {
+      "command": "\\faMicrochip",
+      "family": "free",
+      "unicode": 62171
+    },
+    "microphone": {
+      "command": "\\faMicrophone",
+      "family": "free",
+      "unicode": 61744
+    },
+    "microphone-alt": {
+      "command": "\\faIcon{microphone-alt}",
+      "family": "free",
+      "unicode": 62409
+    },
+    "microphone-alt-slash": {
+      "command": "\\faMicrophoneAltSlash",
+      "family": "free",
+      "unicode": 62777
+    },
+    "microphone-slash": {
+      "command": "\\faMicrophoneSlash",
+      "family": "free",
+      "unicode": 61745
+    },
+    "microscope": {
+      "command": "\\faMicroscope",
+      "family": "free",
+      "unicode": 62992
+    },
+    "microsoft": {
+      "command": "\\faMicrosoft",
+      "family": "brands",
+      "unicode": 62410
+    },
+    "minus": {
+      "command": "\\faMinus",
+      "family": "free",
+      "unicode": 61544
+    },
+    "minus-circle": {
+      "command": "\\faMinusCircle",
+      "family": "free",
+      "unicode": 61526
+    },
+    "minus-square": {
+      "command": "\\faMinusSquare",
+      "family": "free",
+      "unicode": 61766
+    },
+    "mitten": {
+      "command": "\\faMitten",
+      "family": "free",
+      "unicode": 63413
+    },
+    "mix": {
+      "command": "\\faMix",
+      "family": "brands",
+      "unicode": 62411
+    },
+    "mixcloud": {
+      "command": "\\faMixcloud",
+      "family": "brands",
+      "unicode": 62089
+    },
+    "mixer": {
+      "command": "\\faMixer",
+      "family": "brands",
+      "unicode": 57430
+    },
+    "mizuni": {
+      "command": "\\faMizuni",
+      "family": "brands",
+      "unicode": 62412
+    },
+    "mobile": {
+      "command": "\\faMobile",
+      "family": "free",
+      "unicode": 61707
+    },
+    "mobile-alt": {
+      "command": "\\faIcon{mobile-alt}",
+      "family": "free",
+      "unicode": 62413
+    },
+    "modx": {
+      "command": "\\faModx",
+      "family": "brands",
+      "unicode": 62085
+    },
+    "monero": {
+      "command": "\\faMonero",
+      "family": "brands",
+      "unicode": 62416
+    },
+    "money-bill": {
+      "command": "\\faMoneyBill",
+      "family": "free",
+      "unicode": 61654
+    },
+    "money-bill-alt": {
+      "command": "\\faIcon{money-bill-alt}",
+      "family": "free",
+      "unicode": 62417
+    },
+    "money-bill-wave": {
+      "command": "\\faMoneyBillWave",
+      "family": "free",
+      "unicode": 62778
+    },
+    "money-bill-wave-alt": {
+      "command": "\\faIcon{money-bill-wave-alt}",
+      "family": "free",
+      "unicode": 62779
+    },
+    "money-check": {
+      "command": "\\faMoneyCheck",
+      "family": "free",
+      "unicode": 62780
+    },
+    "money-check-alt": {
+      "command": "\\faIcon{money-check-alt}",
+      "family": "free",
+      "unicode": 62781
+    },
+    "monument": {
+      "command": "\\faMonument",
+      "family": "free",
+      "unicode": 62886
+    },
+    "moon": {
+      "command": "\\faMoon",
+      "family": "free",
+      "unicode": 61830
+    },
+    "mortar-pestle": {
+      "command": "\\faMortarPestle",
+      "family": "free",
+      "unicode": 62887
+    },
+    "mosque": {
+      "command": "\\faMosque",
+      "family": "free",
+      "unicode": 63096
+    },
+    "motorcycle": {
+      "command": "\\faMotorcycle",
+      "family": "free",
+      "unicode": 61980
+    },
+    "mountain": {
+      "command": "\\faMountain",
+      "family": "free",
+      "unicode": 63228
+    },
+    "mouse": {
+      "command": "\\faMouse",
+      "family": "free",
+      "unicode": 63692
+    },
+    "mouse-pointer": {
+      "command": "\\faMousePointer",
+      "family": "free",
+      "unicode": 62021
+    },
+    "mug-hot": {
+      "command": "\\faMugHot",
+      "family": "free",
+      "unicode": 63414
+    },
+    "music": {
+      "command": "\\faMusic",
+      "family": "free",
+      "unicode": 61441
+    },
+    "napster": {
+      "command": "\\faNapster",
+      "family": "brands",
+      "unicode": 62418
+    },
+    "neos": {
+      "command": "\\faNeos",
+      "family": "brands",
+      "unicode": 62994
+    },
+    "network-wired": {
+      "command": "\\faNetworkWired",
+      "family": "free",
+      "unicode": 63231
+    },
+    "neuter": {
+      "command": "\\faNeuter",
+      "family": "free",
+      "unicode": 61996
+    },
+    "newspaper": {
+      "command": "\\faNewspaper",
+      "family": "free",
+      "unicode": 61930
+    },
+    "nimblr": {
+      "command": "\\faNimblr",
+      "family": "brands",
+      "unicode": 62888
+    },
+    "node": {
+      "command": "\\faNode",
+      "family": "brands",
+      "unicode": 62489
+    },
+    "node-js": {
+      "command": "\\faNodeJs",
+      "family": "brands",
+      "unicode": 62419
+    },
+    "not-equal": {
+      "command": "\\faNotEqual",
+      "family": "free",
+      "unicode": 62782
+    },
+    "notes-medical": {
+      "command": "\\faNotesMedical",
+      "family": "free",
+      "unicode": 62593
+    },
+    "npm": {
+      "command": "\\faNpm",
+      "family": "brands",
+      "unicode": 62420
+    },
+    "ns8": {
+      "command": "\\faNs8",
+      "family": "brands",
+      "unicode": 62421
+    },
+    "nutritionix": {
+      "command": "\\faNutritionix",
+      "family": "brands",
+      "unicode": 62422
+    },
+    "object-group": {
+      "command": "\\faObjectGroup",
+      "family": "free",
+      "unicode": 62023
+    },
+    "object-ungroup": {
+      "command": "\\faObjectUngroup",
+      "family": "free",
+      "unicode": 62024
+    },
+    "octopus-deploy": {
+      "command": "\\faOctopusDeploy",
+      "family": "brands",
+      "unicode": 57474
+    },
+    "odnoklassniki": {
+      "command": "\\faOdnoklassniki",
+      "family": "brands",
+      "unicode": 62051
+    },
+    "odnoklassniki-square": {
+      "command": "\\faOdnoklassnikiSquare",
+      "family": "brands",
+      "unicode": 62052
+    },
+    "oil-can": {
+      "command": "\\faOilCan",
+      "family": "free",
+      "unicode": 62995
+    },
+    "old-republic": {
+      "command": "\\faOldRepublic",
+      "family": "brands",
+      "unicode": 62736
+    },
+    "om": {
+      "command": "\\faOm",
+      "family": "free",
+      "unicode": 63097
+    },
+    "opencart": {
+      "command": "\\faOpencart",
+      "family": "brands",
+      "unicode": 62013
+    },
+    "openid": {
+      "command": "\\faOpenid",
+      "family": "brands",
+      "unicode": 61851
+    },
+    "opera": {
+      "command": "\\faOpera",
+      "family": "brands",
+      "unicode": 62058
+    },
+    "optin-monster": {
+      "command": "\\faOptinMonster",
+      "family": "brands",
+      "unicode": 62012
+    },
+    "orcid": {
+      "command": "\\faOrcid",
+      "family": "brands",
+      "unicode": 63698
+    },
+    "osi": {
+      "command": "\\faOsi",
+      "family": "brands",
+      "unicode": 62490
+    },
+    "otter": {
+      "command": "\\faOtter",
+      "family": "free",
+      "unicode": 63232
+    },
+    "outdent": {
+      "command": "\\faOutdent",
+      "family": "free",
+      "unicode": 61499
+    },
+    "page4": {
+      "command": "\\faPage4",
+      "family": "brands",
+      "unicode": 62423
+    },
+    "pagelines": {
+      "command": "\\faPagelines",
+      "family": "brands",
+      "unicode": 61836
+    },
+    "pager": {
+      "command": "\\faPager",
+      "family": "free",
+      "unicode": 63509
+    },
+    "paint-brush": {
+      "command": "\\faPaintBrush",
+      "family": "free",
+      "unicode": 61948
+    },
+    "paint-roller": {
+      "command": "\\faPaintRoller",
+      "family": "free",
+      "unicode": 62890
+    },
+    "palette": {
+      "command": "\\faPalette",
+      "family": "free",
+      "unicode": 62783
+    },
+    "palfed": {
+      "command": "\\faPalfed",
+      "family": "brands",
+      "unicode": 62424
+    },
+    "pallet": {
+      "command": "\\faPallet",
+      "family": "free",
+      "unicode": 62594
+    },
+    "paper-plane": {
+      "command": "\\faPaperPlane",
+      "family": "free",
+      "unicode": 61912
+    },
+    "paperclip": {
+      "command": "\\faPaperclip",
+      "family": "free",
+      "unicode": 61638
+    },
+    "parachute-box": {
+      "command": "\\faParachuteBox",
+      "family": "free",
+      "unicode": 62669
+    },
+    "paragraph": {
+      "command": "\\faParagraph",
+      "family": "free",
+      "unicode": 61917
+    },
+    "parking": {
+      "command": "\\faParking",
+      "family": "free",
+      "unicode": 62784
+    },
+    "passport": {
+      "command": "\\faPassport",
+      "family": "free",
+      "unicode": 62891
+    },
+    "pastafarianism": {
+      "command": "\\faPastafarianism",
+      "family": "free",
+      "unicode": 63099
+    },
+    "paste": {
+      "command": "\\faPaste",
+      "family": "free",
+      "unicode": 61674
+    },
+    "patreon": {
+      "command": "\\faPatreon",
+      "family": "brands",
+      "unicode": 62425
+    },
+    "pause": {
+      "command": "\\faPause",
+      "family": "free",
+      "unicode": 61516
+    },
+    "pause-circle": {
+      "command": "\\faPauseCircle",
+      "family": "free",
+      "unicode": 62091
+    },
+    "paw": {
+      "command": "\\faPaw",
+      "family": "free",
+      "unicode": 61872
+    },
+    "paypal": {
+      "command": "\\faPaypal",
+      "family": "brands",
+      "unicode": 61933
+    },
+    "peace": {
+      "command": "\\faPeace",
+      "family": "free",
+      "unicode": 63100
+    },
+    "pen": {
+      "command": "\\faPen",
+      "family": "free",
+      "unicode": 62212
+    },
+    "pen-alt": {
+      "command": "\\faIcon{pen-alt}",
+      "family": "free",
+      "unicode": 62213
+    },
+    "pen-fancy": {
+      "command": "\\faPenFancy",
+      "family": "free",
+      "unicode": 62892
+    },
+    "pen-nib": {
+      "command": "\\faPenNib",
+      "family": "free",
+      "unicode": 62893
+    },
+    "pen-square": {
+      "command": "\\faPenSquare",
+      "family": "free",
+      "unicode": 61771
+    },
+    "pencil-alt": {
+      "command": "\\faIcon{pencil-alt}",
+      "family": "free",
+      "unicode": 62211
+    },
+    "pencil-ruler": {
+      "command": "\\faPencilRuler",
+      "family": "free",
+      "unicode": 62894
+    },
+    "penny-arcade": {
+      "command": "\\faPennyArcade",
+      "family": "brands",
+      "unicode": 63236
+    },
+    "people-arrows": {
+      "command": "\\faPeopleArrows",
+      "family": "free",
+      "unicode": 57448
+    },
+    "people-carry": {
+      "command": "\\faPeopleCarry",
+      "family": "free",
+      "unicode": 62670
+    },
+    "pepper-hot": {
+      "command": "\\faPepperHot",
+      "family": "free",
+      "unicode": 63510
+    },
+    "perbyte": {
+      "command": "\\faPerbyte",
+      "family": "brands",
+      "unicode": 57475
+    },
+    "percent": {
+      "command": "\\faPercent",
+      "family": "free",
+      "unicode": 62101
+    },
+    "percentage": {
+      "command": "\\faPercentage",
+      "family": "free",
+      "unicode": 62785
+    },
+    "periscope": {
+      "command": "\\faPeriscope",
+      "family": "brands",
+      "unicode": 62426
+    },
+    "person-booth": {
+      "command": "\\faPersonBooth",
+      "family": "free",
+      "unicode": 63318
+    },
+    "phabricator": {
+      "command": "\\faPhabricator",
+      "family": "brands",
+      "unicode": 62427
+    },
+    "phoenix-framework": {
+      "command": "\\faPhoenixFramework",
+      "family": "brands",
+      "unicode": 62428
+    },
+    "phoenix-squadron": {
+      "command": "\\faPhoenixSquadron",
+      "family": "brands",
+      "unicode": 62737
+    },
+    "phone": {
+      "command": "\\faPhone",
+      "family": "free",
+      "unicode": 61589
+    },
+    "phone-alt": {
+      "command": "\\faIcon{phone-alt}",
+      "family": "free",
+      "unicode": 63609
+    },
+    "phone-slash": {
+      "command": "\\faPhoneSlash",
+      "family": "free",
+      "unicode": 62429
+    },
+    "phone-square": {
+      "command": "\\faPhoneSquare",
+      "family": "free",
+      "unicode": 61592
+    },
+    "phone-square-alt": {
+      "command": "\\faIcon{phone-square-alt}",
+      "family": "free",
+      "unicode": 63611
+    },
+    "phone-volume": {
+      "command": "\\faPhoneVolume",
+      "family": "free",
+      "unicode": 62112
+    },
+    "photo-video": {
+      "command": "\\faPhotoVideo",
+      "family": "free",
+      "unicode": 63612
+    },
+    "php": {
+      "command": "\\faPhp",
+      "family": "brands",
+      "unicode": 62551
+    },
+    "pied-piper": {
+      "command": "\\faPiedPiper",
+      "family": "brands",
+      "unicode": 62126
+    },
+    "pied-piper-alt": {
+      "command": "\\faIcon{pied-piper-alt}",
+      "family": "brands",
+      "unicode": 61864
+    },
+    "pied-piper-hat": {
+      "command": "\\faPiedPiperHat",
+      "family": "brands",
+      "unicode": 62693
+    },
+    "pied-piper-pp": {
+      "command": "\\faPiedPiperPp",
+      "family": "brands",
+      "unicode": 61863
+    },
+    "pied-piper-square": {
+      "command": "\\faPiedPiperSquare",
+      "family": "brands",
+      "unicode": 57374
+    },
+    "piggy-bank": {
+      "command": "\\faPiggyBank",
+      "family": "free",
+      "unicode": 62675
+    },
+    "pills": {
+      "command": "\\faPills",
+      "family": "free",
+      "unicode": 62596
+    },
+    "pinterest": {
+      "command": "\\faPinterest",
+      "family": "brands",
+      "unicode": 61650
+    },
+    "pinterest-p": {
+      "command": "\\faPinterestP",
+      "family": "brands",
+      "unicode": 62001
+    },
+    "pinterest-square": {
+      "command": "\\faPinterestSquare",
+      "family": "brands",
+      "unicode": 61651
+    },
+    "pizza-slice": {
+      "command": "\\faPizzaSlice",
+      "family": "free",
+      "unicode": 63512
+    },
+    "place-of-worship": {
+      "command": "\\faPlaceOfWorship",
+      "family": "free",
+      "unicode": 63103
+    },
+    "plane": {
+      "command": "\\faPlane",
+      "family": "free",
+      "unicode": 61554
+    },
+    "plane-arrival": {
+      "command": "\\faPlaneArrival",
+      "family": "free",
+      "unicode": 62895
+    },
+    "plane-departure": {
+      "command": "\\faPlaneDeparture",
+      "family": "free",
+      "unicode": 62896
+    },
+    "plane-slash": {
+      "command": "\\faPlaneSlash",
+      "family": "free",
+      "unicode": 57449
+    },
+    "play": {
+      "command": "\\faPlay",
+      "family": "free",
+      "unicode": 61515
+    },
+    "play-circle": {
+      "command": "\\faPlayCircle",
+      "family": "free",
+      "unicode": 61764
+    },
+    "playstation": {
+      "command": "\\faPlaystation",
+      "family": "brands",
+      "unicode": 62431
+    },
+    "plug": {
+      "command": "\\faPlug",
+      "family": "free",
+      "unicode": 61926
+    },
+    "plus": {
+      "command": "\\faPlus",
+      "family": "free",
+      "unicode": 61543
+    },
+    "plus-circle": {
+      "command": "\\faPlusCircle",
+      "family": "free",
+      "unicode": 61525
+    },
+    "plus-square": {
+      "command": "\\faPlusSquare",
+      "family": "free",
+      "unicode": 61694
+    },
+    "podcast": {
+      "command": "\\faPodcast",
+      "family": "free",
+      "unicode": 62158
+    },
+    "poll": {
+      "command": "\\faPoll",
+      "family": "free",
+      "unicode": 63105
+    },
+    "poll-h": {
+      "command": "\\faPollH",
+      "family": "free",
+      "unicode": 63106
+    },
+    "poo": {
+      "command": "\\faPoo",
+      "family": "free",
+      "unicode": 62206
+    },
+    "poo-storm": {
+      "command": "\\faPooStorm",
+      "family": "free",
+      "unicode": 63322
+    },
+    "poop": {
+      "command": "\\faPoop",
+      "family": "free",
+      "unicode": 63001
+    },
+    "portrait": {
+      "command": "\\faPortrait",
+      "family": "free",
+      "unicode": 62432
+    },
+    "pound-sign": {
+      "command": "\\faPoundSign",
+      "family": "free",
+      "unicode": 61780
+    },
+    "power-off": {
+      "command": "\\faPowerOff",
+      "family": "free",
+      "unicode": 61457
+    },
+    "pray": {
+      "command": "\\faPray",
+      "family": "free",
+      "unicode": 63107
+    },
+    "praying-hands": {
+      "command": "\\faPrayingHands",
+      "family": "free",
+      "unicode": 63108
+    },
+    "prescription": {
+      "command": "\\faPrescription",
+      "family": "free",
+      "unicode": 62897
+    },
+    "prescription-bottle": {
+      "command": "\\faPrescriptionBottle",
+      "family": "free",
+      "unicode": 62597
+    },
+    "prescription-bottle-alt": {
+      "command": "\\faIcon{prescription-bottle-alt}",
+      "family": "free",
+      "unicode": 62598
+    },
+    "print": {
+      "command": "\\faPrint",
+      "family": "free",
+      "unicode": 61487
+    },
+    "procedures": {
+      "command": "\\faProcedures",
+      "family": "free",
+      "unicode": 62599
+    },
+    "product-hunt": {
+      "command": "\\faProductHunt",
+      "family": "brands",
+      "unicode": 62088
+    },
+    "project-diagram": {
+      "command": "\\faProjectDiagram",
+      "family": "free",
+      "unicode": 62786
+    },
+    "pump-medical": {
+      "command": "\\faPumpMedical",
+      "family": "free",
+      "unicode": 57450
+    },
+    "pump-soap": {
+      "command": "\\faPumpSoap",
+      "family": "free",
+      "unicode": 57451
+    },
+    "pushed": {
+      "command": "\\faPushed",
+      "family": "brands",
+      "unicode": 62433
+    },
+    "puzzle-piece": {
+      "command": "\\faPuzzlePiece",
+      "family": "free",
+      "unicode": 61742
+    },
+    "python": {
+      "command": "\\faPython",
+      "family": "brands",
+      "unicode": 62434
+    },
+    "qq": {
+      "command": "\\faQq",
+      "family": "brands",
+      "unicode": 61910
+    },
+    "qrcode": {
+      "command": "\\faQrcode",
+      "family": "free",
+      "unicode": 61481
+    },
+    "question": {
+      "command": "\\faQuestion",
+      "family": "free",
+      "unicode": 61736
+    },
+    "question-circle": {
+      "command": "\\faQuestionCircle",
+      "family": "free",
+      "unicode": 61529
+    },
+    "quidditch": {
+      "command": "\\faQuidditch",
+      "family": "free",
+      "unicode": 62552
+    },
+    "quinscape": {
+      "command": "\\faQuinscape",
+      "family": "brands",
+      "unicode": 62553
+    },
+    "quora": {
+      "command": "\\faQuora",
+      "family": "brands",
+      "unicode": 62148
+    },
+    "quote-left": {
+      "command": "\\faQuoteLeft",
+      "family": "free",
+      "unicode": 61709
+    },
+    "quote-right": {
+      "command": "\\faQuoteRight",
+      "family": "free",
+      "unicode": 61710
+    },
+    "quran": {
+      "command": "\\faQuran",
+      "family": "free",
+      "unicode": 63111
+    },
+    "r-project": {
+      "command": "\\faRProject",
+      "family": "brands",
+      "unicode": 62711
+    },
+    "radiation": {
+      "command": "\\faRadiation",
+      "family": "free",
+      "unicode": 63417
+    },
+    "radiation-alt": {
+      "command": "\\faIcon{radiation-alt}",
+      "family": "free",
+      "unicode": 63418
+    },
+    "rainbow": {
+      "command": "\\faRainbow",
+      "family": "free",
+      "unicode": 63323
+    },
+    "random": {
+      "command": "\\faRandom",
+      "family": "free",
+      "unicode": 61556
+    },
+    "raspberry-pi": {
+      "command": "\\faRaspberryPi",
+      "family": "brands",
+      "unicode": 63419
+    },
+    "ravelry": {
+      "command": "\\faRavelry",
+      "family": "brands",
+      "unicode": 62169
+    },
+    "react": {
+      "command": "\\faReact",
+      "family": "brands",
+      "unicode": 62491
+    },
+    "reacteurope": {
+      "command": "\\faReacteurope",
+      "family": "brands",
+      "unicode": 63325
+    },
+    "readme": {
+      "command": "\\faReadme",
+      "family": "brands",
+      "unicode": 62677
+    },
+    "rebel": {
+      "command": "\\faRebel",
+      "family": "brands",
+      "unicode": 61904
+    },
+    "receipt": {
+      "command": "\\faReceipt",
+      "family": "free",
+      "unicode": 62787
+    },
+    "record-vinyl": {
+      "command": "\\faRecordVinyl",
+      "family": "free",
+      "unicode": 63705
+    },
+    "recycle": {
+      "command": "\\faRecycle",
+      "family": "free",
+      "unicode": 61880
+    },
+    "red-river": {
+      "command": "\\faRedRiver",
+      "family": "brands",
+      "unicode": 62435
+    },
+    "reddit": {
+      "command": "\\faReddit",
+      "family": "brands",
+      "unicode": 61857
+    },
+    "reddit-alien": {
+      "command": "\\faRedditAlien",
+      "family": "brands",
+      "unicode": 62081
+    },
+    "reddit-square": {
+      "command": "\\faRedditSquare",
+      "family": "brands",
+      "unicode": 61858
+    },
+    "redhat": {
+      "command": "\\faRedhat",
+      "family": "brands",
+      "unicode": 63420
+    },
+    "redo": {
+      "command": "\\faRedo",
+      "family": "free",
+      "unicode": 61470
+    },
+    "redo-alt": {
+      "command": "\\faIcon{redo-alt}",
+      "family": "free",
+      "unicode": 62201
+    },
+    "registered": {
+      "command": "\\faRegistered",
+      "family": "free",
+      "unicode": 62045
+    },
+    "remove-format": {
+      "command": "\\faRemoveFormat",
+      "family": "free",
+      "unicode": 63613
+    },
+    "renren": {
+      "command": "\\faRenren",
+      "family": "brands",
+      "unicode": 61835
+    },
+    "reply": {
+      "command": "\\faReply",
+      "family": "free",
+      "unicode": 62437
+    },
+    "reply-all": {
+      "command": "\\faReplyAll",
+      "family": "free",
+      "unicode": 61730
+    },
+    "replyd": {
+      "command": "\\faReplyd",
+      "family": "brands",
+      "unicode": 62438
+    },
+    "republican": {
+      "command": "\\faRepublican",
+      "family": "free",
+      "unicode": 63326
+    },
+    "researchgate": {
+      "command": "\\faResearchgate",
+      "family": "brands",
+      "unicode": 62712
+    },
+    "resolving": {
+      "command": "\\faResolving",
+      "family": "brands",
+      "unicode": 62439
+    },
+    "restroom": {
+      "command": "\\faRestroom",
+      "family": "free",
+      "unicode": 63421
+    },
+    "retweet": {
+      "command": "\\faRetweet",
+      "family": "free",
+      "unicode": 61561
+    },
+    "rev": {
+      "command": "\\faRev",
+      "family": "brands",
+      "unicode": 62898
+    },
+    "ribbon": {
+      "command": "\\faRibbon",
+      "family": "free",
+      "unicode": 62678
+    },
+    "ring": {
+      "command": "\\faRing",
+      "family": "free",
+      "unicode": 63243
+    },
+    "road": {
+      "command": "\\faRoad",
+      "family": "free",
+      "unicode": 61464
+    },
+    "robot": {
+      "command": "\\faRobot",
+      "family": "free",
+      "unicode": 62788
+    },
+    "rocket": {
+      "command": "\\faRocket",
+      "family": "free",
+      "unicode": 61749
+    },
+    "rocketchat": {
+      "command": "\\faRocketchat",
+      "family": "brands",
+      "unicode": 62440
+    },
+    "rockrms": {
+      "command": "\\faRockrms",
+      "family": "brands",
+      "unicode": 62441
+    },
+    "route": {
+      "command": "\\faRoute",
+      "family": "free",
+      "unicode": 62679
+    },
+    "rss": {
+      "command": "\\faRss",
+      "family": "free",
+      "unicode": 61598
+    },
+    "rss-square": {
+      "command": "\\faRssSquare",
+      "family": "free",
+      "unicode": 61763
+    },
+    "ruble-sign": {
+      "command": "\\faRubleSign",
+      "family": "free",
+      "unicode": 61784
+    },
+    "ruler": {
+      "command": "\\faRuler",
+      "family": "free",
+      "unicode": 62789
+    },
+    "ruler-combined": {
+      "command": "\\faRulerCombined",
+      "family": "free",
+      "unicode": 62790
+    },
+    "ruler-horizontal": {
+      "command": "\\faRulerHorizontal",
+      "family": "free",
+      "unicode": 62791
+    },
+    "ruler-vertical": {
+      "command": "\\faRulerVertical",
+      "family": "free",
+      "unicode": 62792
+    },
+    "running": {
+      "command": "\\faRunning",
+      "family": "free",
+      "unicode": 63244
+    },
+    "rupee-sign": {
+      "command": "\\faRupeeSign",
+      "family": "free",
+      "unicode": 61782
+    },
+    "rust": {
+      "command": "\\faRust",
+      "family": "brands",
+      "unicode": 57466
+    },
+    "sad-cry": {
+      "command": "\\faSadCry",
+      "family": "free",
+      "unicode": 62899
+    },
+    "sad-tear": {
+      "command": "\\faSadTear",
+      "family": "free",
+      "unicode": 62900
+    },
+    "safari": {
+      "command": "\\faSafari",
+      "family": "brands",
+      "unicode": 62055
+    },
+    "salesforce": {
+      "command": "\\faSalesforce",
+      "family": "brands",
+      "unicode": 63547
+    },
+    "sass": {
+      "command": "\\faSass",
+      "family": "brands",
+      "unicode": 62494
+    },
+    "satellite": {
+      "command": "\\faSatellite",
+      "family": "free",
+      "unicode": 63423
+    },
+    "satellite-dish": {
+      "command": "\\faSatelliteDish",
+      "family": "free",
+      "unicode": 63424
+    },
+    "save": {
+      "command": "\\faSave",
+      "family": "free",
+      "unicode": 61639
+    },
+    "schlix": {
+      "command": "\\faSchlix",
+      "family": "brands",
+      "unicode": 62442
+    },
+    "school": {
+      "command": "\\faSchool",
+      "family": "free",
+      "unicode": 62793
+    },
+    "screwdriver": {
+      "command": "\\faScrewdriver",
+      "family": "free",
+      "unicode": 62794
+    },
+    "scribd": {
+      "command": "\\faScribd",
+      "family": "brands",
+      "unicode": 62090
+    },
+    "scroll": {
+      "command": "\\faScroll",
+      "family": "free",
+      "unicode": 63246
+    },
+    "sd-card": {
+      "command": "\\faSdCard",
+      "family": "free",
+      "unicode": 63426
+    },
+    "search": {
+      "command": "\\faSearch",
+      "family": "free",
+      "unicode": 61442
+    },
+    "search-dollar": {
+      "command": "\\faSearchDollar",
+      "family": "free",
+      "unicode": 63112
+    },
+    "search-location": {
+      "command": "\\faSearchLocation",
+      "family": "free",
+      "unicode": 63113
+    },
+    "search-minus": {
+      "command": "\\faSearchMinus",
+      "family": "free",
+      "unicode": 61456
+    },
+    "search-plus": {
+      "command": "\\faSearchPlus",
+      "family": "free",
+      "unicode": 61454
+    },
+    "searchengin": {
+      "command": "\\faSearchengin",
+      "family": "brands",
+      "unicode": 62443
+    },
+    "seedling": {
+      "command": "\\faSeedling",
+      "family": "free",
+      "unicode": 62680
+    },
+    "sellcast": {
+      "command": "\\faSellcast",
+      "family": "brands",
+      "unicode": 62170
+    },
+    "sellsy": {
+      "command": "\\faSellsy",
+      "family": "brands",
+      "unicode": 61971
+    },
+    "server": {
+      "command": "\\faServer",
+      "family": "free",
+      "unicode": 62003
+    },
+    "servicestack": {
+      "command": "\\faServicestack",
+      "family": "brands",
+      "unicode": 62444
+    },
+    "shapes": {
+      "command": "\\faShapes",
+      "family": "free",
+      "unicode": 63007
+    },
+    "share": {
+      "command": "\\faShare",
+      "family": "free",
+      "unicode": 61540
+    },
+    "share-alt": {
+      "command": "\\faIcon{share-alt}",
+      "family": "free",
+      "unicode": 61920
+    },
+    "share-alt-square": {
+      "command": "\\faShareAltSquare",
+      "family": "free",
+      "unicode": 61921
+    },
+    "share-square": {
+      "command": "\\faShareSquare",
+      "family": "free",
+      "unicode": 61773
+    },
+    "shekel-sign": {
+      "command": "\\faShekelSign",
+      "family": "free",
+      "unicode": 61963
+    },
+    "shield-alt": {
+      "command": "\\faIcon{shield-alt}",
+      "family": "free",
+      "unicode": 62445
+    },
+    "shield-virus": {
+      "command": "\\faShieldVirus",
+      "family": "free",
+      "unicode": 57452
+    },
+    "ship": {
+      "command": "\\faShip",
+      "family": "free",
+      "unicode": 61978
+    },
+    "shipping-fast": {
+      "command": "\\faShippingFast",
+      "family": "free",
+      "unicode": 62603
+    },
+    "shirtsinbulk": {
+      "command": "\\faShirtsinbulk",
+      "family": "brands",
+      "unicode": 61972
+    },
+    "shoe-prints": {
+      "command": "\\faShoePrints",
+      "family": "free",
+      "unicode": 62795
+    },
+    "shopify": {
+      "command": "\\faShopify",
+      "family": "brands",
+      "unicode": 57431
+    },
+    "shopping-bag": {
+      "command": "\\faShoppingBag",
+      "family": "free",
+      "unicode": 62096
+    },
+    "shopping-basket": {
+      "command": "\\faShoppingBasket",
+      "family": "free",
+      "unicode": 62097
+    },
+    "shopping-cart": {
+      "command": "\\faShoppingCart",
+      "family": "free",
+      "unicode": 61562
+    },
+    "shopware": {
+      "command": "\\faShopware",
+      "family": "brands",
+      "unicode": 62901
+    },
+    "shower": {
+      "command": "\\faShower",
+      "family": "free",
+      "unicode": 62156
+    },
+    "shuttle-van": {
+      "command": "\\faShuttleVan",
+      "family": "free",
+      "unicode": 62902
+    },
+    "sign": {
+      "command": "\\faSign",
+      "family": "free",
+      "unicode": 62681
+    },
+    "sign-in-alt": {
+      "command": "\\faIcon{sign-in-alt}",
+      "family": "free",
+      "unicode": 62198
+    },
+    "sign-language": {
+      "command": "\\faSignLanguage",
+      "family": "free",
+      "unicode": 62119
+    },
+    "sign-out-alt": {
+      "command": "\\faIcon{sign-out-alt}",
+      "family": "free",
+      "unicode": 62197
+    },
+    "signal": {
+      "command": "\\faIcon{signal}",
+      "family": "free",
+      "unicode": 61458
+    },
+    "signature": {
+      "command": "\\faSignature",
+      "family": "free",
+      "unicode": 62903
+    },
+    "sim-card": {
+      "command": "\\faSimCard",
+      "family": "free",
+      "unicode": 63428
+    },
+    "simplybuilt": {
+      "command": "\\faSimplybuilt",
+      "family": "brands",
+      "unicode": 61973
+    },
+    "sink": {
+      "command": "\\faSink",
+      "family": "free",
+      "unicode": 57453
+    },
+    "sistrix": {
+      "command": "\\faSistrix",
+      "family": "brands",
+      "unicode": 62446
+    },
+    "sitemap": {
+      "command": "\\faSitemap",
+      "family": "free",
+      "unicode": 61672
+    },
+    "sith": {
+      "command": "\\faSith",
+      "family": "brands",
+      "unicode": 62738
+    },
+    "skating": {
+      "command": "\\faSkating",
+      "family": "free",
+      "unicode": 63429
+    },
+    "sketch": {
+      "command": "\\faSketch",
+      "family": "brands",
+      "unicode": 63430
+    },
+    "skiing": {
+      "command": "\\faSkiing",
+      "family": "free",
+      "unicode": 63433
+    },
+    "skiing-nordic": {
+      "command": "\\faSkiingNordic",
+      "family": "free",
+      "unicode": 63434
+    },
+    "skull": {
+      "command": "\\faSkull",
+      "family": "free",
+      "unicode": 62796
+    },
+    "skull-crossbones": {
+      "command": "\\faSkullCrossbones",
+      "family": "free",
+      "unicode": 63252
+    },
+    "skyatlas": {
+      "command": "\\faSkyatlas",
+      "family": "brands",
+      "unicode": 61974
+    },
+    "skype": {
+      "command": "\\faSkype",
+      "family": "brands",
+      "unicode": 61822
+    },
+    "slack": {
+      "command": "\\faSlack",
+      "family": "brands",
+      "unicode": 61848
+    },
+    "slack-hash": {
+      "command": "\\faSlackHash",
+      "family": "brands",
+      "unicode": 62447
+    },
+    "slash": {
+      "command": "\\faSlash",
+      "family": "free",
+      "unicode": 63253
+    },
+    "sleigh": {
+      "command": "\\faSleigh",
+      "family": "free",
+      "unicode": 63436
+    },
+    "sliders-h": {
+      "command": "\\faSlidersH",
+      "family": "free",
+      "unicode": 61918
+    },
+    "slideshare": {
+      "command": "\\faSlideshare",
+      "family": "brands",
+      "unicode": 61927
+    },
+    "smile": {
+      "command": "\\faSmile",
+      "family": "free",
+      "unicode": 61720
+    },
+    "smile-beam": {
+      "command": "\\faSmileBeam",
+      "family": "free",
+      "unicode": 62904
+    },
+    "smile-wink": {
+      "command": "\\faSmileWink",
+      "family": "free",
+      "unicode": 62682
+    },
+    "smog": {
+      "command": "\\faSmog",
+      "family": "free",
+      "unicode": 63327
+    },
+    "smoking": {
+      "command": "\\faSmoking",
+      "family": "free",
+      "unicode": 62605
+    },
+    "smoking-ban": {
+      "command": "\\faSmokingBan",
+      "family": "free",
+      "unicode": 62797
+    },
+    "sms": {
+      "command": "\\faSms",
+      "family": "free",
+      "unicode": 63437
+    },
+    "snapchat": {
+      "command": "\\faSnapchat",
+      "family": "brands",
+      "unicode": 62123
+    },
+    "snapchat-ghost": {
+      "command": "\\faSnapchatGhost",
+      "family": "brands",
+      "unicode": 62124
+    },
+    "snapchat-square": {
+      "command": "\\faSnapchatSquare",
+      "family": "brands",
+      "unicode": 62125
+    },
+    "snowboarding": {
+      "command": "\\faSnowboarding",
+      "family": "free",
+      "unicode": 63438
+    },
+    "snowflake": {
+      "command": "\\faSnowflake",
+      "family": "free",
+      "unicode": 62172
+    },
+    "snowman": {
+      "command": "\\faSnowman",
+      "family": "free",
+      "unicode": 63440
+    },
+    "snowplow": {
+      "command": "\\faSnowplow",
+      "family": "free",
+      "unicode": 63442
+    },
+    "soap": {
+      "command": "\\faSoap",
+      "family": "free",
+      "unicode": 57454
+    },
+    "socks": {
+      "command": "\\faSocks",
+      "family": "free",
+      "unicode": 63126
+    },
+    "solar-panel": {
+      "command": "\\faSolarPanel",
+      "family": "free",
+      "unicode": 62906
+    },
+    "sort": {
+      "command": "\\faSort",
+      "family": "free",
+      "unicode": 61660
+    },
+    "sort-alpha-down": {
+      "command": "\\faSortAlphaDown",
+      "family": "free",
+      "unicode": 61789
+    },
+    "sort-alpha-down-alt": {
+      "command": "\\faIcon{sort-alpha-down-alt}",
+      "family": "free",
+      "unicode": 63617
+    },
+    "sort-alpha-up": {
+      "command": "\\faSortAlphaUp",
+      "family": "free",
+      "unicode": 61790
+    },
+    "sort-alpha-up-alt": {
+      "command": "\\faIcon{sort-alpha-up-alt}",
+      "family": "free",
+      "unicode": 63618
+    },
+    "sort-amount-down": {
+      "command": "\\faSortAmountDown",
+      "family": "free",
+      "unicode": 61792
+    },
+    "sort-amount-down-alt": {
+      "command": "\\faIcon{sort-amount-down-alt}",
+      "family": "free",
+      "unicode": 63620
+    },
+    "sort-amount-up": {
+      "command": "\\faSortAmountUp",
+      "family": "free",
+      "unicode": 61793
+    },
+    "sort-amount-up-alt": {
+      "command": "\\faIcon{sort-amount-up-alt}",
+      "family": "free",
+      "unicode": 63621
+    },
+    "sort-down": {
+      "command": "\\faSortDown",
+      "family": "free",
+      "unicode": 61661
+    },
+    "sort-numeric-down": {
+      "command": "\\faSortNumericDown",
+      "family": "free",
+      "unicode": 61794
+    },
+    "sort-numeric-down-alt": {
+      "command": "\\faIcon{sort-numeric-down-alt}",
+      "family": "free",
+      "unicode": 63622
+    },
+    "sort-numeric-up": {
+      "command": "\\faSortNumericUp",
+      "family": "free",
+      "unicode": 61795
+    },
+    "sort-numeric-up-alt": {
+      "command": "\\faIcon{sort-numeric-up-alt}",
+      "family": "free",
+      "unicode": 63623
+    },
+    "sort-up": {
+      "command": "\\faSortUp",
+      "family": "free",
+      "unicode": 61662
+    },
+    "soundcloud": {
+      "command": "\\faSoundcloud",
+      "family": "brands",
+      "unicode": 61886
+    },
+    "sourcetree": {
+      "command": "\\faSourcetree",
+      "family": "brands",
+      "unicode": 63443
+    },
+    "spa": {
+      "command": "\\faSpa",
+      "family": "free",
+      "unicode": 62907
+    },
+    "space-shuttle": {
+      "command": "\\faSpaceShuttle",
+      "family": "free",
+      "unicode": 61847
+    },
+    "speakap": {
+      "command": "\\faSpeakap",
+      "family": "brands",
+      "unicode": 62451
+    },
+    "speaker-deck": {
+      "command": "\\faSpeakerDeck",
+      "family": "brands",
+      "unicode": 63548
+    },
+    "spell-check": {
+      "command": "\\faSpellCheck",
+      "family": "free",
+      "unicode": 63633
+    },
+    "spider": {
+      "command": "\\faSpider",
+      "family": "free",
+      "unicode": 63255
+    },
+    "spinner": {
+      "command": "\\faSpinner",
+      "family": "free",
+      "unicode": 61712
+    },
+    "splotch": {
+      "command": "\\faSplotch",
+      "family": "free",
+      "unicode": 62908
+    },
+    "spotify": {
+      "command": "\\faSpotify",
+      "family": "brands",
+      "unicode": 61884
+    },
+    "spray-can": {
+      "command": "\\faSprayCan",
+      "family": "free",
+      "unicode": 62909
+    },
+    "square": {
+      "command": "\\faSquare",
+      "family": "free",
+      "unicode": 61640
+    },
+    "square-full": {
+      "command": "\\faSquareFull",
+      "family": "free",
+      "unicode": 62556
+    },
+    "square-root-alt": {
+      "command": "\\faIcon{square-root-alt}",
+      "family": "free",
+      "unicode": 63128
+    },
+    "squarespace": {
+      "command": "\\faSquarespace",
+      "family": "brands",
+      "unicode": 62910
+    },
+    "stack-exchange": {
+      "command": "\\faStackExchange",
+      "family": "brands",
+      "unicode": 61837
+    },
+    "stack-overflow": {
+      "command": "\\faStackOverflow",
+      "family": "brands",
+      "unicode": 61804
+    },
+    "stackpath": {
+      "command": "\\faStackpath",
+      "family": "brands",
+      "unicode": 63554
+    },
+    "stamp": {
+      "command": "\\faStamp",
+      "family": "free",
+      "unicode": 62911
+    },
+    "star": {
+      "command": "\\faStar",
+      "family": "free",
+      "unicode": 61445
+    },
+    "star-and-crescent": {
+      "command": "\\faStarAndCrescent",
+      "family": "free",
+      "unicode": 63129
+    },
+    "star-half": {
+      "command": "\\faStarHalf",
+      "family": "free",
+      "unicode": 61577
+    },
+    "star-half-alt": {
+      "command": "\\faIcon{star-half-alt}",
+      "family": "free",
+      "unicode": 62912
+    },
+    "star-of-david": {
+      "command": "\\faStarOfDavid",
+      "family": "free",
+      "unicode": 63130
+    },
+    "star-of-life": {
+      "command": "\\faStarOfLife",
+      "family": "free",
+      "unicode": 63009
+    },
+    "staylinked": {
+      "command": "\\faStaylinked",
+      "family": "brands",
+      "unicode": 62453
+    },
+    "steam": {
+      "command": "\\faSteam",
+      "family": "brands",
+      "unicode": 61878
+    },
+    "steam-square": {
+      "command": "\\faSteamSquare",
+      "family": "brands",
+      "unicode": 61879
+    },
+    "steam-symbol": {
+      "command": "\\faSteamSymbol",
+      "family": "brands",
+      "unicode": 62454
+    },
+    "step-backward": {
+      "command": "\\faStepBackward",
+      "family": "free",
+      "unicode": 61512
+    },
+    "step-forward": {
+      "command": "\\faStepForward",
+      "family": "free",
+      "unicode": 61521
+    },
+    "stethoscope": {
+      "command": "\\faStethoscope",
+      "family": "free",
+      "unicode": 61681
+    },
+    "sticker-mule": {
+      "command": "\\faStickerMule",
+      "family": "brands",
+      "unicode": 62455
+    },
+    "sticky-note": {
+      "command": "\\faStickyNote",
+      "family": "free",
+      "unicode": 62025
+    },
+    "stop": {
+      "command": "\\faStop",
+      "family": "free",
+      "unicode": 61517
+    },
+    "stop-circle": {
+      "command": "\\faStopCircle",
+      "family": "free",
+      "unicode": 62093
+    },
+    "stopwatch": {
+      "command": "\\faIcon{stopwatch}",
+      "family": "free",
+      "unicode": 62194
+    },
+    "stopwatch-20": {
+      "command": "\\faIcon{stopwatch-20}",
+      "family": "free",
+      "unicode": 57455
+    },
+    "store": {
+      "command": "\\faStore",
+      "family": "free",
+      "unicode": 62798
+    },
+    "store-alt": {
+      "command": "\\faIcon{store-alt}",
+      "family": "free",
+      "unicode": 62799
+    },
+    "store-alt-slash": {
+      "command": "\\faStoreAltSlash",
+      "family": "free",
+      "unicode": 57456
+    },
+    "store-slash": {
+      "command": "\\faStoreSlash",
+      "family": "free",
+      "unicode": 57457
+    },
+    "strava": {
+      "command": "\\faStrava",
+      "family": "brands",
+      "unicode": 62504
+    },
+    "stream": {
+      "command": "\\faStream",
+      "family": "free",
+      "unicode": 62800
+    },
+    "street-view": {
+      "command": "\\faStreetView",
+      "family": "free",
+      "unicode": 61981
+    },
+    "strikethrough": {
+      "command": "\\faStrikethrough",
+      "family": "free",
+      "unicode": 61644
+    },
+    "stripe": {
+      "command": "\\faStripe",
+      "family": "brands",
+      "unicode": 62505
+    },
+    "stripe-s": {
+      "command": "\\faStripeS",
+      "family": "brands",
+      "unicode": 62506
+    },
+    "stroopwafel": {
+      "command": "\\faStroopwafel",
+      "family": "free",
+      "unicode": 62801
+    },
+    "studiovinari": {
+      "command": "\\faStudiovinari",
+      "family": "brands",
+      "unicode": 62456
+    },
+    "stumbleupon": {
+      "command": "\\faStumbleupon",
+      "family": "brands",
+      "unicode": 61860
+    },
+    "stumbleupon-circle": {
+      "command": "\\faStumbleuponCircle",
+      "family": "brands",
+      "unicode": 61859
+    },
+    "subscript": {
+      "command": "\\faSubscript",
+      "family": "free",
+      "unicode": 61740
+    },
+    "subway": {
+      "command": "\\faSubway",
+      "family": "free",
+      "unicode": 62009
+    },
+    "suitcase": {
+      "command": "\\faSuitcase",
+      "family": "free",
+      "unicode": 61682
+    },
+    "suitcase-rolling": {
+      "command": "\\faSuitcaseRolling",
+      "family": "free",
+      "unicode": 62913
+    },
+    "sun": {
+      "command": "\\faSun",
+      "family": "free",
+      "unicode": 61829
+    },
+    "superpowers": {
+      "command": "\\faSuperpowers",
+      "family": "brands",
+      "unicode": 62173
+    },
+    "superscript": {
+      "command": "\\faSuperscript",
+      "family": "free",
+      "unicode": 61739
+    },
+    "supple": {
+      "command": "\\faSupple",
+      "family": "brands",
+      "unicode": 62457
+    },
+    "surprise": {
+      "command": "\\faSurprise",
+      "family": "free",
+      "unicode": 62914
+    },
+    "suse": {
+      "command": "\\faSuse",
+      "family": "brands",
+      "unicode": 63446
+    },
+    "swatchbook": {
+      "command": "\\faSwatchbook",
+      "family": "free",
+      "unicode": 62915
+    },
+    "swift": {
+      "command": "\\faSwift",
+      "family": "brands",
+      "unicode": 63713
+    },
+    "swimmer": {
+      "command": "\\faSwimmer",
+      "family": "free",
+      "unicode": 62916
+    },
+    "swimming-pool": {
+      "command": "\\faSwimmingPool",
+      "family": "free",
+      "unicode": 62917
+    },
+    "symfony": {
+      "command": "\\faSymfony",
+      "family": "brands",
+      "unicode": 63549
+    },
+    "synagogue": {
+      "command": "\\faSynagogue",
+      "family": "free",
+      "unicode": 63131
+    },
+    "sync": {
+      "command": "\\faSync",
+      "family": "free",
+      "unicode": 61473
+    },
+    "sync-alt": {
+      "command": "\\faIcon{sync-alt}",
+      "family": "free",
+      "unicode": 62193
+    },
+    "syringe": {
+      "command": "\\faSyringe",
+      "family": "free",
+      "unicode": 62606
+    },
+    "table": {
+      "command": "\\faTable",
+      "family": "free",
+      "unicode": 61646
+    },
+    "table-tennis": {
+      "command": "\\faTableTennis",
+      "family": "free",
+      "unicode": 62557
+    },
+    "tablet": {
+      "command": "\\faTablet",
+      "family": "free",
+      "unicode": 61706
+    },
+    "tablet-alt": {
+      "command": "\\faIcon{tablet-alt}",
+      "family": "free",
+      "unicode": 62458
+    },
+    "tablets": {
+      "command": "\\faTablets",
+      "family": "free",
+      "unicode": 62608
+    },
+    "tachometer-alt": {
+      "command": "\\faIcon{tachometer-alt}",
+      "family": "free",
+      "unicode": 62461
+    },
+    "tag": {
+      "command": "\\faTag",
+      "family": "free",
+      "unicode": 61483
+    },
+    "tags": {
+      "command": "\\faTags",
+      "family": "free",
+      "unicode": 61484
+    },
+    "tape": {
+      "command": "\\faTape",
+      "family": "free",
+      "unicode": 62683
+    },
+    "tasks": {
+      "command": "\\faTasks",
+      "family": "free",
+      "unicode": 61614
+    },
+    "taxi": {
+      "command": "\\faTaxi",
+      "family": "free",
+      "unicode": 61882
+    },
+    "teamspeak": {
+      "command": "\\faTeamspeak",
+      "family": "brands",
+      "unicode": 62713
+    },
+    "teeth": {
+      "command": "\\faTeeth",
+      "family": "free",
+      "unicode": 63022
+    },
+    "teeth-open": {
+      "command": "\\faTeethOpen",
+      "family": "free",
+      "unicode": 63023
+    },
+    "telegram": {
+      "command": "\\faTelegram",
+      "family": "brands",
+      "unicode": 62150
+    },
+    "telegram-plane": {
+      "command": "\\faTelegramPlane",
+      "family": "brands",
+      "unicode": 62462
+    },
+    "temperature-high": {
+      "command": "\\faTemperatureHigh",
+      "family": "free",
+      "unicode": 63337
+    },
+    "temperature-low": {
+      "command": "\\faTemperatureLow",
+      "family": "free",
+      "unicode": 63339
+    },
+    "tencent-weibo": {
+      "command": "\\faTencentWeibo",
+      "family": "brands",
+      "unicode": 61909
+    },
+    "tenge": {
+      "command": "\\faTenge",
+      "family": "free",
+      "unicode": 63447
+    },
+    "terminal": {
+      "command": "\\faTerminal",
+      "family": "free",
+      "unicode": 61728
+    },
+    "text-height": {
+      "command": "\\faTextHeight",
+      "family": "free",
+      "unicode": 61492
+    },
+    "text-width": {
+      "command": "\\faTextWidth",
+      "family": "free",
+      "unicode": 61493
+    },
+    "th": {
+      "command": "\\faTh",
+      "family": "free",
+      "unicode": 61450
+    },
+    "th-large": {
+      "command": "\\faThLarge",
+      "family": "free",
+      "unicode": 61449
+    },
+    "th-list": {
+      "command": "\\faThList",
+      "family": "free",
+      "unicode": 61451
+    },
+    "the-red-yeti": {
+      "command": "\\faTheRedYeti",
+      "family": "brands",
+      "unicode": 63133
+    },
+    "theater-masks": {
+      "command": "\\faTheaterMasks",
+      "family": "free",
+      "unicode": 63024
+    },
+    "themeco": {
+      "command": "\\faThemeco",
+      "family": "brands",
+      "unicode": 62918
+    },
+    "themeisle": {
+      "command": "\\faThemeisle",
+      "family": "brands",
+      "unicode": 62130
+    },
+    "thermometer": {
+      "command": "\\faThermometer",
+      "family": "free",
+      "unicode": 62609
+    },
+    "thermometer-empty": {
+      "command": "\\faThermometerEmpty",
+      "family": "free",
+      "unicode": 62155
+    },
+    "thermometer-full": {
+      "command": "\\faThermometerFull",
+      "family": "free",
+      "unicode": 62151
+    },
+    "thermometer-half": {
+      "command": "\\faThermometerHalf",
+      "family": "free",
+      "unicode": 62153
+    },
+    "thermometer-quarter": {
+      "command": "\\faThermometerQuarter",
+      "family": "free",
+      "unicode": 62154
+    },
+    "thermometer-three-quarters": {
+      "command": "\\faThermometerThreeQuarters",
+      "family": "free",
+      "unicode": 62152
+    },
+    "think-peaks": {
+      "command": "\\faThinkPeaks",
+      "family": "brands",
+      "unicode": 63281
+    },
+    "thumbs-down": {
+      "command": "\\faThumbsDown",
+      "family": "free",
+      "unicode": 61797
+    },
+    "thumbs-up": {
+      "command": "\\faThumbsUp",
+      "family": "free",
+      "unicode": 61796
+    },
+    "thumbtack": {
+      "command": "\\faThumbtack",
+      "family": "free",
+      "unicode": 61581
+    },
+    "ticket-alt": {
+      "command": "\\faIcon{ticket-alt}",
+      "family": "free",
+      "unicode": 62463
+    },
+    "tiktok": {
+      "command": "\\faTiktok",
+      "family": "brands",
+      "unicode": 57467
+    },
+    "times": {
+      "command": "\\faTimes",
+      "family": "free",
+      "unicode": 61453
+    },
+    "times-circle": {
+      "command": "\\faTimesCircle",
+      "family": "free",
+      "unicode": 61527
+    },
+    "tint": {
+      "command": "\\faTint",
+      "family": "free",
+      "unicode": 61507
+    },
+    "tint-slash": {
+      "command": "\\faTintSlash",
+      "family": "free",
+      "unicode": 62919
+    },
+    "tired": {
+      "command": "\\faTired",
+      "family": "free",
+      "unicode": 62920
+    },
+    "toggle-off": {
+      "command": "\\faToggleOff",
+      "family": "free",
+      "unicode": 61956
+    },
+    "toggle-on": {
+      "command": "\\faToggleOn",
+      "family": "free",
+      "unicode": 61957
+    },
+    "toilet": {
+      "command": "\\faToilet",
+      "family": "free",
+      "unicode": 63448
+    },
+    "toilet-paper": {
+      "command": "\\faToiletPaper",
+      "family": "free",
+      "unicode": 63262
+    },
+    "toilet-paper-slash": {
+      "command": "\\faToiletPaperSlash",
+      "family": "free",
+      "unicode": 57458
+    },
+    "toolbox": {
+      "command": "\\faToolbox",
+      "family": "free",
+      "unicode": 62802
+    },
+    "tools": {
+      "command": "\\faTools",
+      "family": "free",
+      "unicode": 63449
+    },
+    "tooth": {
+      "command": "\\faTooth",
+      "family": "free",
+      "unicode": 62921
+    },
+    "torah": {
+      "command": "\\faTorah",
+      "family": "free",
+      "unicode": 63136
+    },
+    "torii-gate": {
+      "command": "\\faToriiGate",
+      "family": "free",
+      "unicode": 63137
+    },
+    "tractor": {
+      "command": "\\faTractor",
+      "family": "free",
+      "unicode": 63266
+    },
+    "trade-federation": {
+      "command": "\\faTradeFederation",
+      "family": "brands",
+      "unicode": 62739
+    },
+    "trademark": {
+      "command": "\\faTrademark",
+      "family": "free",
+      "unicode": 62044
+    },
+    "traffic-light": {
+      "command": "\\faTrafficLight",
+      "family": "free",
+      "unicode": 63031
+    },
+    "trailer": {
+      "command": "\\faTrailer",
+      "family": "free",
+      "unicode": 57409
+    },
+    "train": {
+      "command": "\\faTrain",
+      "family": "free",
+      "unicode": 62008
+    },
+    "tram": {
+      "command": "\\faTram",
+      "family": "free",
+      "unicode": 63450
+    },
+    "transgender": {
+      "command": "\\faTransgender",
+      "family": "free",
+      "unicode": 61988
+    },
+    "transgender-alt": {
+      "command": "\\faIcon{transgender-alt}",
+      "family": "free",
+      "unicode": 61989
+    },
+    "trash": {
+      "command": "\\faTrash",
+      "family": "free",
+      "unicode": 61944
+    },
+    "trash-alt": {
+      "command": "\\faIcon{trash-alt}",
+      "family": "free",
+      "unicode": 62189
+    },
+    "trash-restore": {
+      "command": "\\faTrashRestore",
+      "family": "free",
+      "unicode": 63529
+    },
+    "trash-restore-alt": {
+      "command": "\\faIcon{trash-restore-alt}",
+      "family": "free",
+      "unicode": 63530
+    },
+    "tree": {
+      "command": "\\faTree",
+      "family": "free",
+      "unicode": 61883
+    },
+    "trello": {
+      "command": "\\faTrello",
+      "family": "brands",
+      "unicode": 61825
+    },
+    "trophy": {
+      "command": "\\faTrophy",
+      "family": "free",
+      "unicode": 61585
+    },
+    "truck": {
+      "command": "\\faTruck",
+      "family": "free",
+      "unicode": 61649
+    },
+    "truck-loading": {
+      "command": "\\faTruckLoading",
+      "family": "free",
+      "unicode": 62686
+    },
+    "truck-monster": {
+      "command": "\\faTruckMonster",
+      "family": "free",
+      "unicode": 63035
+    },
+    "truck-moving": {
+      "command": "\\faTruckMoving",
+      "family": "free",
+      "unicode": 62687
+    },
+    "truck-pickup": {
+      "command": "\\faTruckPickup",
+      "family": "free",
+      "unicode": 63036
+    },
+    "tshirt": {
+      "command": "\\faTshirt",
+      "family": "free",
+      "unicode": 62803
+    },
+    "tty": {
+      "command": "\\faTty",
+      "family": "free",
+      "unicode": 61924
+    },
+    "tumblr": {
+      "command": "\\faTumblr",
+      "family": "brands",
+      "unicode": 61811
+    },
+    "tumblr-square": {
+      "command": "\\faTumblrSquare",
+      "family": "brands",
+      "unicode": 61812
+    },
+    "tv": {
+      "command": "\\faTv",
+      "family": "free",
+      "unicode": 62060
+    },
+    "twitch": {
+      "command": "\\faTwitch",
+      "family": "brands",
+      "unicode": 61928
+    },
+    "twitter": {
+      "command": "\\faTwitter",
+      "family": "brands",
+      "unicode": 61593
+    },
+    "twitter-square": {
+      "command": "\\faTwitterSquare",
+      "family": "brands",
+      "unicode": 61569
+    },
+    "typo3": {
+      "command": "\\faTypo3",
+      "family": "brands",
+      "unicode": 62507
+    },
+    "uber": {
+      "command": "\\faUber",
+      "family": "brands",
+      "unicode": 62466
+    },
+    "ubuntu": {
+      "command": "\\faUbuntu",
+      "family": "brands",
+      "unicode": 63455
+    },
+    "uikit": {
+      "command": "\\faUikit",
+      "family": "brands",
+      "unicode": 62467
+    },
+    "umbraco": {
+      "command": "\\faUmbraco",
+      "family": "brands",
+      "unicode": 63720
+    },
+    "umbrella": {
+      "command": "\\faUmbrella",
+      "family": "free",
+      "unicode": 61673
+    },
+    "umbrella-beach": {
+      "command": "\\faUmbrellaBeach",
+      "family": "free",
+      "unicode": 62922
+    },
+    "uncharted": {
+      "command": "\\faUncharted",
+      "family": "brands",
+      "unicode": 57476
+    },
+    "underline": {
+      "command": "\\faUnderline",
+      "family": "free",
+      "unicode": 61645
+    },
+    "undo": {
+      "command": "\\faUndo",
+      "family": "free",
+      "unicode": 61666
+    },
+    "undo-alt": {
+      "command": "\\faIcon{undo-alt}",
+      "family": "free",
+      "unicode": 62186
+    },
+    "uniregistry": {
+      "command": "\\faUniregistry",
+      "family": "brands",
+      "unicode": 62468
+    },
+    "unity": {
+      "command": "\\faUnity",
+      "family": "brands",
+      "unicode": 57417
+    },
+    "universal-access": {
+      "command": "\\faUniversalAccess",
+      "family": "free",
+      "unicode": 62106
+    },
+    "university": {
+      "command": "\\faUniversity",
+      "family": "free",
+      "unicode": 61852
+    },
+    "unlink": {
+      "command": "\\faUnlink",
+      "family": "free",
+      "unicode": 61735
+    },
+    "unlock": {
+      "command": "\\faUnlock",
+      "family": "free",
+      "unicode": 61596
+    },
+    "unlock-alt": {
+      "command": "\\faIcon{unlock-alt}",
+      "family": "free",
+      "unicode": 61758
+    },
+    "unsplash": {
+      "command": "\\faUnsplash",
+      "family": "brands",
+      "unicode": 57468
+    },
+    "untappd": {
+      "command": "\\faUntappd",
+      "family": "brands",
+      "unicode": 62469
+    },
+    "upload": {
+      "command": "\\faUpload",
+      "family": "free",
+      "unicode": 61587
+    },
+    "ups": {
+      "command": "\\faUps",
+      "family": "brands",
+      "unicode": 63456
+    },
+    "usb": {
+      "command": "\\faUsb",
+      "family": "brands",
+      "unicode": 62087
+    },
+    "user": {
+      "command": "\\faUser",
+      "family": "free",
+      "unicode": 61447
+    },
+    "user-alt": {
+      "command": "\\faIcon{user-alt}",
+      "family": "free",
+      "unicode": 62470
+    },
+    "user-alt-slash": {
+      "command": "\\faUserAltSlash",
+      "family": "free",
+      "unicode": 62714
+    },
+    "user-astronaut": {
+      "command": "\\faUserAstronaut",
+      "family": "free",
+      "unicode": 62715
+    },
+    "user-check": {
+      "command": "\\faUserCheck",
+      "family": "free",
+      "unicode": 62716
+    },
+    "user-circle": {
+      "command": "\\faUserCircle",
+      "family": "free",
+      "unicode": 62141
+    },
+    "user-clock": {
+      "command": "\\faUserClock",
+      "family": "free",
+      "unicode": 62717
+    },
+    "user-cog": {
+      "command": "\\faUserCog",
+      "family": "free",
+      "unicode": 62718
+    },
+    "user-edit": {
+      "command": "\\faUserEdit",
+      "family": "free",
+      "unicode": 62719
+    },
+    "user-friends": {
+      "command": "\\faUserFriends",
+      "family": "free",
+      "unicode": 62720
+    },
+    "user-graduate": {
+      "command": "\\faUserGraduate",
+      "family": "free",
+      "unicode": 62721
+    },
+    "user-injured": {
+      "command": "\\faUserInjured",
+      "family": "free",
+      "unicode": 63272
+    },
+    "user-lock": {
+      "command": "\\faUserLock",
+      "family": "free",
+      "unicode": 62722
+    },
+    "user-md": {
+      "command": "\\faUserMd",
+      "family": "free",
+      "unicode": 61680
+    },
+    "user-minus": {
+      "command": "\\faUserMinus",
+      "family": "free",
+      "unicode": 62723
+    },
+    "user-ninja": {
+      "command": "\\faUserNinja",
+      "family": "free",
+      "unicode": 62724
+    },
+    "user-nurse": {
+      "command": "\\faUserNurse",
+      "family": "free",
+      "unicode": 63535
+    },
+    "user-plus": {
+      "command": "\\faUserPlus",
+      "family": "free",
+      "unicode": 62004
+    },
+    "user-secret": {
+      "command": "\\faUserSecret",
+      "family": "free",
+      "unicode": 61979
+    },
+    "user-shield": {
+      "command": "\\faUserShield",
+      "family": "free",
+      "unicode": 62725
+    },
+    "user-slash": {
+      "command": "\\faUserSlash",
+      "family": "free",
+      "unicode": 62726
+    },
+    "user-tag": {
+      "command": "\\faUserTag",
+      "family": "free",
+      "unicode": 62727
+    },
+    "user-tie": {
+      "command": "\\faUserTie",
+      "family": "free",
+      "unicode": 62728
+    },
+    "user-times": {
+      "command": "\\faUserTimes",
+      "family": "free",
+      "unicode": 62005
+    },
+    "users": {
+      "command": "\\faUsers",
+      "family": "free",
+      "unicode": 61632
+    },
+    "users-cog": {
+      "command": "\\faUsersCog",
+      "family": "free",
+      "unicode": 62729
+    },
+    "users-slash": {
+      "command": "\\faUsersSlash",
+      "family": "free",
+      "unicode": 57459
+    },
+    "usps": {
+      "command": "\\faUsps",
+      "family": "brands",
+      "unicode": 63457
+    },
+    "ussunnah": {
+      "command": "\\faUssunnah",
+      "family": "brands",
+      "unicode": 62471
+    },
+    "utensil-spoon": {
+      "command": "\\faUtensilSpoon",
+      "family": "free",
+      "unicode": 62181
+    },
+    "utensils": {
+      "command": "\\faUtensils",
+      "family": "free",
+      "unicode": 62183
+    },
+    "vaadin": {
+      "command": "\\faVaadin",
+      "family": "brands",
+      "unicode": 62472
+    },
+    "vector-square": {
+      "command": "\\faVectorSquare",
+      "family": "free",
+      "unicode": 62923
+    },
+    "venus": {
+      "command": "\\faVenus",
+      "family": "free",
+      "unicode": 61985
+    },
+    "venus-double": {
+      "command": "\\faVenusDouble",
+      "family": "free",
+      "unicode": 61990
+    },
+    "venus-mars": {
+      "command": "\\faVenusMars",
+      "family": "free",
+      "unicode": 61992
+    },
+    "vest": {
+      "command": "\\faVest",
+      "family": "free",
+      "unicode": 57477
+    },
+    "vest-patches": {
+      "command": "\\faVestPatches",
+      "family": "free",
+      "unicode": 57478
+    },
+    "viacoin": {
+      "command": "\\faViacoin",
+      "family": "brands",
+      "unicode": 62007
+    },
+    "viadeo": {
+      "command": "\\faViadeo",
+      "family": "brands",
+      "unicode": 62121
+    },
+    "viadeo-square": {
+      "command": "\\faViadeoSquare",
+      "family": "brands",
+      "unicode": 62122
+    },
+    "vial": {
+      "command": "\\faVial",
+      "family": "free",
+      "unicode": 62610
+    },
+    "vials": {
+      "command": "\\faVials",
+      "family": "free",
+      "unicode": 62611
+    },
+    "viber": {
+      "command": "\\faViber",
+      "family": "brands",
+      "unicode": 62473
+    },
+    "video": {
+      "command": "\\faVideo",
+      "family": "free",
+      "unicode": 61501
+    },
+    "video-slash": {
+      "command": "\\faVideoSlash",
+      "family": "free",
+      "unicode": 62690
+    },
+    "vihara": {
+      "command": "\\faVihara",
+      "family": "free",
+      "unicode": 63143
+    },
+    "vimeo": {
+      "command": "\\faVimeo",
+      "family": "brands",
+      "unicode": 62474
+    },
+    "vimeo-square": {
+      "command": "\\faVimeoSquare",
+      "family": "brands",
+      "unicode": 61844
+    },
+    "vimeo-v": {
+      "command": "\\faVimeoV",
+      "family": "brands",
+      "unicode": 62077
+    },
+    "vine": {
+      "command": "\\faVine",
+      "family": "brands",
+      "unicode": 61898
+    },
+    "virus": {
+      "command": "\\faVirus",
+      "family": "free",
+      "unicode": 57460
+    },
+    "virus-slash": {
+      "command": "\\faVirusSlash",
+      "family": "free",
+      "unicode": 57461
+    },
+    "viruses": {
+      "command": "\\faViruses",
+      "family": "free",
+      "unicode": 57462
+    },
+    "vk": {
+      "command": "\\faVk",
+      "family": "brands",
+      "unicode": 61833
+    },
+    "vnv": {
+      "command": "\\faVnv",
+      "family": "brands",
+      "unicode": 62475
+    },
+    "voicemail": {
+      "command": "\\faVoicemail",
+      "family": "free",
+      "unicode": 63639
+    },
+    "volleyball-ball": {
+      "command": "\\faVolleyballBall",
+      "family": "free",
+      "unicode": 62559
+    },
+    "volume-down": {
+      "command": "\\faVolumeDown",
+      "family": "free",
+      "unicode": 61479
+    },
+    "volume-mute": {
+      "command": "\\faVolumeMute",
+      "family": "free",
+      "unicode": 63145
+    },
+    "volume-off": {
+      "command": "\\faVolumeOff",
+      "family": "free",
+      "unicode": 61478
+    },
+    "volume-up": {
+      "command": "\\faVolumeUp",
+      "family": "free",
+      "unicode": 61480
+    },
+    "vote-yea": {
+      "command": "\\faVoteYea",
+      "family": "free",
+      "unicode": 63346
+    },
+    "vr-cardboard": {
+      "command": "\\faVrCardboard",
+      "family": "free",
+      "unicode": 63273
+    },
+    "vuejs": {
+      "command": "\\faVuejs",
+      "family": "brands",
+      "unicode": 62495
+    },
+    "walking": {
+      "command": "\\faWalking",
+      "family": "free",
+      "unicode": 62804
+    },
+    "wallet": {
+      "command": "\\faWallet",
+      "family": "free",
+      "unicode": 62805
+    },
+    "warehouse": {
+      "command": "\\faWarehouse",
+      "family": "free",
+      "unicode": 62612
+    },
+    "watchman-monitoring": {
+      "command": "\\faWatchmanMonitoring",
+      "family": "brands",
+      "unicode": 57479
+    },
+    "water": {
+      "command": "\\faWater",
+      "family": "free",
+      "unicode": 63347
+    },
+    "wave-square": {
+      "command": "\\faWaveSquare",
+      "family": "free",
+      "unicode": 63550
+    },
+    "waze": {
+      "command": "\\faWaze",
+      "family": "brands",
+      "unicode": 63551
+    },
+    "weebly": {
+      "command": "\\faWeebly",
+      "family": "brands",
+      "unicode": 62924
+    },
+    "weibo": {
+      "command": "\\faWeibo",
+      "family": "brands",
+      "unicode": 61834
+    },
+    "weight": {
+      "command": "\\faWeight",
+      "family": "free",
+      "unicode": 62614
+    },
+    "weight-hanging": {
+      "command": "\\faWeightHanging",
+      "family": "free",
+      "unicode": 62925
+    },
+    "weixin": {
+      "command": "\\faWeixin",
+      "family": "brands",
+      "unicode": 61911
+    },
+    "whatsapp": {
+      "command": "\\faWhatsapp",
+      "family": "brands",
+      "unicode": 62002
+    },
+    "whatsapp-square": {
+      "command": "\\faWhatsappSquare",
+      "family": "brands",
+      "unicode": 62476
+    },
+    "wheelchair": {
+      "command": "\\faWheelchair",
+      "family": "free",
+      "unicode": 61843
+    },
+    "whmcs": {
+      "command": "\\faWhmcs",
+      "family": "brands",
+      "unicode": 62477
+    },
+    "wifi": {
+      "command": "\\faIcon{wifi}",
+      "family": "free",
+      "unicode": 61931
+    },
+    "wikipedia-w": {
+      "command": "\\faWikipediaW",
+      "family": "brands",
+      "unicode": 62054
+    },
+    "wind": {
+      "command": "\\faWind",
+      "family": "free",
+      "unicode": 63278
+    },
+    "window-close": {
+      "command": "\\faWindowClose",
+      "family": "free",
+      "unicode": 62480
+    },
+    "window-maximize": {
+      "command": "\\faWindowMaximize",
+      "family": "free",
+      "unicode": 62160
+    },
+    "window-minimize": {
+      "command": "\\faWindowMinimize",
+      "family": "free",
+      "unicode": 62161
+    },
+    "window-restore": {
+      "command": "\\faWindowRestore",
+      "family": "free",
+      "unicode": 62162
+    },
+    "windows": {
+      "command": "\\faWindows",
+      "family": "brands",
+      "unicode": 61818
+    },
+    "wine-bottle": {
+      "command": "\\faWineBottle",
+      "family": "free",
+      "unicode": 63279
+    },
+    "wine-glass": {
+      "command": "\\faWineGlass",
+      "family": "free",
+      "unicode": 62691
+    },
+    "wine-glass-alt": {
+      "command": "\\faIcon{wine-glass-alt}",
+      "family": "free",
+      "unicode": 62926
+    },
+    "wix": {
+      "command": "\\faWix",
+      "family": "brands",
+      "unicode": 62927
+    },
+    "wizards-of-the-coast": {
+      "command": "\\faWizardsOfTheCoast",
+      "family": "brands",
+      "unicode": 63280
+    },
+    "wodu": {
+      "command": "\\faWodu",
+      "family": "brands",
+      "unicode": 57480
+    },
+    "wolf-pack-battalion": {
+      "command": "\\faWolfPackBattalion",
+      "family": "brands",
+      "unicode": 62740
+    },
+    "won-sign": {
+      "command": "\\faWonSign",
+      "family": "free",
+      "unicode": 61785
+    },
+    "wordpress": {
+      "command": "\\faWordpress",
+      "family": "brands",
+      "unicode": 61850
+    },
+    "wordpress-simple": {
+      "command": "\\faWordpressSimple",
+      "family": "brands",
+      "unicode": 62481
+    },
+    "wpbeginner": {
+      "command": "\\faWpbeginner",
+      "family": "brands",
+      "unicode": 62103
+    },
+    "wpexplorer": {
+      "command": "\\faWpexplorer",
+      "family": "brands",
+      "unicode": 62174
+    },
+    "wpforms": {
+      "command": "\\faWpforms",
+      "family": "brands",
+      "unicode": 62104
+    },
+    "wpressr": {
+      "command": "\\faWpressr",
+      "family": "brands",
+      "unicode": 62436
+    },
+    "wrench": {
+      "command": "\\faWrench",
+      "family": "free",
+      "unicode": 61613
+    },
+    "x-ray": {
+      "command": "\\faXRay",
+      "family": "free",
+      "unicode": 62615
+    },
+    "xbox": {
+      "command": "\\faXbox",
+      "family": "brands",
+      "unicode": 62482
+    },
+    "xing": {
+      "command": "\\faXing",
+      "family": "brands",
+      "unicode": 61800
+    },
+    "xing-square": {
+      "command": "\\faXingSquare",
+      "family": "brands",
+      "unicode": 61801
+    },
+    "y-combinator": {
+      "command": "\\faYCombinator",
+      "family": "brands",
+      "unicode": 62011
+    },
+    "yahoo": {
+      "command": "\\faYahoo",
+      "family": "brands",
+      "unicode": 61854
+    },
+    "yammer": {
+      "command": "\\faYammer",
+      "family": "brands",
+      "unicode": 63552
+    },
+    "yandex": {
+      "command": "\\faYandex",
+      "family": "brands",
+      "unicode": 62483
+    },
+    "yandex-international": {
+      "command": "\\faYandexInternational",
+      "family": "brands",
+      "unicode": 62484
+    },
+    "yarn": {
+      "command": "\\faYarn",
+      "family": "brands",
+      "unicode": 63459
+    },
+    "yelp": {
+      "command": "\\faYelp",
+      "family": "brands",
+      "unicode": 61929
+    },
+    "yen-sign": {
+      "command": "\\faYenSign",
+      "family": "free",
+      "unicode": 61783
+    },
+    "yin-yang": {
+      "command": "\\faYinYang",
+      "family": "free",
+      "unicode": 63149
+    },
+    "yoast": {
+      "command": "\\faYoast",
+      "family": "brands",
+      "unicode": 62129
+    },
+    "youtube": {
+      "command": "\\faYoutube",
+      "family": "brands",
+      "unicode": 61799
+    },
+    "youtube-square": {
+      "command": "\\faYoutubeSquare",
+      "family": "brands",
+      "unicode": 62513
+    },
+    "zhihu": {
+      "command": "\\faZhihu",
+      "family": "brands",
+      "unicode": 63039
+    }
+  },
+  "notice": "Icon name/Unicode metadata from Font Awesome 5 Free (SIL OFL 1.1); TeX mapping by Marcel Krueger (LPPL 1.3c). No font programs included.",
+  "sha256": "83c86c8a92d80e0b2c84af78a055d10798f8294f63b397ba8225351b9eaaa500",
+  "source": "https://mirrors.ctan.org/fonts/fontawesome5.zip",
+  "version": "5.15.4"
+}

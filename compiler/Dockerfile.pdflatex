@@ -4,6 +4,12 @@ RUN apt-get update \
        texlive-latex-base texlive-latex-recommended texlive-fonts-recommended \
        texlive-pictures lmodern \
     && rm -rf /var/lib/apt/lists/*
+COPY install_fontawesome.py /tmp/install_fontawesome.py
+RUN python /tmp/install_fontawesome.py \
+    && mktexlsr /usr/local/share/texmf \
+    && updmap-sys --enable Map=fontawesome5.map \
+    && kpsewhich fontawesome5.sty \
+    && rm /tmp/install_fontawesome.py
 ENV HOME=/tmp TEXMFVAR=/tmp/texmf-var TEXMFCONFIG=/tmp/texmf-config
 WORKDIR /work
 ENTRYPOINT ["pdflatex"]

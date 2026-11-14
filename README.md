@@ -14,13 +14,34 @@ recovered from visible text and embedded font metadata; PDF links become
 Structure is inferred from font sizes, formatting and alignment. This does not
 recover the original author's macros. Text reflows after edits; the output does
 not promise a visual similarity threshold. Review reading order, multi-column
-content, equations and tables. Decorative icon glyphs are omitted; unsupported
-characters have explicit placeholders and warnings. This mode currently exports
+content, equations and tables. Font Awesome 5 icons use named commands with their original size and baseline
+rise. Unknown icon fonts use named inline vector fallbacks; unrecoverable icons
+and unsupported characters have visible placeholders and warnings. This mode currently exports
 text and links, with a warning for omitted embedded images. Use Preserve original layout to retain
 scanned images. Use a layout mode to retain illustrations.
 
 `POST /api/convert` defaults to `mode=readable` and returns `engine=pdflatex`.
 The available conversion modes are `readable` and `layout`.
+
+## Icons in readable source
+
+Recognized Font Awesome 5 icons become reusable commands such as
+`\IconExternalLinkAlt`, defined once using `\faExternalLink*`. Solid, regular and
+brand styles are retained, along with the source font size and baseline rise.
+The body stays readable; no per-icon drawing coordinates appear among the prose.
+Unknown icon fonts use named vector macros in the preamble, keeping the export
+self-contained. If an icon cannot be decoded, it gets a visible placeholder and
+a warning instead of disappearing.
+
+The pdfLaTeX compiler image installs Font Awesome 5 Free 5.15.4 from a pinned,
+SHA-256-verified CTAN archive. Rebuild an older image with `./install_pdflatex.sh`
+or `docker build -t pdf3tex-pdflatex:local -f compiler/Dockerfile.pdflatex compiler`.
+Overleaf already provides `fontawesome5`; local TeX installations need that
+package (and `pgf` for unknown-icon vector fallbacks).
+
+The icon catalog contains names, Unicode values and command mappings, with no
+font programs. Regenerate it from the pinned archive with
+`python scripts/build_icon_catalog.py /path/to/fontawesome5.zip`.
 
 ## Layout and visual verification
 
